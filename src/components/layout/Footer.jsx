@@ -1,171 +1,86 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-function Footer() {
+import { getCurrentUser } from "../../services/authService.js";
+
+const linkClass =
+  "text-sm text-white/55 transition-colors duration-200 hover:text-white focus-visible:text-white";
+
+export default function Footer() {
+  const [currentUser, setCurrentUser] = useState(() => getCurrentUser());
+
+  useEffect(() => {
+    const syncAuth = () => setCurrentUser(getCurrentUser());
+    window.addEventListener("retrotoonz:auth-changed", syncAuth);
+    window.addEventListener("storage", syncAuth);
+    return () => {
+      window.removeEventListener("retrotoonz:auth-changed", syncAuth);
+      window.removeEventListener("storage", syncAuth);
+    };
+  }, []);
+
   return (
-    <footer className="relative bg-gradient-to-b from-[#0a1628] via-[#0f1f38] to-[#081120] text-white/90 py-12 border-t border-white/10">
-      {/* Top Gradient Line */}
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-cyan-400/70 via-blue-400/70 to-cyan-400/70"></div>
-
-      <div className="max-w-6xl mx-auto px-6 flex flex-col gap-10">
-        {/* ================= MOBILE ================= */}
-        <div className="flex flex-col items-center gap-6 md:hidden text-center">
-          {/* Logo */}
-          <Link
-            to="/"
-            className="text-title font-royal font-bold cursor-pointer select-none text-white scale-95 transform transition-all duration-300 ease-in-out hover:scale-105 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#8f84c0] hover:via-[#eba550] hover:to-[#b7ce88] md:text-4xl md:scale-100 md:text-white md:hover:scale-100 md:hover:text-white md:bg-none"
-          >
-            RetroToonz
-          </Link>
-
-          {/* Links */}
-          <div className="flex gap-16 text-body">
-            <div className="space-y-2">
-              <h4 className="text-heading text-white">Company</h4>
-              <Link
-                to="/about-us"
-                className="block text-white/60 hover:text-cyan-300"
-              >
-                About Us
-              </Link>
-            </div>
-
-            <div className="space-y-2">
-              <h4 className="text-heading text-white">Explore</h4>
-              <Link to="/" className="block text-white/60 hover:text-cyan-300">
-                Home
-              </Link>
-              <Link
-                to="/profile"
-                className="block text-white/60 hover:text-cyan-300"
-              >
-                Profile
-              </Link>
-              <Link
-                to="/watchlist"
-                className="block text-white/60 hover:text-cyan-300"
-              >
-                Watchlist
-              </Link>
-            </div>
-          </div>
-
-          {/* Button */}
-          <a
-            href="https://buymeachai.ezee.li/Samyak005"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 bg-white/90 px-5 py-2 rounded-xl shadow-md"
-          >
-            <img
-              src="https://buymeachai.ezee.li/assets/images/chai.png"
-              alt="chai"
-               className="w-8 h-8 flex-shrink-0"              
-            />
-            <span
-              className="text-xl text-black/80 font-semibold"
-              style={{ fontFamily: "'Cookie', cursive" }}
-            >
-              Buy me a chai
-            </span>
-          </a>
-        </div>
-
-        {/* ================= DESKTOP ================= */}
-        <div className="hidden md:flex justify-between items-start">
-          {/* LEFT: Logo + Button */}
-          <div className="flex flex-col items-center md:items-start gap-6 relative">
-            {/* Glow Background */}
-            <div className="absolute -top-6 left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 w-40 h-40 bg-cyan-400/10 blur-3xl rounded-full pointer-events-none"></div>
-
-            {/* Logo */}
+    <footer className="rt-footer mt-auto">
+      <div className="rt-standard-content py-8 sm:py-10">
+        <div className="flex flex-col gap-7 border-b border-white/8 pb-7 lg:flex-row lg:items-center lg:justify-between">
+          <div className="max-w-md">
             <Link
               to="/"
-              className="relative font-royal font-extrabold cursor-pointer select-none transition-all duration-300 ease-in-out transform text-white scale-95 md:text-4xl md:scale-100 md:hover:scale-105 md:hover:text-transparent md:hover:bg-clip-text md:hover:bg-gradient-to-r md:hover:from-[#8f84c0] md:hover:via-[#eba550] md:hover:to-[#b7ce88]"
+              className="text-2xl font-extrabold tracking-[-0.045em] text-white transition hover:text-cyan-200"
             >
               RetroToonz
             </Link>
+            <p className="mt-2 text-sm leading-6 text-white/48">
+              Classic cartoons, collected in one simple place.
+            </p>
+          </div>
 
-            {/* CTA Button */}
+          <nav
+            aria-label="Footer navigation"
+            className="flex flex-wrap items-center gap-x-5 gap-y-3 lg:justify-end"
+          >
+            <Link className={linkClass} to="/">
+              Home
+            </Link>
+            <Link className={linkClass} to="/all-shows">
+              All Shows
+            </Link>
+            <Link className={linkClass} to="/watchlist">
+              Watchlist
+            </Link>
+            <Link className={linkClass} to="/about-us">
+              About
+            </Link>
+            {currentUser ? (
+              <Link className={linkClass} to="/profile">
+                My Profile
+              </Link>
+            ) : (
+              <Link className={linkClass} to="/login">
+                Sign in
+              </Link>
+            )}
+            {currentUser?.role === "admin" && (
+              <Link className={linkClass} to="/admin">
+                Admin
+              </Link>
+            )}
             <a
+              className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.045] px-3 py-1.5 text-sm font-semibold text-white/70 transition hover:border-cyan-300/25 hover:bg-cyan-300/10 hover:text-cyan-100"
               href="https://buymeachai.ezee.li/Samyak005"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex items-center gap-3 bg-white px-6 py-3 rounded-2xl shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-[2px]"
             >
-              {/* Soft glow */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-400/10 to-blue-400/10 opacity-0 group-hover:opacity-100 transition duration-300"></div>
-
-              {/* Icon */}
-              <img
-                src="https://buymeachai.ezee.li/assets/images/chai.png"
-                alt="chai"
-                className="w-6 h-6 relative z-10 group-hover:scale-110 transition-transform duration-300"
-              />
-
-              {/* Text */}
-              <span
-                className="relative z-10 text-2xl text-black/80 font-semibold"
-                style={{ fontFamily: "'Cookie', cursive" }}
-              >
-                Buy me a chai
-              </span>
+              Help with chai ☕
             </a>
-          </div>
-
-          {/* RIGHT: Links */}
-          <div className="flex gap-20 text-body">
-            <div className="space-y-2">
-              <h4 className="text-heading text-white">Company</h4>
-              <Link
-                to="/about-us"
-                className="block text-white/60 hover:text-cyan-300"
-              >
-                About Us
-              </Link>
-            </div>
-
-            <div className="space-y-2">
-              <h4 className="text-heading text-white">Explore</h4>
-              <Link to="/" className="block text-white/60 hover:text-cyan-300">
-                Home
-              </Link>
-              <Link
-                to="/profile"
-                className="block text-white/60 hover:text-cyan-300"
-              >
-                Profile
-              </Link>
-              <Link
-                to="/watchlist"
-                className="block text-white/60 hover:text-cyan-300"
-              >
-                Watchlist
-              </Link>
-            </div>
-          </div>
+          </nav>
         </div>
 
-        {/* ================= BOTTOM ================= */}
-        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-meta text-white/50">
-          <span>
-            © {new Date().getFullYear()} RetroToonz. All rights reserved.
-          </span>
-
-          <div className="flex gap-6">
-            <span className="text-meta hover:text-white cursor-pointer">
-              Terms
-            </span>
-            <span className="text-meta hover:text-white cursor-pointer">
-              Privacy
-            </span>
-            <span className="text-meta hover:text-white cursor-pointer">
-              FAQ
-            </span>
-          </div>
+        <div className="flex flex-col gap-2 pt-5 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between">
+          <span>© {new Date().getFullYear()} RetroToonz. All rights reserved.</span>
+          <span>Made for nostalgia.</span>
         </div>
       </div>
     </footer>
   );
 }
-
-export default Footer;

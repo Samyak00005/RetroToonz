@@ -19,7 +19,7 @@ export default function AnalyticsPage() {
         ].map((item) => (
           <div
             key={item.label}
-            className="bg-black/50 border border-white/10 rounded-xl p-4 hover:bg-white/5 transition"
+            className="bg-white/[0.055] border border-white/10 rounded-[var(--rt-radius-control)] p-4 hover:bg-white/5 transition"
           >
             <p className="text-xs text-gray-400">{item.label}</p>
             <h2 className="text-xl font-semibold mt-1">{item.value}</h2>
@@ -30,17 +30,17 @@ export default function AnalyticsPage() {
 
       {/* 📈 Charts Placeholder */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <div className="h-64 rounded-xl bg-black/50 border border-white/10 flex items-center justify-center text-gray-400">
+        <div className="h-64 rounded-[var(--rt-radius-control)] bg-white/[0.055] border border-white/10 flex items-center justify-center text-gray-400">
           Traffic Chart Coming Soon 📊
         </div>
 
-        <div className="h-64 rounded-xl bg-black/50 border border-white/10 flex items-center justify-center text-gray-400">
+        <div className="h-64 rounded-[var(--rt-radius-control)] bg-white/[0.055] border border-white/10 flex items-center justify-center text-gray-400">
           User Growth Chart Coming Soon 📈
         </div>
       </div>
 
       {/* 🏆 Top Shows Table */}
-      <div className="rounded-xl bg-black/50 border border-white/10 overflow-hidden">
+      <div className="rounded-[var(--rt-radius-control)] bg-white/[0.055] border border-white/10 overflow-hidden">
         <div className="px-4 py-3 border-b border-white/10">
           <h2 className="text-sm font-medium">Top Performing Shows</h2>
         </div>

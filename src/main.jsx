@@ -3,8 +3,8 @@
 import { inject } from "@vercel/analytics";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./index.css";
+import App from "./app/App.jsx";
+import "./styles/globals.css";
 
 inject();
 

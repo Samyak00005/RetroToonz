@@ -1,39 +1,38 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
-import AdminSidebar from "../components/admin/AdminSidebar";
-import AdminHeader from "../components/admin/AdminHeader";
+import AdminHeader from "../components/admin/AdminHeader.jsx";
+import AdminSidebar from "../components/admin/AdminSidebar.jsx";
 
 export default function AdminLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white">
-      {/* Mobile Sidebar */}
+    <div className="rt-admin-page flex min-h-screen min-w-0">
       {sidebarOpen && (
-        <div className="fixed inset-0 z-40 flex">
-          <div className="w-64 bg-black">
-            <AdminSidebar closeSidebar={() => setSidebarOpen(false)} />
+        <div className="fixed inset-0 z-[80] flex md:hidden">
+          <div className="w-[min(82vw,280px)] p-2">
+            <AdminSidebar closeSidebar={() => setSidebarOpen(false)} mobile />
           </div>
-
-          <div
-            className="flex-1 bg-black/50"
+          <button
+            type="button"
+            aria-label="Close admin navigation"
+            className="flex-1 bg-black/55 backdrop-blur-sm"
             onClick={() => setSidebarOpen(false)}
           />
         </div>
       )}
 
-      {/* Desktop Sidebar */}
-      <div className="hidden md:block">
+      <div className="hidden shrink-0 md:block">
         <AdminSidebar />
       </div>
 
-      {/* Main */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex min-w-0 flex-1 flex-col">
         <AdminHeader onMenuClick={() => setSidebarOpen(true)} />
-
-        <main className="flex-1 p-4 md:p-6">
-          <Outlet />
+        <main className="min-w-0 flex-1 px-4 pb-8 pt-4 sm:px-5 md:px-6 lg:px-8">
+          <div className="mx-auto w-full max-w-[1600px]">
+            <Outlet />
+          </div>
         </main>
       </div>
     </div>

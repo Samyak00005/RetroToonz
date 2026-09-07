@@ -4,8 +4,8 @@
       "id": "ben-10",
       "title": "Ben 10",
       "year": "2005",
-      "poster": "/media/poster/portrait/ben-10-poster.jpg",
-      "backdrop": "/media/backdrops/landscape/ben-10-backdrop.jpg",
+      "poster": "/media/shows/ben-10/poster.jpg",
+      "backdrop": "/media/shows/ben-10/backdrop.jpg",
       "tags": [
         "Action",
         "Adventure",
@@ -31,8 +31,8 @@
               "title": "The Day of the Omnitrix",
               "synopsis": "Ben discovers the Omnitrix and transforms into his first alien.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/ben-10_s01.jpg",
-              "videoUrl": "/media/episodes/ben-10/season-01/ben-10-s01-e01.mp4",
+              "thumbnail": "/media/shows/ben-10/backdrop.jpg",
+              "videoUrl": "/media/shows/ben-10/seasons/s01/episodes/ben-10-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -42,8 +42,8 @@
               "title": "Welcome to the Tennyson Family",
               "synopsis": "Ben learns more about the Omnitrix and his new responsibilities.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/ben-10_s01.jpg",
-              "videoUrl": "/media/episodes/ben-10/season-01/ben-10-s01-e02.mp4",
+              "thumbnail": "/media/shows/ben-10/backdrop.jpg",
+              "videoUrl": "/media/shows/ben-10/seasons/s01/episodes/ben-10-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -53,8 +53,8 @@
               "title": "First Big Battle",
               "synopsis": "Ben faces a dangerous rival in his first big fight.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/ben-10_s01.jpg",
-              "videoUrl": "/media/episodes/ben-10/season-01/ben-10-s01-e03.mp4",
+              "thumbnail": "/media/shows/ben-10/backdrop.jpg",
+              "videoUrl": "/media/shows/ben-10/seasons/s01/episodes/ben-10-s01-e03.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -71,8 +71,8 @@
               "title": "A New Threat",
               "synopsis": "A new villain forces Ben to push his powers further.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/ben-10_s02.jpg",
-              "videoUrl": "/media/episodes/ben-10/season-02/ben-10-s02-e01.mp4",
+              "thumbnail": "/media/shows/ben-10/backdrop.jpg",
+              "videoUrl": "/media/shows/ben-10/seasons/s02/episodes/ben-10-s02-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -82,8 +82,8 @@
               "title": "Allies & Enemies",
               "synopsis": "Allies arrive, and Ben must choose who to trust.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/ben-10_s02.jpg",
-              "videoUrl": "/media/episodes/ben-10/season-02/ben-10-s02-e02.mp4",
+              "thumbnail": "/media/shows/ben-10/backdrop.jpg",
+              "videoUrl": "/media/shows/ben-10/seasons/s02/episodes/ben-10-s02-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -95,8 +95,8 @@
       "id": "chhota-bheem",
       "title": "Chhota Bheem",
       "year": "2008",
-      "backdrop": "/media/backdrops/landscape/chhota-bheem-backdrop.jpg",
-      "poster": "/media/poster/portrait/chhota-bheem-poster.jpg",
+      "backdrop": "/media/shows/chhota-bheem/backdrop.jpg",
+      "poster": "/media/shows/chhota-bheem/poster.jpg",
       "tags": [
         "Adventure",
         "Action",
@@ -123,8 +123,8 @@
               "title": "Where is Bheem?",
               "synopsis": "Laddoos are being stolen from Tun Tun Mausi's shop, and Chutki suspects Bheem. However, Bheem is nowhere to be found. Chutki, Raju, and even Kalia search all over Dholakpur to solve the mystery of the missing Bheem.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/chhota-bheem_s01.jpg",
-              "videoUrl": "/media/episodes/chhota-bheem/season-01/chhota-bheem-s01-e01.mp4",
+              "thumbnail": "/media/shows/chhota-bheem/backdrop.jpg",
+              "videoUrl": "/media/shows/chhota-bheem/seasons/s01/episodes/chhota-bheem-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -134,8 +134,8 @@
               "title": "Babban Sher",
               "synopsis": "A ferocious man-eating lion named Babban Sher is terrorizing Dholakpur. Provoked by Kalia's sidekicks, little Raju ventures into the jungle alone to catch the beast, but soon finds himself in danger, requiring Bheem to come to the rescue.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/chhota-bheem_s01.jpg",
-              "videoUrl": "/media/episodes/chhota-bheem/season-01/chhota-bheem-s01-e02.mp4",
+              "thumbnail": "/media/shows/chhota-bheem/backdrop.jpg",
+              "videoUrl": "/media/shows/chhota-bheem/seasons/s01/episodes/chhota-bheem-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -145,8 +145,8 @@
               "title": "Sanki Shikari the Crazy Hunter",
               "synopsis": "A wicked poacher named Sanki Shikari arrives in Dholakpur and starts trapping innocent animals, including a deer and an elephant. Bheem and his friends team up to save the animals and teach the greedy hunter a lesson.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/chhota-bheem_s01.jpg",
-              "videoUrl": "/media/episodes/chhota-bheem/season-01/chhota-bheem-s01-e03.mp4",
+              "thumbnail": "/media/shows/chhota-bheem/backdrop.jpg",
+              "videoUrl": "/media/shows/chhota-bheem/seasons/s01/episodes/chhota-bheem-s01-e03.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -163,8 +163,8 @@
               "title": "Talking Statue",
               "synopsis": "A statue mysteriously comes to life and guides Bheem on a quest.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/chhota-bheem_s02.jpg",
-              "videoUrl": "/media/episodes/chhota-bheem/season-02/chhota-bheem-s02-e01.mp4",
+              "thumbnail": "/media/shows/chhota-bheem/backdrop.jpg",
+              "videoUrl": "/media/shows/chhota-bheem/seasons/s02/episodes/chhota-bheem-s02-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -174,8 +174,8 @@
               "title": "Saber Toothed Tiger",
               "synopsis": "A prehistoric predator threatens the villagers and Bheem must protect them.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/chhota-bheem_s02.jpg",
-              "videoUrl": "/media/episodes/chhota-bheem/season-02/chhota-bheem-s02-e02.mp4",
+              "thumbnail": "/media/shows/chhota-bheem/backdrop.jpg",
+              "videoUrl": "/media/shows/chhota-bheem/seasons/s02/episodes/chhota-bheem-s02-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -185,8 +185,8 @@
               "title": "Pagalpur",
               "synopsis": "Bheem travels to Pagalpur and helps solve problems caused by a local feud.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/chhota-bheem_s02.jpg",
-              "videoUrl": "/media/episodes/chhota-bheem/season-02/chhota-bheem-s02-e03.mp4",
+              "thumbnail": "/media/shows/chhota-bheem/backdrop.jpg",
+              "videoUrl": "/media/shows/chhota-bheem/seasons/s02/episodes/chhota-bheem-s02-e03.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -198,8 +198,8 @@
       "id": "doraemon",
       "title": "Doraemon",
       "year": "1979",
-      "backdrop": "/media/backdrops/landscape/doraemon-backdrop.jpg",
-      "poster": "/media/poster/portrait/doraemon-poster.jpg",
+      "backdrop": "/media/shows/doraemon/backdrop.jpg",
+      "poster": "/media/shows/doraemon/poster.jpg",
       "tags": [
         "Action",
         "Artificial Intelligence",
@@ -226,8 +226,8 @@
               "title": "All the Way From the Country of the Future",
               "synopsis": " Doraemon bursts out of Nobita's desk drawer, surprising Nobita and his pet, while introducing himself as a robotic cat sent to improve Nobita's clumsy, unlucky life.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/doraemon_s01.jpg",
-              "videoUrl": "/media/episodes/doraemon/season-01/doraemon e01.mkv",
+              "thumbnail": "/media/shows/doraemon/backdrop.jpg",
+              "videoUrl": "/media/shows/doraemon/seasons/s01/episodes/doraemon-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -237,8 +237,8 @@
               "title": "The Mountain Echo Recorder",
               "synopsis": "Doraemon helps Nobita by providing the Echo Mountain gadget to record his voice. Nobita uses it to trick the bully Gian into keeping his word, causing typical comedic chaos before being forced to do his homework.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/doraemon_s01.jpg",
-              "videoUrl": "/media/episodes/doraemon/season-01/doraemon e02.mkv",
+              "thumbnail": "/media/shows/doraemon/backdrop.jpg",
+              "videoUrl": "/media/shows/doraemon/seasons/s01/episodes/doraemon-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -248,8 +248,8 @@
               "title": "Tomorrow's Newspaper",
               "synopsis": "Doraemon gives Nobita a futuristic gadget that prints tomorrow's newspaper. When Nobita uses it to dodge getting tested on material he hasn't studied, but his impending failures eventually backfire.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/doraemon_s01.jpg",
-              "videoUrl": "/media/episodes/doraemon/season-01/doraemon e03.mkv",
+              "thumbnail": "/media/shows/doraemon/backdrop.jpg",
+              "videoUrl": "/media/shows/doraemon/seasons/s01/episodes/doraemon-s01-e03.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -266,8 +266,8 @@
               "title": "Time Changing Machine",
               "synopsis": "The gadget allows users to swap an area through time. They will have to specify the area they wish to swap by drawing around it using a chalk. They will then have to use the dial on the right to adjust the time they wish to swap and then pressing the second button on the left to swap.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/doraemon_s02.jpg",
-              "videoUrl": "/media/episodes/doraemon/season-02/doraemon e26.mkv",
+              "thumbnail": "/media/shows/doraemon/backdrop.jpg",
+              "videoUrl": "/media/shows/doraemon/seasons/s02/episodes/doraemon-s02-e26.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -277,8 +277,8 @@
               "title": "The Anything Crane Game",
               "synopsis": "In this classic segment, Doraemon uses the Anything Crane Game gadget to rescue his cat girlfriend, Mi-chan. Later, Suneo asks to borrow the gadget to retrieve his baseball, which got stuck in Mr. Kaminari's strict garden.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/doraemon_s02.jpg",
-              "videoUrl": "/media/episodes/doraemon/season-02/doraemon e29.mkv",
+              "thumbnail": "/media/shows/doraemon/backdrop.jpg",
+              "videoUrl": "/media/shows/doraemon/seasons/s02/episodes/doraemon-s02-e29.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -288,8 +288,8 @@
               "title": "Police Dog Nose",
               "synopsis": "Doraemon equips Nobita with a gadget that attaches to the nose to help him track items or follow the trails of other characters by their scent.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/doraemon_s02.jpg",
-              "videoUrl": "/media/episodes/doraemon/season-02/doraemon e33.mkv",
+              "thumbnail": "/media/shows/doraemon/backdrop.jpg",
+              "videoUrl": "/media/shows/doraemon/seasons/s02/episodes/doraemon-s02-e33.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -299,8 +299,8 @@
               "title": "Star Making Hammer and Catching Net",
               "synopsis": " Nobita and Doraemon use these special future gadgets to literally catch real shooting stars right out of the night sky, bringing them down to Earth to create a beautiful and glowing star collection.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/doraemon_s02.jpg",
-              "videoUrl": "/media/episodes/doraemon/season-02/doraemon e46.mkv",
+              "thumbnail": "/media/shows/doraemon/backdrop.jpg",
+              "videoUrl": "/media/shows/doraemon/seasons/s02/episodes/doraemon-s02-e46.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -317,8 +317,8 @@
               "title": "Fairytale Land Admission Tickets",
               "synopsis": "These ticket can be used to enter fairytale land in the 22nd century. When users enter the fairytale land entrance, they will transform into animals according to their personalities. Then you can play there as much as you like!.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/doraemon_s03.jpg",
-              "videoUrl": "/media/episodes/doraemon/season-03/doraemon e05.mkv",
+              "thumbnail": "/media/shows/doraemon/backdrop.jpg",
+              "videoUrl": "/media/shows/doraemon/seasons/s03/episodes/doraemon-s03-e05.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -328,8 +328,8 @@
               "title": "Practical Mini Car Set",
               "synopsis": "In this classic episode, Doraemon gives Nobita a special set of toy cars. When the user speaks the name of a specific vehicle into the car and presses its button, it magically transforms into a life-sized, functioning version of that vehicle.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/doraemon_s03.jpg",
-              "videoUrl": "/media/episodes/doraemon/season-03/doraemon e05.mkv",
+              "thumbnail": "/media/shows/doraemon/backdrop.jpg",
+              "videoUrl": "/media/shows/doraemon/seasons/s03/episodes/doraemon-s03-e27.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -341,8 +341,8 @@
       "id": "hagemaru",
       "title": "Hagemaru",
       "year": "1988",
-      "backdrop": "/media/backdrops/landscape/hagemaru-backdrop.jpg",
-      "poster": "/media/poster/portrait/hagemaru-poster.jpg",
+      "backdrop": "/media/shows/hagemaru/backdrop.jpg",
+      "poster": "/media/shows/hagemaru/poster.jpg",
       "tags": [
         "Comedy",
         "Animation",
@@ -366,8 +366,8 @@
               "title": "Hagemaru Was Born",
               "synopsis": "The story follows the origins of Hagemaru Hageda. It hilariously showcases how his miser parents brought him into the world and instantly started finding absurd, money-saving tricks to raise him.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/hagemaru_s01.jpg",
-              "videoUrl": "/media/episodes/hagemaru/season-01/hagemaru e01.mkv",
+              "thumbnail": "/media/shows/hagemaru/backdrop.jpg",
+              "videoUrl": "/media/shows/hagemaru/seasons/s01/episodes/hagemaru-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -377,8 +377,8 @@
               "title": "Hagemaru's Mom is a Miser",
               "synopsis": "Hagemaru, the family’s extreme miserly nature takes center stage as they go to great lengths to save money on daily expenses. They devise quirky 'formulas' to avoid spending money, such as trying to get free food deliveries and tricking the newspaper vendor.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/hagemaru_s01.jpg",
-              "videoUrl": "/media/episodes/hagemaru/season-01/hagemaru e02.mkv",
+              "thumbnail": "/media/shows/hagemaru/backdrop.jpg",
+              "videoUrl": "/media/shows/hagemaru/seasons/s01/episodes/hagemaru-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -390,8 +390,8 @@
       "id": "kick-buttowski",
       "title": "Kick Buttowski",
       "year": "2010",
-      "backdrop": "/media/backdrops/landscape/kick-buttowski-backdrop.jpg",
-      "poster": "/media/poster/portrait/kick-buttowski-poster.jpg",
+      "backdrop": "/media/shows/kick-buttowski/backdrop.jpg",
+      "poster": "/media/shows/kick-buttowski/poster.jpg",
       "tags": [
         "Action",
         "Adventure",
@@ -416,8 +416,8 @@
               "title": "Dead Man's Drop",
               "synopsis": "Kick attempts to conquer the Dead Man's Drop ramp while also trying to catch his idol's show — with Gunther's help.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/kick_s01.jpg",
-              "videoUrl": "/media/episodes/kick-buttowski/season-01/kick-buttowski-s01-e01.mp4",
+              "thumbnail": "/media/shows/kick-buttowski/backdrop.jpg",
+              "videoUrl": "/media/shows/kick-buttowski/seasons/s01/episodes/kick-buttowski-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -427,8 +427,8 @@
               "title": "If Books Could Kill",
               "synopsis": "Gunther accidentally returns Kick's autographed book to the library; in the B-story they try to crash a party for nachos.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/kick_s01.jpg",
-              "videoUrl": "/media/episodes/kick-buttowski/season-01/kick-buttowski-s01-e02.mp4",
+              "thumbnail": "/media/shows/kick-buttowski/backdrop.jpg",
+              "videoUrl": "/media/shows/kick-buttowski/seasons/s01/episodes/kick-buttowski-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -438,8 +438,8 @@
               "title": "Kicked Out",
               "synopsis": "Kick must go 24 hours without attempting stunts or face serious consequences, while the B-story deals with an intervention on his stunt habit.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/kick_s01.jpg",
-              "videoUrl": "/media/episodes/kick-buttowski/season-01/kick-buttowski-s01-e03.mp4",
+              "thumbnail": "/media/shows/kick-buttowski/backdrop.jpg",
+              "videoUrl": "/media/shows/kick-buttowski/seasons/s01/episodes/kick-buttowski-s01-e03.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -456,8 +456,8 @@
               "title": "Mow Money / Love Stinks!",
               "synopsis": "Kick and Gunther try to earn money (lawn-mowing) to see Rock Callahan; the B-story follows first crush / romance hijinks.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/kick_s02.jpg",
-              "videoUrl": "/media/episodes/kick-buttowski/season-02/kick-buttowski-s02-e01.mp4",
+              "thumbnail": "/media/shows/kick-buttowski/backdrop.jpg",
+              "videoUrl": "/media/shows/kick-buttowski/seasons/s02/episodes/kick-buttowski-s02-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -467,8 +467,8 @@
               "title": "Kickin' Genes / Clothes Call",
               "synopsis": "Two short stories: one about genes/identity and another about a clothing-related stunt mishap.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/kick_s02.jpg",
-              "videoUrl": "/media/episodes/kick-buttowski/season-02/kick-buttowski-s02-e02.mp4",
+              "thumbnail": "/media/shows/kick-buttowski/backdrop.jpg",
+              "videoUrl": "/media/shows/kick-buttowski/seasons/s02/episodes/kick-buttowski-s02-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -480,8 +480,8 @@
       "id": "kid-vs-kat",
       "title": "Kid vs Kat",
       "year": "2008",
-      "backdrop": "/media/backdrops/landscape/kid-vs-kat-backdrop.jpg",
-      "poster": "/media/poster/portrait/kid-vs-kat-poster.jpg",
+      "backdrop": "/media/shows/kid-vs-kat/backdrop.jpg",
+      "poster": "/media/shows/kid-vs-kat/poster.jpg",
       "tags": [
         "Action",
         "Adventure",
@@ -508,8 +508,8 @@
               "title": "Let the Games Begin / Night of the Zombie Kat",
               "synopsis": "Coop discovers Kat's alien origin and tries to expose him after a series of spooky and chaotic events.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/kidvkat_s01.jpg",
-              "videoUrl": "/media/episodes/kid-vs-kat/season-01/kid-vs-kat-s01-e01.mp4",
+              "thumbnail": "/media/shows/kid-vs-kat/backdrop.jpg",
+              "videoUrl": "/media/shows/kid-vs-kat/seasons/s01/episodes/kid-vs-kat-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -519,8 +519,8 @@
               "title": "Trespassers Will Be Persecuted / Me-Oh-Me-Oh Meow",
               "synopsis": "Coop runs afoul of Old Lady Munson while Kat's behavior causes mayhem; Kat's meowing causes trouble in the B-story.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/kidvkat_s01.jpg",
-              "videoUrl": "/media/episodes/kid-vs-kat/season-01/kid-vs-kat-s01-e02.mp4",
+              "thumbnail": "/media/shows/kid-vs-kat/backdrop.jpg",
+              "videoUrl": "/media/shows/kid-vs-kat/seasons/s01/episodes/kid-vs-kat-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -537,8 +537,8 @@
               "title": "Rat a Phooey",
               "synopsis": "Kat builds a rat-ray gun which causes Dad to be zapped; Coop must capture and fix the situation.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/kidvkat_s02.jpg",
-              "videoUrl": "/media/episodes/kid-vs-kat/season-02/kid-vs-kat - Rat a Phooey - s02-e01.mp4",
+              "thumbnail": "/media/shows/kid-vs-kat/backdrop.jpg",
+              "videoUrl": "/media/shows/kid-vs-kat/seasons/s02/episodes/kid-vs-kat-s02-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -548,8 +548,8 @@
               "title": "Night of the Zombie Kat",
               "synopsis": "Coop watches a horror movie and Kat uses flour to scare him, creating a 'zombie' cat situation.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/kidvkat_s02.jpg",
-              "videoUrl": "/media/episodes/kid-vs-kat/season-02/kid-vs-kat - Night Of The Zombie Cat - s01-e02.mp4",
+              "thumbnail": "/media/shows/kid-vs-kat/backdrop.jpg",
+              "videoUrl": "/media/shows/kid-vs-kat/seasons/s02/episodes/kid-vs-kat-s02-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -561,8 +561,8 @@
       "id": "kiteretsu",
       "title": "Kiteretsu",
       "year": "1988",
-      "backdrop": "/media/backdrops/landscape/kiteretsu-backdrop.jpg",
-      "poster": "/media/poster/portrait/kiteretsu-poster.jpg",
+      "backdrop": "/media/shows/kiteretsu/backdrop.jpg",
+      "poster": "/media/shows/kiteretsu/poster.jpg",
       "tags": [
         "Animation",
         "Anime",
@@ -588,8 +588,8 @@
               "title": "Kiteretsu Encyclopedia",
               "synopsis": "Kiteretsu discovers the ancient encyclopedia and starts inventing with Korosuke.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/kiteretsu_s01.jpg",
-              "videoUrl": "/media/episodes/kiteretsu/season-01/kiteretsu-s01e01.mp4",
+              "thumbnail": "/media/shows/kiteretsu/backdrop.jpg",
+              "videoUrl": "/media/shows/kiteretsu/seasons/s01/episodes/kiteretsu-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -599,8 +599,8 @@
               "title": "Korosuke Comes Alive",
               "synopsis": "Kiteretsu repairs and befriends the robot Korosuke, who becomes his loyal partner.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/kiteretsu_s01.jpg",
-              "videoUrl": "/media/episodes/kiteretsu/season-01/kiteretsu-s01e02.mp4",
+              "thumbnail": "/media/shows/kiteretsu/backdrop.jpg",
+              "videoUrl": "/media/shows/kiteretsu/seasons/s01/episodes/kiteretsu-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -617,8 +617,8 @@
               "title": "The Flying Bicycle",
               "synopsis": "Kiteretsu invents a flying bicycle that brings unexpected adventures.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/kiteretsu_s02.jpg",
-              "videoUrl": "/media/episodes/kiteretsu/season-02/kiteretsu-s02e01.mp4",
+              "thumbnail": "/media/shows/kiteretsu/backdrop.jpg",
+              "videoUrl": "/media/shows/kiteretsu/seasons/s02/episodes/kiteretsu-s02-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -628,8 +628,8 @@
               "title": "Adventures in Time",
               "synopsis": "Kiteretsu experiments with time travel, leading to comic situations.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/kiteretsu_s02.jpg",
-              "videoUrl": "/media/episodes/kiteretsu/season-02/kiteretsu-s02e02.mp4",
+              "thumbnail": "/media/shows/kiteretsu/backdrop.jpg",
+              "videoUrl": "/media/shows/kiteretsu/seasons/s02/episodes/kiteretsu-s02-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -641,8 +641,8 @@
       "id": "mickey-mouse",
       "title": "Mickey Mouse Clubhouse",
       "year": "1928",
-      "backdrop": "/media/backdrops/landscape/mickey-mouse-clubhouse-backdrop.jpg",
-      "poster": "/media/poster/portrait/mickey-mouse-clubhouse-poster.jpg",
+      "backdrop": "/media/shows/mickey-mouse/backdrop.jpg",
+      "poster": "/media/shows/mickey-mouse/poster.jpg",
       "tags": [
         "Adventure",
         "Animal Adventure",
@@ -669,8 +669,8 @@
               "title": "Clubhouse Adventure",
               "synopsis": "Mickey and friends solve a puzzle at the clubhouse.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/mickey_s01.jpg",
-              "videoUrl": "/media/episodes/mickey-mouse-clubhouse/season-01/mickey-mouse-clubhouse-s01-e01.mp4",
+              "thumbnail": "/media/shows/mickey-mouse/backdrop.jpg",
+              "videoUrl": "/media/shows/mickey-mouse/seasons/s01/episodes/mickey-mouse-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -680,8 +680,8 @@
               "title": "Mickey Goes Fishing",
               "synopsis": "Mickey and friends head out for a fun fishing trip.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/mickey_s01.jpg",
-              "videoUrl": "/media/episodes/mickey-mouse-clubhouse/season-01/mickey-mouse-clubhouse-s01-e02.mp4",
+              "thumbnail": "/media/shows/mickey-mouse/backdrop.jpg",
+              "videoUrl": "/media/shows/mickey-mouse/seasons/s01/episodes/mickey-mouse-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -691,8 +691,8 @@
               "title": "Mickey Helps the Red Birdie",
               "synopsis": "Mickey helps a little birdie find its way home.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/mickey_s01.jpg",
-              "videoUrl": "/media/episodes/mickey-mouse-clubhouse/season-01/mickey-mouse-clubhouse-s01-e03.mp4",
+              "thumbnail": "/media/shows/mickey-mouse/backdrop.jpg",
+              "videoUrl": "/media/shows/mickey-mouse/seasons/s01/episodes/mickey-mouse-s01-e03.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -709,8 +709,8 @@
               "title": "Mickey Says Hi at the Halloween Party",
               "synopsis": "The gang celebrates Halloween at the clubhouse.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/mickey_s02.jpg",
-              "videoUrl": "/media/episodes/mickey-mouse-clubhouse/season-02/mickey-mouse-clubhouse - s02-e01.mp4",
+              "thumbnail": "/media/shows/mickey-mouse/backdrop.jpg",
+              "videoUrl": "/media/shows/mickey-mouse/seasons/s02/episodes/mickey-mouse-s02-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -720,8 +720,8 @@
               "title": "Mickey’s Treasure Hunt",
               "synopsis": "Mickey and his friends go on an adventurous treasure hunt.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/mickey_s02.jpg",
-              "videoUrl": "/media/episodes/mickey-mouse-clubhouse/season-02/mickey-mouse-clubhouse-s02-e02.mp4",
+              "thumbnail": "/media/shows/mickey-mouse/backdrop.jpg",
+              "videoUrl": "/media/shows/mickey-mouse/seasons/s02/episodes/mickey-mouse-s02-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -733,8 +733,8 @@
       "id": "mr-bean",
       "title": "Mr. Bean",
       "year": "1990",
-      "backdrop": "/media/backdrops/landscape/mr-bean-backdrop.jpg",
-      "poster": "/media/poster/portrait/mr-bean-poster.jpg",
+      "backdrop": "/media/shows/mr-bean/backdrop.jpg",
+      "poster": "/media/shows/mr-bean/poster.jpg",
       "tags": [
         "Animation",
         "Comedy",
@@ -760,8 +760,8 @@
               "title": "Bean's Trouble",
               "synopsis": "Mr. Bean faces everyday trouble with hilarious solutions.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/mrbean_s01.jpg",
-              "videoUrl": "/media/episodes/mr-bean/season-01/mr-bean-s01-e01.mp4",
+              "thumbnail": "/media/shows/mr-bean/backdrop.jpg",
+              "videoUrl": "/media/shows/mr-bean/seasons/s01/episodes/mr-bean-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -771,8 +771,8 @@
               "title": "Spring Clean Bean",
               "synopsis": "Mr. Bean attempts a spring clean that quickly gets out of hand.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/mrbean_s01.jpg",
-              "videoUrl": "/media/episodes/mr-bean/season-01/mr-bean-s01-e02.mp4",
+              "thumbnail": "/media/shows/mr-bean/backdrop.jpg",
+              "videoUrl": "/media/shows/mr-bean/seasons/s01/episodes/mr-bean-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -782,8 +782,8 @@
               "title": "Super Marrow",
               "synopsis": "A strange mishap with a marrow leads to chaotic comedy.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/mrbean_s01.jpg",
-              "videoUrl": "/media/episodes/mr-bean/season-01/mr-bean-s01-e03.mp4",
+              "thumbnail": "/media/shows/mr-bean/backdrop.jpg",
+              "videoUrl": "/media/shows/mr-bean/seasons/s01/episodes/mr-bean-s01-e03.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -800,8 +800,8 @@
               "title": "Jurassic Bean",
               "synopsis": "An everyday object becomes prehistorically problematic for Bean.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/mrbean_s02.jpg",
-              "videoUrl": "/media/episodes/mr-bean/season-02/mr-bean-s02-e01.mp4",
+              "thumbnail": "/media/shows/mr-bean/backdrop.jpg",
+              "videoUrl": "/media/shows/mr-bean/seasons/s02/episodes/mr-bean-s02-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -811,8 +811,8 @@
               "title": "The Frog Problem",
               "synopsis": "A pesky frog turns a quiet day into full-on chaos.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/mrbean_s02.jpg",
-              "videoUrl": "/media/episodes/mr-bean/season-02/mr-bean-s02-e02.mp4",
+              "thumbnail": "/media/shows/mr-bean/backdrop.jpg",
+              "videoUrl": "/media/shows/mr-bean/seasons/s02/episodes/mr-bean-s02-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -824,8 +824,8 @@
       "id": "ninja-hattori",
       "title": "Ninja Hattori",
       "year": "1981",
-      "backdrop": "/media/backdrops/landscape/ninja-hattori-backdrop.jpg",
-      "poster": "/media/poster/portrait/ninja-hattori-poster.jpg",
+      "backdrop": "/media/shows/ninja-hattori/backdrop.jpg",
+      "poster": "/media/shows/ninja-hattori/poster.jpg",
       "tags": [
         "Action",
         "Adventure",
@@ -851,8 +851,8 @@
               "title": "The New Ninja",
               "synopsis": "Hattori arrives and teaches Kenichi a lesson.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/ninjahattori_s01.jpg",
-              "videoUrl": "/media/episodes/ninja-hattori/season-01/ninja-hattori-s01-e01.mp4",
+              "thumbnail": "/media/shows/ninja-hattori/backdrop.jpg",
+              "videoUrl": "/media/shows/ninja-hattori/seasons/s01/episodes/ninja-hattori-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -862,8 +862,8 @@
               "title": "Training Day",
               "synopsis": "Kenichi learns basic ninja techniques.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/ninjahattori_s01.jpg",
-              "videoUrl": "/media/episodes/ninja-hattori/season-01/ninja-hattori-s01-e02.mp4",
+              "thumbnail": "/media/shows/ninja-hattori/backdrop.jpg",
+              "videoUrl": "/media/shows/ninja-hattori/seasons/s01/episodes/ninja-hattori-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -873,8 +873,8 @@
               "title": "Small Mission",
               "synopsis": "Hattori completes a small mission for a neighbor.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/ninjahattori_s01.jpg",
-              "videoUrl": "/media/episodes/ninja-hattori/season-01/ninja-hattori-s01-e03.mp4",
+              "thumbnail": "/media/shows/ninja-hattori/backdrop.jpg",
+              "videoUrl": "/media/shows/ninja-hattori/seasons/s01/episodes/ninja-hattori-s01-e03.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -891,8 +891,8 @@
               "title": "Rival Ninja",
               "synopsis": "A rival threatens the town and a duel is set.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/ninjahattori_s02.jpg",
-              "videoUrl": "/media/episodes/ninja-hattori/season-02/ninja-hattori-s02-e01.mp4",
+              "thumbnail": "/media/shows/ninja-hattori/backdrop.jpg",
+              "videoUrl": "/media/shows/ninja-hattori/seasons/s02/episodes/ninja-hattori-s02-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -902,8 +902,8 @@
               "title": "The Lost Scroll",
               "synopsis": "A scroll containing secret techniques is stolen.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/ninjahattori_s02.jpg",
-              "videoUrl": "/media/episodes/ninja-hattori/season-02/ninja-hattori-s02-e02.mp4",
+              "thumbnail": "/media/shows/ninja-hattori/backdrop.jpg",
+              "videoUrl": "/media/shows/ninja-hattori/seasons/s02/episodes/ninja-hattori-s02-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -915,8 +915,8 @@
       "id": "oggy",
       "title": "Oggy and the Cockroaches",
       "year": "1998",
-      "backdrop": "/media/backdrops/landscape/oggy-and-the-cockroaches-backdrop.jpg",
-      "poster": "/media/poster/portrait/oggy-and-the-cockroaches-poster.jpg",
+      "backdrop": "/media/shows/oggy/backdrop.jpg",
+      "poster": "/media/shows/oggy/poster.jpg",
       "tags": [
         "Adventure",
         "Animal Adventure",
@@ -942,8 +942,8 @@
               "title": "Cockroach Mayhem",
               "synopsis": "Oggy battles the cockroaches in comedic fashion.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/oggy_s01.jpg",
-              "videoUrl": "/media/episodes/oggy/season-01/oggy-and-the-cockroaches-s01-e01.mp4",
+              "thumbnail": "/media/shows/oggy/backdrop.jpg",
+              "videoUrl": "/media/shows/oggy/seasons/s01/episodes/oggy-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -953,8 +953,8 @@
               "title": "Kitchen Chaos",
               "synopsis": "The kitchen becomes a battleground for food and pranks.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/oggy_s01.jpg",
-              "videoUrl": "/media/episodes/oggy/season-01/oggy-and-the-cockroaches-s01-e02.mp4",
+              "thumbnail": "/media/shows/oggy/backdrop.jpg",
+              "videoUrl": "/media/shows/oggy/seasons/s01/episodes/oggy-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -971,8 +971,8 @@
               "title": "Holiday Havoc",
               "synopsis": "A holiday special ends up in disaster for Oggy.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/oggy_s02.jpg",
-              "videoUrl": "/media/episodes/oggy/season-02/oggy-and-the-cockroaches-S02E01.mp4",
+              "thumbnail": "/media/shows/oggy/backdrop.jpg",
+              "videoUrl": "/media/shows/oggy/seasons/s02/episodes/oggy-s02-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -982,8 +982,8 @@
               "title": "Giant Roach",
               "synopsis": "A giant cockroach causes panic across town.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/oggy_s02.jpg",
-              "videoUrl": "/media/episodes/oggy/season-02/oggy-and-the-cockroaches-S02E02.mp4",
+              "thumbnail": "/media/shows/oggy/backdrop.jpg",
+              "videoUrl": "/media/shows/oggy/seasons/s02/episodes/oggy-s02-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -995,8 +995,8 @@
       "id": "oswald",
       "title": "Oswald",
       "year": "2001",
-      "backdrop": "/media/backdrops/landscape/oswald-backdrop.jpg",
-      "poster": "/media/poster/portrait/oswald-poster.jpg",
+      "backdrop": "/media/shows/oswald/backdrop.jpg",
+      "poster": "/media/shows/oswald/poster.jpg",
       "tags": [
         "Animation",
         "Comedy",
@@ -1020,8 +1020,8 @@
               "title": "Episode 1",
               "synopsis": "Oswald and Weenie embark on a delightful adventure in Big City.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/oswald_s01.jpg",
-              "videoUrl": "/media/episodes/oswald/season-01/oswald-s01-e01.mp4",
+              "thumbnail": "/media/shows/oswald/backdrop.jpg",
+              "videoUrl": "/media/shows/oswald/seasons/s01/episodes/oswald-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1031,8 +1031,8 @@
               "title": "Episode 2",
               "synopsis": "A simple day turns into a memorable adventure for Oswald and his friends.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/oswald_s01.jpg",
-              "videoUrl": "/media/episodes/oswald/season-01/oswald-s01-e02.mp4",
+              "thumbnail": "/media/shows/oswald/backdrop.jpg",
+              "videoUrl": "/media/shows/oswald/seasons/s01/episodes/oswald-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -1044,8 +1044,8 @@
       "id": "perman",
       "title": "Perman",
       "year": "1983",
-      "backdrop": "/media/backdrops/landscape/perman-backdrop.jpg",
-      "poster": "/media/poster/portrait/perman-poster.jpg",
+      "backdrop": "/media/shows/perman/backdrop.jpg",
+      "poster": "/media/shows/perman/poster.jpg",
       "tags": [
         "Action",
         "Adventure",
@@ -1074,8 +1074,8 @@
               "title": "The Run Away",
               "synopsis": "Mitsuo faces a dilemma when he tries to run away from responsibilities.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/perman_s01.jpg",
-              "videoUrl": "/media/episodes/perman/season-01/perman-s01-e01.mp4",
+              "thumbnail": "/media/shows/perman/backdrop.jpg",
+              "videoUrl": "/media/shows/perman/seasons/s01/episodes/perman-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1085,8 +1085,8 @@
               "title": "Robot To The Rescue",
               "synopsis": "Perman takes help from a robot in a tricky situation.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/perman_s01.jpg",
-              "videoUrl": "/media/episodes/perman/season-01/perman-s01-e02.mp4",
+              "thumbnail": "/media/shows/perman/backdrop.jpg",
+              "videoUrl": "/media/shows/perman/seasons/s01/episodes/perman-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1096,8 +1096,8 @@
               "title": "Trouble At The Hotspring",
               "synopsis": "A peaceful day at the hotspring turns chaotic for Perman.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/perman_s01.jpg",
-              "videoUrl": "/media/episodes/perman/season-01/perman-s01-e03.mp4",
+              "thumbnail": "/media/shows/perman/backdrop.jpg",
+              "videoUrl": "/media/shows/perman/seasons/s01/episodes/perman-s01-e03.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -1114,8 +1114,8 @@
               "title": "New Tutor",
               "synopsis": "Mitsuo struggles with a strict new tutor while balancing superhero duties.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/perman_s02.jpg",
-              "videoUrl": "/media/episodes/perman/season-02/perman-s02-e01.mp4",
+              "thumbnail": "/media/shows/perman/backdrop.jpg",
+              "videoUrl": "/media/shows/perman/seasons/s02/episodes/perman-s02-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1125,8 +1125,8 @@
               "title": "The Pyramid Adventure",
               "synopsis": "Perman embarks on an adventure inside a mysterious pyramid.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/perman_s02.jpg",
-              "videoUrl": "/media/episodes/perman/season-02/perman-s02-e02.mp4",
+              "thumbnail": "/media/shows/perman/backdrop.jpg",
+              "videoUrl": "/media/shows/perman/seasons/s02/episodes/perman-s02-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1136,8 +1136,8 @@
               "title": "The Hidden Danger",
               "synopsis": "Perman uncovers a hidden threat lurking in the city.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/perman_s02.jpg",
-              "videoUrl": "/media/episodes/perman/season-02/perman-s02-e03.mp4",
+              "thumbnail": "/media/shows/perman/backdrop.jpg",
+              "videoUrl": "/media/shows/perman/seasons/s02/episodes/perman-s02-e03.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -1149,8 +1149,8 @@
       "id": "phineas-and-ferb",
       "title": "Phineas and Ferb",
       "year": "2007",
-      "backdrop": "/media/backdrops/landscape/phineas-and-ferb-backdrop.jpg",
-      "poster": "/media/poster/portrait/phineas-and-ferb-poster.jpg",
+      "backdrop": "/media/shows/phineas-and-ferb/backdrop.jpg",
+      "poster": "/media/shows/phineas-and-ferb/poster.jpg",
       "tags": [
         "Action",
         "Adventure",
@@ -1178,8 +1178,8 @@
               "title": "Rollercoaster",
               "synopsis": "Phineas and Ferb build the world's greatest roller coaster in their backyard; Candace tries to bust them.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/phineas_s01.jpg",
-              "videoUrl": "/media/episodes/phineas-and-ferb/season-01/phineas-and-ferb-s01-e01.mp4",
+              "thumbnail": "/media/shows/phineas-and-ferb/backdrop.jpg",
+              "videoUrl": "/media/shows/phineas-and-ferb/seasons/s01/episodes/phineas-and-ferb-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1189,8 +1189,8 @@
               "title": "Lawn Gnome Beach Party of Terror",
               "synopsis": "Phineas and Ferb create a backyard beach party — using a lawn gnome — with chaotic results.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/phineas_s01.jpg",
-              "videoUrl": "/media/episodes/phineas-and-ferb/season-01/phineas-and-ferb-s01-e02.mp4",
+              "thumbnail": "/media/shows/phineas-and-ferb/backdrop.jpg",
+              "videoUrl": "/media/shows/phineas-and-ferb/seasons/s01/episodes/phineas-and-ferb-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1200,8 +1200,8 @@
               "title": "Flop Starz",
               "synopsis": "Phineas starts a boy band and launches a music career gone hilariously wrong.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/phineas_s01.jpg",
-              "videoUrl": "/media/episodes/phineas-and-ferb/season-01/phineas-and-ferb-s01-e03.mp4",
+              "thumbnail": "/media/shows/phineas-and-ferb/backdrop.jpg",
+              "videoUrl": "/media/shows/phineas-and-ferb/seasons/s01/episodes/phineas-and-ferb-s01-e03.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1211,8 +1211,8 @@
               "title": "The Fast and the Phineas",
               "synopsis": "The boys build a souped-up vehicle and enter an over-the-top race.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/phineas_s01.jpg",
-              "videoUrl": "/media/episodes/phineas-and-ferb/season-01/phineas-and-ferb-s01-e04.mp4",
+              "thumbnail": "/media/shows/phineas-and-ferb/backdrop.jpg",
+              "videoUrl": "/media/shows/phineas-and-ferb/seasons/s01/episodes/phineas-and-ferb-s01-e04.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -1229,8 +1229,8 @@
               "title": "The Lake Nose Monster",
               "synopsis": "Phineas and Ferb work to rescue the Lake Nose Monster after Dr. Doofenshmirtz removes all the metal from the water.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/phineas_s02.jpg",
-              "videoUrl": "/media/episodes/phineas-and-ferb/season-02/phineas-and-ferb-s02-e01.mp4",
+              "thumbnail": "/media/shows/phineas-and-ferb/backdrop.jpg",
+              "videoUrl": "/media/shows/phineas-and-ferb/seasons/s02/episodes/phineas-and-ferb-s02-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1240,8 +1240,8 @@
               "title": "Interview With a Platypus / Tip of the Day",
               "synopsis": "Two segments: an 'Interview With a Platypus' and a short 'Tip of the Day' vignette.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/phineas_s02.jpg",
-              "videoUrl": "/media/episodes/phineas-and-ferb/season-02/phineas-and-ferb-s02-e02.mp4",
+              "thumbnail": "/media/shows/phineas-and-ferb/backdrop.jpg",
+              "videoUrl": "/media/shows/phineas-and-ferb/seasons/s02/episodes/phineas-and-ferb-s02-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -1253,8 +1253,8 @@
       "id": "pokemon",
       "title": "Pokemon",
       "year": "2003",
-      "backdrop": "/media/backdrops/landscape/pokemon-backdrop.jpg",
-      "poster": "/media/poster/portrait/pokemon-poster.jpg",
+      "backdrop": "/media/shows/pokemon/backdrop.jpg",
+      "poster": "/media/shows/pokemon/poster.jpg",
       "tags": [
         "Action",
         "Adventure",
@@ -1281,8 +1281,8 @@
               "title": "Pallet Town Begins",
               "synopsis": "Ash gets Pikachu and begins his journey.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/pokemon_s01.jpg",
-              "videoUrl": "/media/episodes/pokemon/season-01/pokemon-s01-e01.mp4",
+              "thumbnail": "/media/shows/pokemon/backdrop.jpg",
+              "videoUrl": "/media/shows/pokemon/seasons/s01/episodes/pokemon-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1292,8 +1292,8 @@
               "title": "A Fan with a Plan",
               "synopsis": "Ash faces an unusual challenge with a fan of Pokémon battles.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/pokemon_s01.jpg",
-              "videoUrl": "/media/episodes/pokemon/season-01/Pokemon - A Fan with a Plan - s01-e02.mp4",
+              "thumbnail": "/media/shows/pokemon/backdrop.jpg",
+              "videoUrl": "/media/shows/pokemon/seasons/s01/episodes/pokemon-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1303,8 +1303,8 @@
               "title": "Exploud and Clear",
               "synopsis": "Ash encounters a noisy Exploud that causes chaos.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/pokemon_s01.jpg",
-              "videoUrl": "/media/episodes/pokemon/season-01/Pokemon - Exploud and Clear - s01-e03.mp4",
+              "thumbnail": "/media/shows/pokemon/backdrop.jpg",
+              "videoUrl": "/media/shows/pokemon/seasons/s01/episodes/pokemon-s01-e03.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -1321,8 +1321,8 @@
               "title": "Two Hits and a Miss",
               "synopsis": "Ash trains for new battles but faces setbacks.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/pokemon_s02.jpg",
-              "videoUrl": "/media/episodes/pokemon/season-02/Pokemon - Two Hits and a miss - s02-e01.mp4",
+              "thumbnail": "/media/shows/pokemon/backdrop.jpg",
+              "videoUrl": "/media/shows/pokemon/seasons/s02/episodes/pokemon-s02-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1332,8 +1332,8 @@
               "title": "Johto Challenge",
               "synopsis": "Ash battles in Johto with new strategies and rivals.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/pokemon_s02.jpg",
-              "videoUrl": "/media/episodes/pokemon/season-02/Pokemon s02-e02.mp4",
+              "thumbnail": "/media/shows/pokemon/backdrop.jpg",
+              "videoUrl": "/media/shows/pokemon/seasons/s02/episodes/pokemon-s02-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -1345,8 +1345,8 @@
       "id": "shaun-the-sheep",
       "title": "Shaun the Sheep",
       "year": "2007",
-      "backdrop": "/media/backdrops/landscape/shaun-the-sheep-backdrop.jpg",
-      "poster": "/media/poster/portrait/shaun-the-sheep-poster.jpg",
+      "backdrop": "/media/shows/shaun-the-sheep/backdrop.jpg",
+      "poster": "/media/shows/shaun-the-sheep/poster.jpg",
       "tags": [
         "Animal Adventure",
         "Animation",
@@ -1372,8 +1372,8 @@
               "title": "Off the Baa!",
               "synopsis": "A football match between the sheep and a head of cabbage kicks off mayhem.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/shaun_s01.jpg",
-              "videoUrl": "/media/episodes/shaun-the-sheep/season-01/shaun-the-sheep-s01-e01.mp4",
+              "thumbnail": "/media/shows/shaun-the-sheep/backdrop.jpg",
+              "videoUrl": "/media/shows/shaun-the-sheep/seasons/s01/episodes/shaun-the-sheep-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1383,8 +1383,8 @@
               "title": "Bath Time",
               "synopsis": "Shaun and the flock try to give the pigs a bath, but things get messy.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/shaun_s01.jpg",
-              "videoUrl": "/media/episodes/shaun-the-sheep/season-01/shaun-the-sheep-s01-e02.mp4",
+              "thumbnail": "/media/shows/shaun-the-sheep/backdrop.jpg",
+              "videoUrl": "/media/shows/shaun-the-sheep/seasons/s01/episodes/shaun-the-sheep-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1394,8 +1394,8 @@
               "title": "Pizza Party",
               "synopsis": "Shaun organizes a pizza party, but Bitzer struggles to keep the flock in shape.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/shaun_s01.jpg",
-              "videoUrl": "/media/episodes/shaun-the-sheep/season-01/shaun-the-sheep-s01-e03.mp4",
+              "thumbnail": "/media/shows/shaun-the-sheep/backdrop.jpg",
+              "videoUrl": "/media/shows/shaun-the-sheep/seasons/s01/episodes/shaun-the-sheep-s01-e03.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -1412,8 +1412,8 @@
               "title": "Stick with Me",
               "synopsis": "Shaun and the flock get into sticky trouble with some super glue.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/shaun_s02.jpg",
-              "videoUrl": "/media/episodes/shaun-the-sheep/season-02/shaun-the-sheep-s02-e01.mp4",
+              "thumbnail": "/media/shows/shaun-the-sheep/backdrop.jpg",
+              "videoUrl": "/media/shows/shaun-the-sheep/seasons/s02/episodes/shaun-the-sheep-s02-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1423,8 +1423,8 @@
               "title": "Fireside Favourite",
               "synopsis": "The flock compete for the Farmer’s attention by the fireplace.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/shaun_s02.jpg",
-              "videoUrl": "/media/episodes/shaun-the-sheep/season-02/shaun-the-sheep-s02-e02.mp4",
+              "thumbnail": "/media/shows/shaun-the-sheep/backdrop.jpg",
+              "videoUrl": "/media/shows/shaun-the-sheep/seasons/s02/episodes/shaun-the-sheep-s02-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1434,8 +1434,8 @@
               "title": "Operation Pidsley",
               "synopsis": "The flock plot to teach the Farmer’s cat Pidsley a lesson.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/shaun_s02.jpg",
-              "videoUrl": "/media/episodes/shaun-the-sheep/season-02/shaun-the-sheep-s02-e03.mp4",
+              "thumbnail": "/media/shows/shaun-the-sheep/backdrop.jpg",
+              "videoUrl": "/media/shows/shaun-the-sheep/seasons/s02/episodes/shaun-the-sheep-s02-e03.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -1447,8 +1447,8 @@
       "id": "shinchan",
       "title": "Shinchan",
       "year": "1996",
-      "backdrop": "/media/backdrops/landscape/shinchan-backdrop.jpg",
-      "poster": "/media/poster/portrait/shinchan-poster.jpg",
+      "backdrop": "/media/shows/shinchan/backdrop.jpg",
+      "poster": "/media/shows/shinchan/poster.jpg",
       "tags": [
         "Anime",
         "Animation",
@@ -1473,8 +1473,8 @@
               "title": "Holiday Trouble",
               "synopsis": "A family holiday goes awry when Shinchan insists on doing everything his own way.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/shinchan_s02.jpg",
-              "videoUrl": "/media/episodes/shinchan/season-02/shinchan e01.mp4",
+              "thumbnail": "/media/shows/shinchan/backdrop.jpg",
+              "videoUrl": "/media/shows/shinchan/seasons/s02/episodes/shinchan-s02-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1484,8 +1484,8 @@
               "title": "Neighborhood Show",
               "synopsis": "Shinchan stages a neighborhood show that spirals into chaotic entertainment.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/shinchan_s02.jpg",
-              "videoUrl": "/media/episodes/shinchan/season-02/shinchan e02.mp4",
+              "thumbnail": "/media/shows/shinchan/backdrop.jpg",
+              "videoUrl": "/media/shows/shinchan/seasons/s02/episodes/shinchan-s02-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1495,8 +1495,8 @@
               "title": "Shinchan's New Pet",
               "synopsis": "Shinchan brings home an unusual pet and the family must adapt to the new addition.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/shinchan_s02.jpg",
-              "videoUrl": "/media/episodes/shinchan/season-02/shinchan e03.mp4",
+              "thumbnail": "/media/shows/shinchan/backdrop.jpg",
+              "videoUrl": "/media/shows/shinchan/seasons/s02/episodes/shinchan-s02-e03.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -1513,8 +1513,8 @@
               "title": "Will Mom Buy Me Steaks?!!",
               "synopsis": "Shinchan finds himself in another hilarious adventure full of mischief and laughter.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/shinchan_s04.jpg",
-              "videoUrl": "/media/episodes/shinchan/season-04/shinchan e07.mkv",
+              "thumbnail": "/media/shows/shinchan/backdrop.jpg",
+              "videoUrl": "/media/shows/shinchan/seasons/s04/episodes/shinchan-s04-e07.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1524,8 +1524,8 @@
               "title": "Someone's Got a Boyfriend",
               "synopsis": "A simple day turns chaotic when Shinchan's antics get out of control.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/shinchan_s04.jpg",
-              "videoUrl": "/media/episodes/shinchan/season-04/shinchan e19.mkv",
+              "thumbnail": "/media/shows/shinchan/backdrop.jpg",
+              "videoUrl": "/media/shows/shinchan/seasons/s04/episodes/shinchan-s04-e19.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1535,8 +1535,8 @@
               "title": "Main Banunga Park Ka Hero",
               "synopsis": "Shin-chan decides to step up as the self-proclaimed hero of his local neighborhood park, leading to his usual hilarious antics while interacting with his friends and Kasukabe residents.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/shinchan_s04.jpg",
-              "videoUrl": "/media/episodes/shinchan/season-04/shinchan e42.mkv",
+              "thumbnail": "/media/shows/shinchan/backdrop.jpg",
+              "videoUrl": "/media/shows/shinchan/seasons/s04/episodes/shinchan-s04-e42.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -1548,8 +1548,8 @@
       "id": "spongebob-squarepants",
       "title": "SpongeBob Square Pants",
       "year": "1999",
-      "backdrop": "/media/backdrops/landscape/spongebob-squarepants-backdrop.jpg",
-      "poster": "/media/poster/portrait/spongebob-squarepants-poster.jpg",
+      "backdrop": "/media/shows/spongebob-squarepants/backdrop.jpg",
+      "poster": "/media/shows/spongebob-squarepants/poster.jpg",
       "tags": [
         "Animal Adventure",
         "Animation",
@@ -1578,8 +1578,8 @@
               "title": "First Day at Work",
               "synopsis": "SpongeBob starts working at the Krusty Krab.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/spongebob_s01.jpg",
-              "videoUrl": "/media/episodes/spongebob-squarepants/season-01/spongebob-squarepants-s01-e01.mp4",
+              "thumbnail": "/media/shows/spongebob-squarepants/backdrop.jpg",
+              "videoUrl": "/media/shows/spongebob-squarepants/seasons/s01/episodes/spongebob-squarepants-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1589,8 +1589,8 @@
               "title": "Jellyfishing Fun",
               "synopsis": "SpongeBob and Patrick go jellyfishing with chaotic results.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/spongebob_s01.jpg",
-              "videoUrl": "/media/episodes/spongebob-squarepants/season-01/spongebob-squarepants-s01-e02.mp4",
+              "thumbnail": "/media/shows/spongebob-squarepants/backdrop.jpg",
+              "videoUrl": "/media/shows/spongebob-squarepants/seasons/s01/episodes/spongebob-squarepants-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1600,8 +1600,8 @@
               "title": "Bubble Trouble",
               "synopsis": "A playful bubble contest gets out of hand.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/spongebob_s01.jpg",
-              "videoUrl": "/media/episodes/spongebob-squarepants/season-01/spongebob-squarepants-s01-e03.mp4",
+              "thumbnail": "/media/shows/spongebob-squarepants/backdrop.jpg",
+              "videoUrl": "/media/shows/spongebob-squarepants/seasons/s01/episodes/spongebob-squarepants-s01-e03.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -1618,8 +1618,8 @@
               "title": "Plankton's Plan",
               "synopsis": "Plankton tries a new scheme to steal the Krabby Patty secret formula.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/spongebob_s02.jpg",
-              "videoUrl": "/media/episodes/spongebob-squarepants/season-02/spongebob-squarepants-s02-e01.mp4",
+              "thumbnail": "/media/shows/spongebob-squarepants/backdrop.jpg",
+              "videoUrl": "/media/shows/spongebob-squarepants/seasons/s02/episodes/spongebob-squarepants-s02-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1629,8 +1629,8 @@
               "title": "Sandy's Invention",
               "synopsis": "Sandy introduces a new invention for Bikini Bottom.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/spongebob_s02.jpg",
-              "videoUrl": "/media/episodes/spongebob-squarepants/season-02/spongebob-squarepants-s02-e02.mp4",
+              "thumbnail": "/media/shows/spongebob-squarepants/backdrop.jpg",
+              "videoUrl": "/media/shows/spongebob-squarepants/seasons/s02/episodes/spongebob-squarepants-s02-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -1642,8 +1642,8 @@
       "id": "strawberry-shortcake",
       "title": "Strawberry Shortcake",
       "year": "2009",
-      "backdrop": "/media/backdrops/landscape/strawberry-shortcake-backdrop.jpg",
-      "poster": "/media/poster/portrait/strawberry-shortcake-poster.jpg",
+      "backdrop": "/media/shows/strawberry-shortcake/backdrop.jpg",
+      "poster": "/media/shows/strawberry-shortcake/poster.jpg",
       "tags": [
         "Animation",
         "Adventure",
@@ -1668,8 +1668,8 @@
               "title": "Strawberry Day",
               "synopsis": "Strawberry Shortcake organizes a festival for friends.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/strawberry_s01.jpg",
-              "videoUrl": "/media/episodes/strawberry-shortcake/season-01/strawberry-shortcake-s01-e01.mp4",
+              "thumbnail": "/media/shows/strawberry-shortcake/backdrop.jpg",
+              "videoUrl": "/media/shows/strawberry-shortcake/seasons/s01/episodes/strawberry-shortcake-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1679,8 +1679,8 @@
               "title": "House Pests",
               "synopsis": "Strawberry and friends deal with mischievous pests around town.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/strawberry_s01.jpg",
-              "videoUrl": "/media/episodes/strawberry-shortcake/season-01/strawberry-shortcake-s01-e02.mp4",
+              "thumbnail": "/media/shows/strawberry-shortcake/backdrop.jpg",
+              "videoUrl": "/media/shows/strawberry-shortcake/seasons/s01/episodes/strawberry-shortcake-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -1697,8 +1697,8 @@
               "title": "The Berry Long Winter",
               "synopsis": "A long unexpected winter tests the town's resourcefulness and friendship.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/strawberry_s02.jpg",
-              "videoUrl": "/media/episodes/strawberry-shortcake/season-02/strawberry-shortcake-s02-e01.mp4",
+              "thumbnail": "/media/shows/strawberry-shortcake/backdrop.jpg",
+              "videoUrl": "/media/shows/strawberry-shortcake/seasons/s02/episodes/strawberry-shortcake-s02-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1708,8 +1708,8 @@
               "title": "The Berry Best Choice",
               "synopsis": "Making the best choice isn't always easy, but friends help each other decide.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/strawberry_s02.jpg",
-              "videoUrl": "/media/episodes/strawberry-shortcake/season-02/strawberry-shortcake-s02-e02.mp4",
+              "thumbnail": "/media/shows/strawberry-shortcake/backdrop.jpg",
+              "videoUrl": "/media/shows/strawberry-shortcake/seasons/s02/episodes/strawberry-shortcake-s02-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -1721,8 +1721,8 @@
       "id": "tom-and-jerry-classic",
       "title": "Tom and Jerry",
       "year": "1952",
-      "backdrop": "/media/backdrops/landscape/tom-and-jerry-backdrop.jpg",
-      "poster": "/media/poster/portrait/tom-and-jerry-poster.jpg",
+      "backdrop": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+      "poster": "/media/shows/tom-and-jerry-classic/poster.jpg",
       "tags": [
         "Adventure",
         "Animation",
@@ -1749,8 +1749,8 @@
               "title": "The Lonesome Mouse",
               "synopsis": "After Tom is kicked out of the house for failing to catch Jerry, the mouse realizes he actually misses having a rival. Jerry lures Tom back inside, and the two orchestrate a series of fake chases to convince Mammy Two Shoes that Tom is a champion mouse-catcher.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerry_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e10.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-classic/seasons/s01/episodes/tom-and-jerry-classic-s01-e10.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1760,8 +1760,8 @@
               "title": "The Milky Waif",
               "synopsis": "Jerry is tasked with babysitting Nibbles, a tiny, hungry orphan mouse. When they try to sneak some of Tom’s milk, a chase breaks out. Despite Tom's efforts to catch them, Jerry and Nibbles use their wits and a bit of teamwork to ensure the baby gets his fill.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerry_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e24.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-classic/seasons/s01/episodes/tom-and-jerry-classic-s01-e24.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1771,8 +1771,8 @@
               "title": "Trap Happy",
               "synopsis": "Tom decides to call in a professional mouse-catcher to handle Jerry once and for all. However, Jerry is far more clever than the expert, leading to a series of backfiring traps and mechanical failures. Tom eventually realizes that if he wants a job done right, he has to do it himself.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerry_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e25.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-classic/seasons/s01/episodes/tom-and-jerry-classic-s01-e25.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1782,8 +1782,8 @@
               "title": "Solid Serenade",
               "synopsis": "Tom brings a double bass to a neighboring yard to serenade a female cat, but his loud singing keeps Jerry awake. Jerry retaliates with various household items to stop the concert. The night ends in a symphony of destruction as the musical instruments become weapons in their classic battle.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerry_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e26.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-classic/seasons/s01/episodes/tom-and-jerry-classic-s01-e26.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1793,8 +1793,8 @@
               "title": "Part Time Pal",
               "synopsis": "After Tom accidentally drinks some 'spiked' punch, he becomes Jerry's best friend. He invites Jerry to feast in the kitchen, much to the mouse's surprise. However, once the effect wears off, Tom returns to his predatory self, leading to a frantic chase to avoid getting into trouble with Mammy.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerry_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e28.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-classic/seasons/s01/episodes/tom-and-jerry-classic-s01-e28.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1804,8 +1804,8 @@
               "title": "The Truce Hurts",
               "synopsis": "Tired of their endless cycle of violence, Tom, Jerry, and Spike the bulldog decide to sign a formal peace treaty. The trio enjoys a brief period of domestic harmony and cooperation until they find a juicy steak. Greedy instincts quickly take over, turning their newfound friendship back into a chaotic free-for-all.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerry_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e35.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-classic/seasons/s01/episodes/tom-and-jerry-classic-s01-e35.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1815,8 +1815,8 @@
               "title": "The Little Orphan",
               "synopsis": "On Thanksgiving, Jerry takes in Nibbles, a perpetually hungry orphan mouse. Jerry attempts to show the little one a grand feast on the dining table, but they must dodge Tom’s constant attacks. This Oscar-winning short features a miniature pilgrim battle as the mice use food and cutlery to defend their holiday meal.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerry_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e40.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-classic/seasons/s01/episodes/tom-and-jerry-classic-s01-e40.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1826,8 +1826,8 @@
               "title": "Hatch Up Your Troubles",
               "synopsis": "A lost woodpecker egg rolls into Jerry’s home and hatches, leading the baby bird to believe Jerry is his mother. The protective Jerry must keep the hungry, wood-pecking bird safe from Tom, who wants a snack. Eventually, the bird's father arrives to give Tom a lesson he will never forget.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerry_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e41.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-classic/seasons/s01/episodes/tom-and-jerry-classic-s01-e41.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1837,8 +1837,8 @@
               "title": "Little Quacker",
               "synopsis": "Tom intercepts a duckling's egg and tries to turn the hatchling into a roast dinner. Jerry heroically intervenes, leading to a frantic chase involving a lawnmower and various garden tools. The story concludes when the duckling’s muscular father steps in to protect his son and humiliate the predatory cat.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerry_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e47.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-classic/seasons/s01/episodes/tom-and-jerry-classic-s01-e47.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1848,8 +1848,8 @@
               "title": "Cue Ball Cat",
               "synopsis": "Tom is enjoying a solo game of billiards in a local pool hall until he wakes up a sleeping Jerry inside one of the pockets. The pool table becomes a miniature battlefield, with Tom using cue balls as projectiles. Jerry uses his wit and the table’s mechanics to turn the game against Tom.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerry_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e54.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-classic/seasons/s01/episodes/tom-and-jerry-classic-s01-e54.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1859,8 +1859,8 @@
               "title": "Casanova Cat",
               "synopsis": "Tom attempts to woo a wealthy female cat by presenting Jerry as an automated, wind-up dancing toy. However, Jerry refuses to play along with the humiliation and begins sabotaging Tom’s romantic gestures. The situation escalates into a destructive pursuit that leaves Tom’s love life in ruins while Jerry gets the last laugh.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerry_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e55.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-classic/seasons/s01/episodes/tom-and-jerry-classic-s01-e55.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1870,8 +1870,8 @@
               "title": "Jerry and the Goldfish",
               "synopsis": "After listening to a radio chef explain how to prepare fish, Tom develops an appetite for the family’s pet goldfish. Jerry becomes the fish's bodyguard, desperately trying to keep his bowl away from the stove. The chase moves through the kitchen as Jerry finds creative ways to rescue his aquatic friend from the pot.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerry_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e56.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-classic/seasons/s01/episodes/tom-and-jerry-classic-s01-e56.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1881,8 +1881,8 @@
               "title": "Jerry's Cousin",
               "synopsis": "Tired of being bullied, Jerry sends a letter to his cousin Muscles, the toughest mouse in the world. Muscles arrives and immediately begins terrorizing Tom, proving that size doesn't matter when you have super strength. After Tom fails to hire thugs to stop him, Jerry adopts Muscles' outfit to keep Tom permanently intimidated.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerry_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e57.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-classic/seasons/s01/episodes/tom-and-jerry-classic-s01-e57.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1892,8 +1892,8 @@
               "title": "His Mouse Friday",
               "synopsis": "Tom finds himself shipwrecked on a tropical island and discovers Jerry. Tom assumes a cannibalistic persona to catch Jerry, but the mouse is one step ahead, using island tricks and a group of 'natives' to turn the tables. Tom quickly realizes he is not the king of this jungle.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerry_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e59.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-classic/seasons/s01/episodes/tom-and-jerry-classic-s01-e59.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1903,8 +1903,8 @@
               "title": "The Two Mouseketeers",
               "synopsis": "In the royal palace of France, Mouseketeers Jerry and Nibbles attempt to raid a massive banquet table. Tom, the King's guard, is threatened with execution if he allows a single crumb to be stolen. A legendary sword fight breaks out amidst the gourmet food, leading to a explosive and somewhat dark finale.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerry_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e65.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-classic/seasons/s01/episodes/tom-and-jerry-classic-s01-e65.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1914,8 +1914,8 @@
               "title": "Smitten Kitten",
               "synopsis": "When Tom falls head-over-heels for a beautiful feline neighbor, Jerry experiences flashbacks of all the times Tom's romantic interests led to disaster. This clip-show episode revisits classic moments of Tom being rejected or tricked while in love. Despite Jerry’s warnings, both characters end up falling for a pair of female mice and cats.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerry_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e66.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-classic/seasons/s01/episodes/tom-and-jerry-classic-s01-e66.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1925,8 +1925,8 @@
               "title": "Cruise Cat",
               "synopsis": "Tom is employed as a mascot on an ocean liner, but Jerry has stowed away for a vacation of his own. The chase spans the entire ship, from the luxury dining halls to the theater. Tom must catch Jerry without getting into trouble with the ship's captain, leading to high-seas hilarity.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerry_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e71.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-classic/seasons/s01/episodes/tom-and-jerry-classic-s01-e71.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1936,8 +1936,8 @@
               "title": "Johann Mouse",
               "synopsis": "Set in the house of Johann Strauss in Vienna, Jerry is a mouse who loves to dance to piano music. Tom teaches himself to play the piano just to lure Jerry out into the open for a capture. This beautifully animated short features classical music and won an Academy Award for its artistic direction.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerry_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e75.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-classic/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-classic/seasons/s01/episodes/tom-and-jerry-classic-s01-e75.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -1949,8 +1949,8 @@
       "id": "tom-and-jerry-tales",
       "title": "Tom and Jerry Tales",
       "year": "2006",
-      "backdrop": "/media/backdrops/landscape/tom-and-jerry-tales-backdrop.jpg",
-      "poster": "/media/poster/portrait/tom-and-jerry-tales-poster.jpg",
+      "backdrop": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+      "poster": "/media/shows/tom-and-jerry-tales/poster.jpg",
       "tags": [
         "Animal Adventure",
         "Adventure",
@@ -1975,8 +1975,8 @@
               "title": "Tiger Cat",
               "synopsis": "Tom and Jerry's chase leads them to a zoo where Tom tries to use a tiger to help catch Jerry, only to realize the big cat isn't on his side.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e01.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1986,8 +1986,8 @@
               "title": "Feeding Time",
               "synopsis": "At the zoo, Tom is tasked with feeding the animals, but Jerry is determined to turn the mealtime into a chaotic buffet.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e02.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -1997,8 +1997,8 @@
               "title": "Polar Peril",
               "synopsis": "The rivalry heads to the arctic where Tom and Jerry battle it out amidst icebergs, freezing water, and a very grumpy polar bear.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e03.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e03.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2008,8 +2008,8 @@
               "title": "Joy Riding Jokers",
               "synopsis": "Tom and Jerry find themselves behind the wheel of a high-speed car, turning a simple drive into a destructive race through the streets.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e04.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e04.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2019,8 +2019,8 @@
               "title": "Cat Got Your Luggage",
               "synopsis": "Set in a busy hotel, Tom’s job as a bellhop is made impossible when Jerry decides to hide inside the guests' suitcases.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e05.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e05.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2030,8 +2030,8 @@
               "title": "City Dump Chumps",
               "synopsis": "The battle moves to the city dump, where the duo uses piles of junk and discarded machinery to build elaborate traps for one another.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e06.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e06.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2041,8 +2041,8 @@
               "title": "Way off Broadway",
               "synopsis": "Tom and Jerry cause a scene at a musical theater, turning a sophisticated performance into a slapstick comedy routine.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e07.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e07.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2052,8 +2052,8 @@
               "title": "Egg Beats",
               "synopsis": "Jerry uses a collection of noisy farm eggs to keep Tom awake and agitated in this high-energy musical pursuit.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e08.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e08.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2063,8 +2063,8 @@
               "title": "Bats What I Like About the South",
               "synopsis": "Tom attempts to use a mechanical bat to catch Jerry, but the invention has a mind of its own in the deep south.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e10.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e10.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2074,8 +2074,8 @@
               "title": "Fraidy Cat Scat",
               "synopsis": "After watching a scary movie, Tom becomes paranoid, and Jerry takes full advantage of his fear to haunt him around the house.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e11.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e11.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2085,8 +2085,8 @@
               "title": "Tomb It May Concern",
               "synopsis": "The duo explores an ancient Egyptian tomb, dodging mummies and ancient curses in a race for hidden treasure.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e12.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e12.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2096,8 +2096,8 @@
               "title": "Dino-Sores",
               "synopsis": "Transported back to the prehistoric era, Tom and Jerry must survive encounters with massive dinosaurs and erupting volcanoes.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e13.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e13.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2107,8 +2107,8 @@
               "title": "Freaky Tiki",
               "synopsis": "On a tropical island, Tom and Jerry deal with a local volcano deity and some very aggressive tiki statues.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e14.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e14.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2118,8 +2118,8 @@
               "title": "Prehisterics",
               "synopsis": "Another adventure in the Stone Age where Tom tries to prove he is the ultimate cave-cat hunter.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e15.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e15.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2129,8 +2129,8 @@
               "title": "Hi, Robot",
               "synopsis": "Tom builds a robot to catch Jerry, but the robot's programming is easily manipulated by the clever mouse.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e17.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e17.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2140,8 +2140,8 @@
               "title": "Tomcat Jetpack",
               "synopsis": "Tom takes to the skies with a high-tech jetpack, but Jerry finds ways to make sure Tom's flight ends in a crash.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e18.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e18.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2151,8 +2151,8 @@
               "title": "Firebreathing Tom Cat",
               "synopsis": "In a medieval fantasy setting, Tom becomes a dragon-like feline, but Jerry has a few magical tricks of his own.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e19.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e19.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2162,8 +2162,8 @@
               "title": "Medieval Menace",
               "synopsis": "Castle walls and knight armor provide the backdrop for a royal battle between the legendary duo.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e20.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e20.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2173,8 +2173,8 @@
               "title": "The Itch",
               "synopsis": "Tom is bothered by a persistent itch that turns out to be a very organized group of fleas led by Jerry.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e21.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e21.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2184,8 +2184,8 @@
               "title": "Ho Ho Horrors",
               "synopsis": "A Christmas-themed chase where Tom and Jerry turn holiday decorations into weapons of festive destruction.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e22.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e22.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2195,8 +2195,8 @@
               "title": "Doggone Hill Hog",
               "synopsis": "Tom and Jerry compete for the best spot on a snowy hill, leading to a high-speed sledding disaster.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e23.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e23.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2206,8 +2206,8 @@
               "title": "Cat Nebula",
               "synopsis": "The rivalry goes galactic as Tom and Jerry take their battle to a high-tech space station in deep orbit.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e25.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e25.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2217,8 +2217,8 @@
               "title": "Martian Mice",
               "synopsis": "Tom discovers that Jerry has been communicating with mice from Mars, leading to an out-of-this-world showdown.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s01.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e26.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s01/episodes/tom-and-jerry-tales-s01-e26.mp4",
               "subtitles": [],
               "isPlayable": true
             }
@@ -2235,8 +2235,8 @@
               "title": "Mischief Mansion",
               "synopsis": "Tom’s antics unleash chaos inside a sprawling old mansion filled with priceless antiques and fragile decorations. Jerry takes advantage of the mayhem, provoking Tom into wilder chases that disrupt every room. Their rivalry triggers a chain of slapstick accidents that escalate into a full-house disaster the mansion’s owner never sees coming.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s02.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-02/tom-and-jerry-tales-s02-e01.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s02/episodes/tom-and-jerry-tales-s02-e01.mp4",
               "subtitles": [],
               "isPlayable": true
             },
@@ -2246,8 +2246,8 @@
               "title": "The Big Trap",
               "synopsis": "Determined to catch Jerry once and for all, Tom constructs an elaborate multi-step trap that fills the house with springs, levers, bait, and contraptions. But Jerry effortlessly navigates the setup, turning every mechanism against Tom. The overly complicated plan collapses spectacularly, leaving Tom to suffer the full force of his own invention.",
               "duration": null,
-              "thumbnail": "/media/backdrops/landscape/tomandjerrytales_s02.jpg",
-              "videoUrl": "/media/episodes/tom-and-jerry-tales/season-02/tom-and-jerry-tales-s02-e02.mp4",
+              "thumbnail": "/media/shows/tom-and-jerry-tales/backdrop.jpg",
+              "videoUrl": "/media/shows/tom-and-jerry-tales/seasons/s02/episodes/tom-and-jerry-tales-s02-e02.mp4",
               "subtitles": [],
               "isPlayable": true
             }

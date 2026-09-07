@@ -5,6 +5,7 @@ import {
   PlayIcon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
+import LoadingSpinner from "../common/LoadingSpinner.jsx";
 
 export default function VideoCenterControls({
   isPlaying,
@@ -14,95 +15,65 @@ export default function VideoCenterControls({
   isBuffering,
   showControls,
 }) {
-  const glassBtn =
-    "bg-black/40 backdrop-blur-lg border border-white/10 hover:bg-white/20 hover:scale-105 transition-all duration-200 rounded-full text-white flex items-center justify-center active:scale-95";
+  const controlClass =
+    "flex items-center justify-center rounded-full border border-white/15 bg-black/38 text-white shadow-lg backdrop-blur-lg transition duration-200 hover:scale-105 hover:bg-white/18 active:scale-95";
 
   return (
     <div
       data-controls
-      className={`
-        absolute inset-0 z-30 flex items-center justify-center
-        pointer-events-none
-        transition-opacity duration-300 ease-in-out
-        translate-y-[-6px] sm:translate-y-0
-
-        ${showControls ? "opacity-100" : "opacity-0"}
-      `}
+      className={`pointer-events-none absolute inset-0 z-30 flex items-center justify-center transition-opacity duration-200 ${
+        showControls ? "opacity-100" : "opacity-0"
+      }`}
     >
-      {/* Spinner */}
       {isBuffering && (
-        <div className="absolute inset-0 z-40 flex items-center justify-center pointer-events-none">
-          <div className="yt-spinner-container">
-            <div className="yt-spinner" />
+        <div className="pointer-events-none absolute inset-0 z-40 flex items-center justify-center">
+          <div className="flex h-14 w-14 items-center justify-center rounded-full border border-white/12 bg-black/40 backdrop-blur-lg">
+            <LoadingSpinner size={30} />
           </div>
         </div>
       )}
 
-      <div className="pointer-events-auto flex items-center gap-10 sm:gap-16">
-        {/* Rewind */}
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            rewind?.();
-          }}
-          className={`${glassBtn} p-3`}
-        >
-          <HugeiconsIcon icon={GoBackward10SecIcon} size={20} />
-        </button>
+      {!isBuffering && (
+        <div className="pointer-events-auto flex items-center gap-7 sm:gap-12">
+          <button
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation();
+              rewind?.();
+            }}
+            className={`${controlClass} h-11 w-11 sm:h-12 sm:w-12`}
+            aria-label="Rewind 10 seconds"
+            title="Rewind 10 seconds"
+          >
+            <HugeiconsIcon icon={GoBackward10SecIcon} size={21} />
+          </button>
 
-        {/* Play / Pause */}
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            togglePlayPause?.();
-          }}
-          className={`${glassBtn} p-3.5`}
-        >
-          {isPlaying ? (
-            <HugeiconsIcon icon={PauseIcon} size={20} />
-          ) : (
-            <HugeiconsIcon icon={PlayIcon} size={20} />
-          )}
-        </button>
+          <button
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation();
+              togglePlayPause?.();
+            }}
+            className={`${controlClass} h-14 w-14 bg-white/16 sm:h-16 sm:w-16`}
+            aria-label={isPlaying ? "Pause" : "Play"}
+          >
+            <HugeiconsIcon icon={isPlaying ? PauseIcon : PlayIcon} size={26} />
+          </button>
 
-        {/* Forward */}
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            forward?.();
-          }}
-          className={`${glassBtn} p-3`}
-        >
-          <HugeiconsIcon icon={GoForward10SecIcon} size={20} />
-        </button>
-      </div>
-
-      {/* Spinner CSS */}
-      <style jsx>{`
-        .yt-spinner-container {
-          padding: 12px;
-          background: rgba(0, 0, 0, 0.4);
-          border-radius: 999px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .yt-spinner {
-          width: 32px;
-          height: 32px;
-          border-radius: 999px;
-          border: 3px solid rgba(255, 255, 255, 0.25);
-          border-top-color: white;
-          animation: yt-spin 0.75s linear infinite;
-        }
-
-        @keyframes yt-spin {
-          to {
-            transform: rotate(360deg);
-          }
-        }
-      `}</style>
+          <button
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation();
+              forward?.();
+            }}
+            className={`${controlClass} h-11 w-11 sm:h-12 sm:w-12`}
+            aria-label="Forward 10 seconds"
+            title="Forward 10 seconds"
+          >
+            <HugeiconsIcon icon={GoForward10SecIcon} size={21} />
+          </button>
+        </div>
+      )}
     </div>
   );
 }

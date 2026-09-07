@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import showsData from "../../data/Shows.json";
+import showsData from "../../services/contentService.js";
 
 import {
   PencilEdit01Icon,
@@ -128,7 +128,7 @@ export default function EpisodesPage() {
 
         <button
           onClick={handleAdd}
-          className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 px-4 py-2 rounded-lg text-sm"
+          className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 px-4 py-2 rounded-[var(--rt-radius-control)] text-sm"
         >
           <HugeiconsIcon icon={Add01Icon} size={16} />
           Add Episode
@@ -142,16 +142,16 @@ export default function EpisodesPage() {
           placeholder="Search by show or episode..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="bg-black/50 border border-white/10 px-3 py-2 rounded-lg text-sm w-72 focus:outline-none focus:border-indigo-500"
+          className="bg-white/[0.055] border border-white/10 px-3 py-2 rounded-[var(--rt-radius-control)] text-sm w-72 focus:outline-none focus:border-indigo-500"
         />
 
-        <span className="text-xs text-gray-400 bg-white/5 px-3 py-1 rounded-lg">
+        <span className="text-xs text-gray-400 bg-white/5 px-3 py-1 rounded-[var(--rt-radius-control)]">
           Total: {filteredEpisodes.length}
         </span>
       </div>
 
       {/* Table */}
-      <div className="rounded-2xl bg-black/50 border border-white/10 overflow-hidden">
+      <div className="rounded-[var(--rt-radius-control)] bg-white/[0.055] border border-white/10 overflow-hidden">
         <table className="w-full text-sm">
           <thead className="bg-white/5 text-gray-400">
             <tr>
@@ -193,7 +193,7 @@ export default function EpisodesPage() {
                     <div className="flex justify-center gap-2">
                       <button
                         onClick={() => handleEdit(ep)}
-                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs 
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-[var(--rt-radius-control)] text-xs 
                         bg-blue-500/10 text-blue-400 border border-blue-500/20 hover:bg-blue-500/20"
                       >
                         <HugeiconsIcon icon={PencilEdit01Icon} size={14} />
@@ -202,7 +202,7 @@ export default function EpisodesPage() {
 
                       <button
                         onClick={() => handleDelete(ep.id)}
-                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs 
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-[var(--rt-radius-control)] text-xs 
                         bg-red-500/10 text-red-400 border border-red-500/20 hover:bg-red-500/20"
                       >
                         <HugeiconsIcon icon={Delete02Icon} size={14} />
@@ -221,7 +221,7 @@ export default function EpisodesPage() {
       {isModalOpen && (
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
           <div
-            className="bg-[#0B0F19] border border-white/10 rounded-2xl p-6 w-full max-w-lg space-y-6 shadow-xl"
+            className="bg-[#0B0F19] border border-white/10 rounded-[var(--rt-radius-control)] p-6 w-full max-w-lg space-y-6 shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className="text-lg font-semibold">
@@ -237,14 +237,14 @@ export default function EpisodesPage() {
                   e.stopPropagation();
                   setShowDropdownOpen(!showDropdownOpen);
                 }}
-                className="w-full bg-white/5 border border-white/10 px-3 py-2 rounded-lg text-sm cursor-pointer flex justify-between"
+                className="w-full bg-white/5 border border-white/10 px-3 py-2 rounded-[var(--rt-radius-control)] text-sm cursor-pointer flex justify-between"
               >
                 {formData.showTitle || "Select show"}
                 <span className="text-xs text-gray-500">▼</span>
               </div>
 
               {showDropdownOpen && (
-                <div className="absolute w-full mt-2 bg-[#0B0F19] border border-white/10 rounded-lg max-h-48 overflow-y-auto z-50">
+                <div className="absolute w-full mt-2 bg-[#0B0F19] border border-white/10 rounded-[var(--rt-radius-control)] max-h-48 overflow-y-auto z-50">
                   {shows.map((s) => (
                     <div
                       key={s.id}
@@ -274,7 +274,7 @@ export default function EpisodesPage() {
                   value={formData.season}
                   onChange={handleChange}
                   placeholder="e.g. 1"
-                  className="w-full bg-white/5 border border-white/10 px-3 py-2 rounded-lg text-sm focus:outline-none focus:border-indigo-500"
+                  className="w-full bg-white/5 border border-white/10 px-3 py-2 rounded-[var(--rt-radius-control)] text-sm focus:outline-none focus:border-indigo-500"
                 />
               </div>
 
@@ -285,7 +285,7 @@ export default function EpisodesPage() {
                   value={formData.episode}
                   onChange={handleChange}
                   placeholder="e.g. 1"
-                  className="w-full bg-white/5 border border-white/10 px-3 py-2 rounded-lg text-sm focus:outline-none focus:border-indigo-500"
+                  className="w-full bg-white/5 border border-white/10 px-3 py-2 rounded-[var(--rt-radius-control)] text-sm focus:outline-none focus:border-indigo-500"
                 />
               </div>
             </div>
@@ -298,7 +298,7 @@ export default function EpisodesPage() {
                 value={formData.title}
                 onChange={handleChange}
                 placeholder="Enter episode title"
-                className="w-full bg-white/5 border border-white/10 px-3 py-2 rounded-lg text-sm focus:outline-none focus:border-indigo-500"
+                className="w-full bg-white/5 border border-white/10 px-3 py-2 rounded-[var(--rt-radius-control)] text-sm focus:outline-none focus:border-indigo-500"
               />
             </div>
 
@@ -306,7 +306,7 @@ export default function EpisodesPage() {
               <p className="text-xs text-gray-400 mb-2">Episode Video</p>
 
               <div
-                className="border border-dashed bg-white/5 border-white/10 rounded-xl p-4 text-center cursor-pointer hover:border-indigo-500 transition"
+                className="border border-dashed bg-white/5 border-white/10 rounded-[var(--rt-radius-control)] p-4 text-center cursor-pointer hover:border-indigo-500 transition"
                 onClick={() =>
                   document.getElementById("episodeVideoInput").click()
                 }
@@ -314,7 +314,7 @@ export default function EpisodesPage() {
                 {formData.video ? (
                   <video
                     src={formData.video}
-                    className="w-full h-40 rounded-lg object-cover"
+                    className="w-full h-40 rounded-[var(--rt-radius-control)] object-cover"
                     controls
                   />
                 ) : (
@@ -348,14 +348,14 @@ export default function EpisodesPage() {
             <div className="flex justify-end gap-3">
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="px-4 py-2 bg-white/10 rounded-lg text-sm"
+                className="px-4 py-2 bg-white/10 rounded-[var(--rt-radius-control)] text-sm"
               >
                 Cancel
               </button>
 
               <button
                 onClick={handleSubmit}
-                className="px-4 py-2 bg-indigo-600 rounded-lg text-sm"
+                className="px-4 py-2 bg-indigo-600 rounded-[var(--rt-radius-control)] text-sm"
               >
                 {editingEpisode ? "Update Episode" : "Create Episode"}
               </button>

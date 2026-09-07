@@ -1,181 +1,139 @@
 import {
   Alert02Icon,
   Analytics01Icon,
+  ArrowLeft01Icon,
   DashboardSquare01Icon,
   GridIcon,
   Home02Icon,
   PlayListAddIcon,
   Settings01Icon,
   UserGroupIcon,
-  ArrowLeft01Icon,
+  UserIcon,
 } from "@hugeicons/core-free-icons";
-
 import { HugeiconsIcon } from "@hugeicons/react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-export default function AdminSidebar({ closeSidebar }) {
+const sections = [
+  {
+    title: "Main",
+    items: [{ name: "Dashboard", path: "/admin", icon: DashboardSquare01Icon }],
+  },
+  {
+    title: "Content",
+    items: [
+      { name: "Shows", path: "/admin/shows", icon: PlayListAddIcon },
+      { name: "Episodes", path: "/admin/episodes", icon: GridIcon },
+      { name: "Homepage", path: "/admin/homepage-section", icon: Home02Icon },
+    ],
+  },
+  {
+    title: "Audience",
+    items: [{ name: "Users", path: "/admin/users", icon: UserGroupIcon }],
+  },
+  {
+    title: "Insights",
+    items: [{ name: "Analytics", path: "/admin/analytics", icon: Analytics01Icon }],
+  },
+  {
+    title: "Control",
+    items: [
+      { name: "Content Health", path: "/admin/content-health", icon: Alert02Icon },
+      { name: "Settings", path: "/admin/settings", icon: Settings01Icon },
+    ],
+  },
+  {
+    title: "Account",
+    items: [{ name: "My Profile", path: "/profile", icon: UserIcon }],
+  },
+];
+
+export default function AdminSidebar({ closeSidebar, mobile = false }) {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const sections = [
-    {
-      title: "MAIN",
-      items: [
-        { name: "Dashboard", path: "/admin", icon: DashboardSquare01Icon },
-      ],
-    },
-    {
-      title: "CONTENT",
-      items: [
-        { name: "Shows", path: "/admin/shows", icon: PlayListAddIcon },
-        { name: "Episodes", path: "/admin/episodes", icon: GridIcon },
-        {
-          name: "Homepage Section",
-          path: "/admin/homepage-section",
-          icon: Home02Icon,
-        },
-      ],
-    },
-    {
-      title: "USERS",
-      items: [{ name: "Users", path: "/admin/users", icon: UserGroupIcon }],
-    },
-    {
-      title: "ANALYTICS",
-      items: [
-        { name: "Analytics", path: "/admin/analytics", icon: Analytics01Icon },
-      ],
-    },
-    {
-      title: "CONTROL",
-      items: [
-        {
-          name: "Content Health",
-          path: "/admin/content-health",
-          icon: Alert02Icon,
-        },
-      ],
-    },
-    {
-      title: "SYSTEM",
-      items: [
-        { name: "Settings", path: "/admin/settings", icon: Settings01Icon },
-      ],
-    },
-  ];
+  const goTo = (path) => {
+    navigate(path);
+    closeSidebar?.();
+  };
 
   return (
     <aside
-      className="
-        w-64 h-[calc(100vh-16px)] m-2 sticky top-2 rounded-2xl 
-        bg-black/50 backdrop-blur-xl backdrop-saturate-150
-        border border-white/10 shadow-2xl flex flex-col
-      "
+      className={`rt-surface-strong flex w-64 flex-col overflow-hidden ${
+        mobile ? "h-[calc(100vh-16px)]" : "sticky top-2 m-2 h-[calc(100vh-16px)]"
+      }`}
     >
-      {/* 🔝 HEADER */}
-      <div className="flex items-center justify-between px-4 py-4 border-b border-white/10">
+      <div className="flex min-h-16 items-center gap-3 border-b border-white/[0.07] px-3.5">
         <button
-          onClick={() => navigate(-1)}
-          className="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition group"
+          type="button"
+          onClick={() => navigate("/")}
+          className="rt-icon-button h-9 w-9"
+          aria-label="Back to RetroToonz"
         >
-          <HugeiconsIcon
-            icon={ArrowLeft01Icon}
-            size={18}
-            className="group-hover:-translate-x-0.5 transition"
-          />
+          <HugeiconsIcon icon={ArrowLeft01Icon} size={17} />
         </button>
 
-        <h1
-          onClick={() => navigate("/")}
-          className="text-base font-semibold tracking-tight bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent cursor-pointer select-none transition-all duration-300 ease-out hover:opacity-90 hover:scale-[1.05]"
+        <button
+          type="button"
+          onClick={() => goTo("/admin")}
+          className="min-w-0 text-left"
         >
-          RetroToonz
-        </h1>
-
-        <div className="w-8" />
+          <span className="block truncate text-base font-semibold tracking-[-0.03em] text-white">
+            RetroToonz
+          </span>
+          <span className="block text-[10px] uppercase tracking-[0.15em] text-white/30">
+            Admin console
+          </span>
+        </button>
       </div>
 
-      {/* 🔥 NAV */}
-      <div className="flex-1 overflow-y-auto px-3 py-4">
-        <nav className="space-y-6">
+      <nav className="flex-1 overflow-y-auto px-2.5 py-4">
+        <div className="space-y-5">
           {sections.map((section) => (
-            <div key={section.title}>
-              {/* SECTION TITLE */}
-              <p
-                className="
-                text-[10px] text-white/40 uppercase tracking-widest 
-                mb-3 px-2
-              "
-              >
+            <section key={section.title}>
+              <p className="mb-2 px-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-white/28">
                 {section.title}
               </p>
 
               <div className="space-y-1">
                 {section.items.map((item) => {
-                  const isActive = location.pathname === item.path;
+                  const isActive =
+                    item.path === "/admin"
+                      ? location.pathname === "/admin"
+                      : item.path === "/profile"
+                        ? location.pathname === "/profile"
+                        : location.pathname.startsWith(item.path);
 
                   return (
-                    <div
-                      key={item.name}
-                      onClick={() => {
-                        navigate(item.path);
-                        closeSidebar?.();
-                      }}
-                      className={`
-                        group relative flex items-center gap-3 px-3 py-2.5 
-                        rounded-xl cursor-pointer transition-all duration-200
-
-                        ${
-                          isActive
-                            ? "bg-white/10 text-white"
-                            : "text-white/70 hover:bg-white/5 hover:text-white"
-                        }
-                      `}
+                    <button
+                      type="button"
+                      key={item.path}
+                      onClick={() => goTo(item.path)}
+                      className={`relative flex w-full items-center gap-3 rounded-[var(--rt-radius-control)] px-3 py-2.5 text-left text-sm font-medium transition ${
+                        isActive
+                          ? "bg-cyan-300/10 text-cyan-100"
+                          : "text-white/55 hover:bg-white/[0.055] hover:text-white/90"
+                      }`}
                     >
-                      {/* ACTIVE BAR */}
                       {isActive && (
-                        <span
-                          className="
-                          absolute left-0 top-1 bottom-1 w-[3px]
-                          rounded-full bg-indigo-400
-                        "
-                        />
+                        <span className="absolute inset-y-2 left-0 w-0.5 rounded-full bg-cyan-300" />
                       )}
-
-                      {/* ICON */}
                       <HugeiconsIcon
                         icon={item.icon}
                         size={18}
-                        className={`
-                          transition-all duration-200
-                          ${
-                            isActive
-                              ? "scale-110 text-indigo-400"
-                              : "group-hover:scale-105"
-                          }
-                        `}
+                        className={isActive ? "text-cyan-300" : "text-white/45"}
                       />
-
-                      {/* TEXT */}
-                      <span
-                        className="
-                        text-sm font-medium tracking-tight
-                      "
-                      >
-                        {item.name}
-                      </span>
-                    </div>
+                      <span>{item.name}</span>
+                    </button>
                   );
                 })}
               </div>
-            </div>
+            </section>
           ))}
-        </nav>
-      </div>
+        </div>
+      </nav>
 
-      {/* 🔻 FOOTER */}
-      <div className="flex justify-center p-4 border-t border-white/10 text-xs text-white/40">
-        © 2026 RetroToonz
+      <div className="border-t border-white/[0.07] px-4 py-3 text-center text-[10px] text-white/25">
+        RetroToonz frontend prototype
       </div>
     </aside>
   );

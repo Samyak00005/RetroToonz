@@ -60,7 +60,7 @@ export default function AddShowPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-[#05060b] to-[#0f0a24] text-white font-inter">
+    <div className="flex flex-col text-white">
       <Header />
 
       <main className="flex-grow">
@@ -92,7 +92,7 @@ export default function AddShowPage() {
                   name="title"
                   value={form.title}
                   onChange={handleChange}
-                  className="w-full bg-white/5 border border-white/10 rounded-lg p-3 focus:outline-none focus:border-cyan-500"
+                  className="w-full bg-white/5 border border-white/10 rounded-[var(--rt-radius-control)] p-3 focus:outline-none focus:border-cyan-500"
                 />
               </label>
 
@@ -106,7 +106,7 @@ export default function AddShowPage() {
                   value={form.description}
                   onChange={handleChange}
                   rows="4"
-                  className="w-full bg-white/5 border border-white/10 rounded-lg p-3 focus:outline-none focus:border-cyan-500"
+                  className="w-full bg-white/5 border border-white/10 rounded-[var(--rt-radius-control)] p-3 focus:outline-none focus:border-cyan-500"
                 />
               </label>
 
@@ -150,7 +150,7 @@ export default function AddShowPage() {
                   Thumbnail
                 </span>
 
-                <label className="flex flex-col items-center justify-center h-40 border border-white/10 rounded-lg cursor-pointer hover:bg-white/5 transition overflow-hidden">
+                <label className="flex flex-col items-center justify-center h-40 border border-white/10 rounded-[var(--rt-radius-control)] cursor-pointer hover:bg-white/5 transition overflow-hidden">
                   {form.thumbnailPreview ? (
                     <img
                       src={form.thumbnailPreview}
@@ -176,7 +176,7 @@ export default function AddShowPage() {
               <div className="mb-6">
                 <span className="text-lg font-semibold mb-4 block">Video</span>
 
-                <label className="flex flex-col items-center justify-center h-40 border border-white/10 rounded-lg cursor-pointer hover:bg-white/5 transition overflow-hidden">
+                <label className="flex flex-col items-center justify-center h-40 border border-white/10 rounded-[var(--rt-radius-control)] cursor-pointer hover:bg-white/5 transition overflow-hidden">
                   {form.videoPreview ? (
                     <video
                       src={form.videoPreview}
@@ -202,7 +202,7 @@ export default function AddShowPage() {
               {/* Submit */}
               <button
                 onClick={handleSubmit}
-                className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:opacity-90 p-3 my-5 rounded-lg font-semibold shadow-lg transition"
+                className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:opacity-90 p-3 my-5 rounded-[var(--rt-radius-control)] font-semibold shadow-lg transition"
               >
                 Add Show
               </button>
@@ -212,7 +212,7 @@ export default function AddShowPage() {
             <div className="order-2 lg:order-1">
               <h2 className="text-xl font-semibold mb-4">Live Preview</h2>
 
-              <div className="rounded-xl overflow-hidden bg-white/5 border border-white/10 shadow-lg">
+              <div className="rounded-[var(--rt-radius-control)] overflow-hidden bg-white/5 border border-white/10 shadow-lg">
                 {/* Media */}
                 <div className="relative h-48">
                   {form.thumbnailPreview ? (

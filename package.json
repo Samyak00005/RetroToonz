@@ -7,7 +7,9 @@
     "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview --host"
+    "preview": "vite preview --host",
+    "media:prepare": "node tools/prepare-media.mjs",
+    "media:scan": "node tools/prepare-media.mjs --dry-run --verbose"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",

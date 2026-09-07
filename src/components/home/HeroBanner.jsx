@@ -8,7 +8,11 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const DEFAULT_BACKDROP = "/media/extras/default.jpg";
+import { getEpisodesForShow } from "../../services/contentService.js";
+import { getPlaybackProgress } from "../../services/libraryService.js";
+import { buildWatchPath } from "../../utils/watchRoutes.js";
+
+const DEFAULT_BACKDROP = "/media/defaults/image.jpg";
 const MOBILE_BREAKPOINT = "(max-width: 640px)";
 const AUTO_PLAY_INTERVAL = 5000;
 const SLIDE_DURATION = 400;
@@ -19,6 +23,7 @@ function HeroBanner({ shows = [] }) {
 
   const [index, setIndex] = useState(0);
   const [slideIn, setSlideIn] = useState(true);
+  const [paused, setPaused] = useState(false);
 
   const [isMobile, setIsMobile] = useState(() =>
     typeof window !== "undefined"
@@ -95,7 +100,7 @@ function HeroBanner({ shows = [] }) {
   }, []);
 
   useEffect(() => {
-    if (!shows.length) return;
+    if (!shows.length || paused) return undefined;
 
     const interval = setInterval(() => {
       setSlideIn(false);
@@ -113,7 +118,7 @@ function HeroBanner({ shows = [] }) {
         clearTimeout(slideTimeoutRef.current);
       }
     };
-  }, [shows.length]);
+  }, [paused, shows.length]);
 
   useEffect(() => {
     if (index >= shows.length) {
@@ -126,7 +131,19 @@ function HeroBanner({ shows = [] }) {
   const show = shows[index];
 
   const handleStartWatching = () => {
-    navigate(`/watch/${show.id}`);
+    const episodes = getEpisodesForShow(show.id);
+    const savedPlayback = getPlaybackProgress(show.id);
+    const savedEpisodeStillExists =
+      savedPlayback &&
+      !savedPlayback.completed &&
+      episodes.some(
+        (episode) => String(episode.episodeId) === String(savedPlayback.episodeId),
+      );
+    const episodeId = savedEpisodeStillExists
+      ? savedPlayback.episodeId
+      : episodes[0]?.episodeId;
+
+    navigate(buildWatchPath(show.id, episodeId));
   };
 
   const handleMoreInfo = () => {
@@ -144,8 +161,14 @@ function HeroBanner({ shows = [] }) {
       className="relative w-full touch-pan-y select-none overflow-hidden text-white"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocusCapture={() => setPaused(true)}
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false);
+      }}
     >
-      <div className="relative aspect-[2/3] w-full sm:aspect-video lg:aspect-[21/9]">
+      <div className="relative aspect-[3/4] w-full sm:aspect-[4/3] lg:aspect-[21/9]">
         <div
           key={show.id}
           className={`absolute inset-0 h-full w-full transition-all duration-700 ease-in-out will-change-transform ${
@@ -166,20 +189,21 @@ function HeroBanner({ shows = [] }) {
           />
         </div>
 
-        <div className="absolute inset-0 z-20 bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
+        <div className="absolute inset-0 z-20 bg-gradient-to-r from-black/60 via-black/20 to-transparent" />
+        <div className="absolute inset-x-0 top-0 z-20 h-32 bg-gradient-to-b from-black/35 to-transparent" />
 
         <div className="pointer-events-none absolute inset-0 z-30">
-          <div className="h-full w-full bg-gradient-to-t from-[#0F0A24] via-[#0F0A24]/40 to-transparent" />
+          <div className="h-full w-full bg-gradient-to-t from-[#080914] via-[#080914]/40 to-transparent" />
         </div>
 
-        <div className="absolute inset-0 z-30 flex flex-col items-start justify-end px-4 pb-10 sm:px-6 sm:pb-6 md:pb-8 lg:px-10">
+        <div className="absolute inset-0 z-30 mx-auto flex w-full max-w-[1800px] flex-col items-start justify-end px-4 pb-10 sm:px-6 sm:pb-8 md:pb-10 lg:px-10 lg:pb-12">
           <div className="mb-3 w-full">
             <div className="flex flex-col gap-1">
               <span className="text-label text-white/80 lg:text-base">
                 Watch
               </span>
 
-              <h1 className="text-2xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)] sm:text-5xl">
+              <h1 className="max-w-[900px] text-2xl font-bold tracking-[-0.035em] text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)] sm:text-4xl lg:text-5xl xl:text-6xl">
                 {show.title}
               </h1>
             </div>
@@ -255,7 +279,7 @@ function HeroBanner({ shows = [] }) {
             onClick={handlePrev}
             aria-label="Previous slide"
             className="
-              absolute left-6 top-1/2 z-40
+              absolute left-5 top-[40%] z-40
               hidden h-14 w-14
               -translate-y-1/2
               items-center justify-center
@@ -276,7 +300,7 @@ function HeroBanner({ shows = [] }) {
             onClick={handleNext}
             aria-label="Next slide"
             className="
-              absolute right-6 top-1/2 z-40
+              absolute right-5 top-[40%] z-40
               hidden h-14 w-14
               -translate-y-1/2
               items-center justify-center
