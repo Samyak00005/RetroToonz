@@ -1,15 +1,17 @@
-import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import { Cancel01Icon } from "@hugeicons/core-free-icons";
-import { HugeiconsIcon } from "@hugeicons/react";
+import AuthShell from "../../components/auth/AuthShell.jsx";
+import SocialLoginButton from "../../components/auth/SocialLoginButton.jsx";
+import PasswordInput from "../../components/common/PasswordInput.jsx";
+import { identityExists, signUp } from "../../services/authService.js";
+import { showToast } from "../../services/toastService.js";
 
-export default function AuthPage() {
+const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+export default function SignupPage() {
   const navigate = useNavigate();
-  const [showPassword, setShowPassword] = useState(false);
-
-  // ✅ STATE ADDED
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     fullName: "",
     username: "",
@@ -17,340 +19,148 @@ export default function AuthPage() {
     password: "",
   });
 
-  function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
-  // ✅ HANDLE INPUT
-  function handleChange(e) {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  }
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((current) => ({ ...current, [name]: value }));
+    if (error) setError("");
+  };
 
-  // ✅ SIGNUP LOGIC
-  function handleSignup(e) {
-    e.preventDefault();
-
+  const validate = () => {
     const { fullName, username, email, password } = formData;
 
-    if (!fullName || !username || !email || !password) {
-      if (!isValidEmail(email)) {
-        alert("Please enter a valid email");
-        return;
-      }
+    if (!fullName.trim() || !username.trim() || !email.trim() || !password) {
+      return "Please fill in all required fields.";
     }
 
-    const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+    if (!isValidEmail(email.trim())) {
+      return "Please enter a valid email address.";
+    }
 
-    const alreadyExists = existingUsers.find(
-      (u) => u.email === email || u.username === username,
-    );
+    if (password.length < 6) {
+      return "Use at least 6 characters for your password.";
+    }
 
-    if (alreadyExists) {
-      alert("User already exists");
+    if (identityExists({ email, username })) {
+      return "A user with this email or username already exists.";
+    }
+
+    return "";
+  };
+
+  const handleSignup = (event) => {
+    event.preventDefault();
+    const validationError = validate();
+    setError(validationError);
+    if (validationError) return;
+
+    const result = signUp(formData);
+    if (!result.ok) {
+      setError(
+        result.reason === "exists"
+          ? "A user with this email or username already exists."
+          : "Unable to create this account.",
+      );
       return;
     }
 
-    const newUser = {
-      fullName,
-      username,
-      email,
-      password,
-      role: "user",
-    };
-
-    localStorage.setItem("users", JSON.stringify([...existingUsers, newUser]));
-
-    alert("Account created successfully!");
     navigate("/login");
-  }
+    window.setTimeout(() => {
+      showToast("Account created. You can sign in now.");
+    }, 50);
+  };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#0b132b]">
-      {/* ✅ CLOSE BUTTON */}
-      <button
-        onClick={() => navigate("/")}
-        className="absolute top-6 right-6 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/15 text-white transition-all border border-white/10 backdrop-blur-md group"
-      >
-        <HugeiconsIcon
-          icon={Cancel01Icon}
-          size={24}
-          color="currentColor"
-          strokeWidth={1.5}
-          className="group-hover:rotate-90 transition-transform duration-300"
-        />
-      </button>
-
-      {/* MAIN CONTENT */}
-      <div className="flex-grow relative flex items-center justify-center px-6 sm:px-10 md:px-16 overflow-hidden">
-        {/* Confetti Overlay */}
-        <div className="absolute inset-0 bg-[url('/media/extras/confetti-doodles.svg')] bg-cover bg-center opacity-10 pointer-events-none" />
-
-        {/* Soft Glow */}
-        <div className="absolute right-1/3 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#ef476f]/20 blur-[120px] rounded-full pointer-events-none" />
-
-        {/* Floating Animated Shapes */}
-        <motion.div
-          className="absolute top-10 left-10 text-[#FF6B6B] text-3xl"
-          animate={{ y: [0, 15, 0], rotate: [0, 15, -15, 0] }}
-          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-        >
-          ▲
-        </motion.div>
-
-        <motion.div
-          className="absolute bottom-16 right-20 text-[#FFD166] text-2xl"
-          animate={{ y: [0, -10, 0], rotate: [0, -20, 20, 0] }}
-          transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
-        >
-          ■
-        </motion.div>
-
-        <motion.div
-          className="absolute bottom-20 left-1/3 text-white text-4xl"
-          animate={{ rotate: [0, 360] }}
-          transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-        >
-          ~
-        </motion.div>
-
-        {/* DESKTOP VIEW */}
-        <div className="hidden md:flex flex-col md:flex-row items-center justify-between w-full max-w-6xl relative z-10">
-          {/* Left Section */}
-          <motion.div
-            className="text-left text-gray-100 mb-10 md:mb-0 md:w-1/2 pl-0 md:pl-8"
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+    <AuthShell
+      title="Create your account"
+      subtitle="Create your RetroToonz profile and keep your favourites close."
+      footer={
+        <>
+          Already have an account?{" "}
+          <button
+            type="button"
+            onClick={() => navigate("/login")}
+            className="font-semibold text-[#ffd166] transition-colors duration-150 hover:text-[#ffe29a] hover:underline"
           >
-            <motion.h1
-              className="text-5xl font-bold mb-4 text-white drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)]"
-              animate={{ scale: [1, 1.03, 1] }}
-              transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-            >
-              RetroToonz
-            </motion.h1>
-            <p className="text-lg leading-relaxed text-gray-200">
-              Relive the magic of classic cartoons — anytime, anywhere.
-            </p>
-          </motion.div>
+            Sign in
+          </button>
+        </>
+      }
+    >
+      <form className="space-y-4" onSubmit={handleSignup}>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <label className="rt-field">
+            <span className="rt-field-label">Full name</span>
+            <input
+              className="rt-auth-input"
+              type="text"
+              name="fullName"
+              autoComplete="name"
+              placeholder="Your name"
+              value={formData.fullName}
+              onChange={handleChange}
+            />
+          </label>
 
-          {/* Right Section */}
-          <motion.div
-            className="w-full md:w-[420px] bg-[#1b1f3a]/10 backdrop-blur-xl text-white rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.45)] p-8 mt-22 mb-6 border border-white/10"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-2xl font-semibold mb-6 text-center text-emerald-100">
-              Create an account
-            </h2>
-
-            {/* ✅ FORM UPDATED */}
-            <form className="space-y-4" onSubmit={handleSignup}>
-              {/* ✅ NEW FIELD */}
-              <input
-                type="text"
-                name="fullName"
-                placeholder="Full Name"
-                value={formData.fullName}
-                onChange={handleChange}
-                className="w-full border border-white/20 bg-transparent text-white placeholder-gray-400  rounded-lg px-4 py-2.5 focus:outline-none focus:ring-1 focus:ring-[#6495ED]"
-              />
-
-              <input
-                type="text"
-                name="username"
-                placeholder="Username"
-                value={formData.username}
-                onChange={handleChange}
-                className="w-full border border-white/20 bg-transparent text-white placeholder-gray-400 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-1 focus:ring-[#6495ED]"
-              />
-
-              <input
-                type="email"
-                name="email"
-                placeholder="Email address"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full border border-white/20 bg-transparent text-white placeholder-gray-400 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-1 focus:ring-[#6495ED]"
-              />
-
-              <input
-                type={showPassword ? "text" : "password"}
-                name="password"
-                placeholder="Password"
-                value={formData.password}
-                onChange={handleChange}
-                className="w-full border border-white/20 bg-transparent text-white placeholder-gray-400 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-1 focus:ring-[#6495ED]"
-              />
-
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-[#EF476F] to-[#FF6B6B] text-white py-2.5 rounded-lg hover:from-[#FF5C8A] hover:to-[#FF8DAA] transition font-medium shadow-md shadow-[#EF476F]/30"
-              >
-                Sign Up
-              </button>
-            </form>
-
-            <div className="flex items-center justify-center my-6">
-              <div className="border-t border-gray-600 w-1/3" />
-              <span className="text-gray-400 text-sm px-2">OR</span>
-              <div className="border-t border-gray-600 w-1/3" />
-            </div>
-
-            {/* Social Buttons */}
-            <div className="flex flex-col space-y-3">
-              <button className="flex items-center justify-center gap-2.5 w-full border border-white/20 rounded-lg py-2.5 hover:bg-white/10 transition">
-                <img src="/logos/google-icon.png" className="w-5 h-5" />
-                Continue with Google
-              </button>
-            </div>
-
-            <p className="text-center text-gray-300 text-sm mt-6">
-              Already have an account?{" "}
-              <button
-                onClick={() => navigate("/login")}
-                className="text-[#FFD166] hover:underline"
-              >
-                Log in
-              </button>
-            </p>
-          </motion.div>
+          <label className="rt-field">
+            <span className="rt-field-label">Username</span>
+            <input
+              className="rt-auth-input"
+              type="text"
+              name="username"
+              autoComplete="username"
+              placeholder="retrofan"
+              value={formData.username}
+              onChange={handleChange}
+            />
+          </label>
         </div>
 
-        {/* MOBILE VIEW */}
-        <div className="flex flex-col items-center justify-center text-center w-full max-w-sm md:hidden relative z-10 py-10">
-          <motion.div
-            className="text-white mb-6"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-4xl font-bold mb-2 drop-shadow-[0_2px_10px_rgba(255,255,255,0.1)]">
-              RetroToonz
-            </h1>
-            <p className="text-base text-gray-300 leading-relaxed">
-              Relive the magic of classic cartoons — anytime, anywhere.
-            </p>
-          </motion.div>
+        <label className="rt-field">
+          <span className="rt-field-label">Email</span>
+          <input
+            className="rt-auth-input"
+            type="email"
+            name="email"
+            autoComplete="email"
+            placeholder="you@example.com"
+            value={formData.email}
+            onChange={handleChange}
+          />
+        </label>
 
-          <motion.div
-            className="w-full bg-[#111633]/80 backdrop-blur-md rounded-2xl shadow-lg border border-white/10 p-6 text-white"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-2xl font-semibold mb-5 text-center text-emerald-100">
-              Create an account
-            </h2>
+        <label className="rt-field">
+          <span className="rt-field-label">Password</span>
+          <PasswordInput
+            name="password"
+            autoComplete="new-password"
+            placeholder="Create a password"
+            value={formData.password}
+            onChange={handleChange}
+          />
+        </label>
 
-            {/* ✅ SAME LOGIC APPLIED */}
-            <form className="space-y-4" onSubmit={handleSignup}>
-              <input
-                type="text"
-                name="fullName"
-                placeholder="Full Name"
-                value={formData.fullName}
-                onChange={handleChange}
-                className="w-full border border-white/20 bg-transparent text-white placeholder-gray-400 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-1 focus:ring-[#6495ED]"
-              />
-
-              <input
-                type="text"
-                name="username"
-                placeholder="Username"
-                value={formData.username}
-                onChange={handleChange}
-                className="w-full border border-white/20 bg-transparent text-white placeholder-gray-400 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-1 focus:ring-[#6495ED]"
-              />
-
-              <input
-                type="email"
-                name="email"
-                placeholder="Email address"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full border border-white/20 bg-transparent text-white placeholder-gray-400 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-1 focus:ring-[#6495ED]"
-              />
-
-              <input
-                type={showPassword ? "text" : "password"}
-                name="password"
-                placeholder="Password"
-                value={formData.password}
-                onChange={handleChange}
-                className="w-full border border-white/20 bg-transparent text-white placeholder-gray-400 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-1 focus:ring-[#6495ED]"
-              />
-
-              <button
-                type="submit"
-                className="w-full bg-[#EF476F] text-white py-3 rounded-lg hover:bg-[#FF5C8A] transition font-medium shadow-md shadow-[#EF476F]/30"
-              >
-                Sign Up
-              </button>
-            </form>
-
-            <div className="flex items-center justify-center my-6">
-              <div className="border-t border-gray-600 w-1/3" />
-              <span className="text-gray-400 text-sm px-2">OR</span>
-              <div className="border-t border-gray-600 w-1/3" />
-            </div>
-
-            <div className="flex flex-col space-y-3">
-              <button className="flex items-center justify-center gap-2 w-full border border-white/20 rounded-lg py-3 hover:bg-white/10 transition">
-                <img src="/logos/google-icon.png" className="w-5 h-5" />
-                Continue with Google
-              </button>
-
-              <button className="flex items-center justify-center gap-2 w-full border border-white/20 rounded-lg py-3 hover:bg-white/10 transition">
-                <img src="/logos/facebook-logo.png" className="w-5 h-5" />
-                Continue with Facebook
-              </button>
-
-              <button className="flex items-center justify-center gap-2 w-full border border-white/20 rounded-lg py-3 hover:bg-white/10 transition">
-                <img
-                  src="/logos/apple-logo.png"
-                  className="w-5 h-5 invert bg-white"
-                />
-                Continue with Apple
-              </button>
-            </div>
-
-            <p className="text-center text-gray-300 text-sm mt-6">
-              Already have an account?{" "}
-              <button
-                onClick={() => navigate("/login")}
-                className="text-[#FFD166] hover:underline"
-              >
-                Log in
-              </button>
-            </p>
-          </motion.div>
+        <div className="rounded-[var(--rt-radius-control)] border border-white/8 bg-white/[0.025] px-3.5 py-3 text-xs leading-5 text-white/45">
+          Email verification is temporarily disabled while RetroToonz is frontend-only.
         </div>
+
+        {error && (
+          <p className="rt-form-message rt-form-message-error">{error}</p>
+        )}
+
+        <button type="submit" className="rt-auth-primary">
+          Create account
+        </button>
+      </form>
+
+      <div className="my-6 flex items-center gap-3" aria-hidden="true">
+        <div className="h-px flex-1 bg-white/8" />
+        <span className="text-[11px] font-medium uppercase tracking-[0.16em] text-white/28">
+          or
+        </span>
+        <div className="h-px flex-1 bg-white/8" />
       </div>
 
-      {/* FOOTER */}
-      <footer className="mt-auto py-4 text-center text-gray-400 text-xs sm:text-sm opacity-70">
-        <p>
-          © {new Date().getFullYear()}{" "}
-          <span className="text-[#FFD166] font-semibold">RetroToonz</span>. All
-          rights reserved.
-        </p>
-        <div className="flex justify-center gap-4 mt-1 text-gray-500">
-          <a href="/about" className="hover:text-[#FFD166] transition">
-            About
-          </a>
-          <a href="/privacy" className="hover:text-[#FFD166] transition">
-            Privacy
-          </a>
-          <a href="/terms" className="hover:text-[#FFD166] transition">
-            Terms
-          </a>
-        </div>
-      </footer>
-    </div>
+      <SocialLoginButton provider="Google" iconSrc="/logos/google-icon.png" />
+    </AuthShell>
   );
 }

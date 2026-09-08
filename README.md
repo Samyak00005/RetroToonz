@@ -73,30 +73,7 @@ RetroToonz is built to demonstrate modern frontend architecture using React, Vit
 
 ## 📁 Project Structure
 
-```
-src/
-│
-├── components/ # Reusable UI components
-│ ├── layout/ # App layout 
-│ ├── home/ # Homepage sections 
-│ ├── show/ # Show-related UI 
-│ ├── video/ # Video player system
-│ ├── common/ # Shared utilities 
-│ └── misc/ # Special components
-│
-├── pages/ # Route-level pages
-│ ├── core/ # Main app pages 
-│ ├── user/ # User profile & activity
-│ ├── admin/ # Admin dashboard & content management
-│ ├── auth/ # Login & Signup
-│ └── misc/ # Secondary pages
-│
-├── data/ # Static/mock data (temporary)
-│
-├── App.jsx # Root component
-├── main.jsx # Entry point
-└── index.css # Global styles
-```
+The source is organized by responsibility: app boot/routing, route pages, reusable components, services, temporary static data, and global styles. See `docs/PROJECT_STRUCTURE.md` for the current structure and migration rules. UI tokens and shared component rules are documented in `docs/DESIGN_SYSTEM.md`.
 
 ---
 
@@ -147,13 +124,17 @@ A floating action feature that:
 
 ---
 
-## 📌 Future Improvements
+## 📌 Next Major Work
 
-- 🔍 Advanced Search
-- ❤️ Persistent Watchlist
-- 👤 User Authentication & Profiles
-- 🌙 Theme Toggle (Dark/Light)
-- 🎬 Enhanced Video Player
+Phase 1 now contains the complete public frontend foundation, including advanced discovery, browser-local watchlist/history, prototype accounts, frontend-only password reset, and the enhanced player experience.
+
+Next major work is **Phase 2 — Admin CMS & persistence architecture**:
+
+- Shows / seasons / episodes management
+- Homepage collection management
+- Content health and analytics cleanup
+- Admin settings and content workflows
+- Later backend/database/media-storage integration
 
 ---
 
@@ -186,3 +167,60 @@ Frontend Developer
 
 ☕ Buy us a masaledar chai and enjoy your childhood:  
 👉 https://buymeachai.ezee.li/Samyak005
+
+---
+
+## 🧪 Frontend Prototype Accounts (Phase 1D)
+
+These accounts exist only for the current no-backend prototype and are visible in the frontend bundle.
+
+**Admin**
+- Email: `samyak.timepass@gmail.com`
+- Username: `samyak`
+- Password: `Password@123`
+
+**Normal user**
+- Email: `user@retrotoonz.com`
+- Username: `retrofan`
+- Password: `User@123`
+
+Admin → Users can create and manage additional browser-local accounts. This is not production authentication.
+
+## Phase 1 — Complete Public Frontend Foundation
+
+Phase 1J introduced artwork-backed category cards. The final Phase 1 polish adds advanced search, filters, profile/watchlist UX, resilient media states, accessibility cleanup, and responsive consistency. See `docs/PHASE_1_FINAL.md`.
+
+## Current working build
+
+Phase 1Q keeps the Phase 1 public UI foundation and replaces the temporary browser FFmpeg experiment with a local native media-preparation pipeline. Source episodes may be MKV or MP4; deployed playback remains browser-safe MP4.
+
+## Phase 1K.2 media convention
+
+Media is now grouped by show under `public/media/shows/<show-id>/`. Episode videos use the normalized `<show-id>-sNN-eNN.mp4` naming rule. See `docs/MEDIA_GUIDE.md` and `docs/EPISODE_MEDIA_MAP.csv`.
+
+## Phase 1L
+
+This build includes the media-folder migration, normalized episode naming, 23:9 desktop player, episode-card cleanup, compact library/search headers, and repaired All Shows filtering. See `docs/PHASE_1L_CHANGELOG.md`.
+
+## Phase 1M stabilization
+
+This build adds current-episode/playback-progress treatment to the Watch-page episode rail, aligns all Homepage rails to one shared safe zone, protects Watchlist for signed-in users, and reduces the desktop wordmark weight.
+
+---
+
+## Current UI milestone
+
+Phase 1N adds the final Profile polish pass: separated account/admin controls, improved Continue Watching and History cards, accurate local library metrics, and responsive empty/recommendation states. See `docs/PHASE_1N_PROFILE_POLISH.md`.
+
+## 🎬 Local media preparation
+
+RetroToonz does not run FFmpeg in the browser. Original episodes may be MKV or MP4, but browser delivery files are prepared locally before deployment.
+
+```bash
+npm run media:scan
+npm run media:prepare
+```
+
+Put source/master files under `media-source/shows/...` using `<show-id>-sNN-eNN.<ext>`. The pipeline uses native `ffprobe`/`ffmpeg`, fast-remuxes already-compatible H.264/AAC sources, and selectively transcodes incompatible streams to browser-ready MP4/H.264/AAC in `public/media/shows/...`.
+
+See `docs/LOCAL_MEDIA_PIPELINE.md`.

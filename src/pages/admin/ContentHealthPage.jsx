@@ -1,4 +1,4 @@
-import showsData from "../../data/Shows.json";
+import showsData from "../../services/contentService.js";
 
 export default function ContentHealthPage() {
   const shows = Array.isArray(showsData)
@@ -25,14 +25,14 @@ export default function ContentHealthPage() {
 
       {/* 📊 Summary Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div className="bg-black/50 border border-white/10 rounded-xl p-4">
+        <div className="bg-white/[0.055] border border-white/10 rounded-[var(--rt-radius-control)] p-4">
           <p className="text-sm text-gray-400">Missing Thumbnails</p>
           <h2 className="text-xl font-semibold mt-1 text-red-400">
             {missingThumbnails.length}
           </h2>
         </div>
 
-        <div className="bg-black/50 border border-white/10 rounded-xl p-4">
+        <div className="bg-white/[0.055] border border-white/10 rounded-[var(--rt-radius-control)] p-4">
           <p className="text-sm text-gray-400">No Episodes</p>
           <h2 className="text-xl font-semibold mt-1 text-yellow-400">
             {noEpisodes.length}
@@ -41,7 +41,7 @@ export default function ContentHealthPage() {
       </div>
 
       {/* 🔴 Missing Thumbnails Table */}
-      <div className="rounded-2xl bg-black/50 border border-white/10 overflow-hidden">
+      <div className="rounded-[var(--rt-radius-control)] bg-white/[0.055] border border-white/10 overflow-hidden">
         <div className="px-4 py-3 border-b border-white/10">
           <h2 className="text-sm font-medium text-red-400">
             Shows Missing Thumbnails
@@ -75,7 +75,7 @@ export default function ContentHealthPage() {
       </div>
 
       {/* 🟡 No Episodes Table */}
-      <div className="rounded-2xl bg-black/50 border border-white/10 overflow-hidden">
+      <div className="rounded-[var(--rt-radius-control)] bg-white/[0.055] border border-white/10 overflow-hidden">
         <div className="px-4 py-3 border-b border-white/10">
           <h2 className="text-sm font-medium text-yellow-400">
             Shows Without Episodes

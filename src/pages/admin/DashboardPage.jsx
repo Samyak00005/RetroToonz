@@ -9,13 +9,15 @@ import {
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 
-import showsData from "../../data/Shows.json";
+import showsData from "../../services/contentService.js";
+import { getAllUsers } from "../../services/authService.js";
 
 export default function DashboardPage() {
   const shows = Array.isArray(showsData) ? showsData : showsData.allShows || [];
 
   // 🔥 Derived stats
   const totalShows = shows.length;
+  const totalUsers = getAllUsers().length;
 
   const totalEpisodes = shows.reduce((acc, show) => {
     const seasons = show.seasons || [];
@@ -35,8 +37,8 @@ export default function DashboardPage() {
   const stats = [
     {
       title: "Users",
-      value: "12,430",
-      change: "+12%",
+      value: totalUsers,
+      change: "Local",
       icon: UserGroupIcon,
     },
     {
@@ -79,7 +81,7 @@ export default function DashboardPage() {
         {stats.map((stat) => (
           <div
             key={stat.title}
-            className="rounded-2xl bg-black/50 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/10 p-4"
+            className="rounded-[var(--rt-radius-control)] bg-white/[0.055] bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/10 p-4"
           >
             <div className="flex items-center justify-between">
               <p className="text-xs text-gray-500 uppercase tracking-wide">
@@ -99,7 +101,7 @@ export default function DashboardPage() {
       </div>
 
       {/* 🚨 Content Health */}
-      <div className="rounded-2xl bg-black/50 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/10 p-5">
+      <div className="rounded-[var(--rt-radius-control)] bg-white/[0.055] bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/10 p-5">
         <h3 className="text-lg font-medium text-gray-300 mb-4 flex items-center gap-2">
           <HugeiconsIcon icon={Alert02Icon} size={18} />
           Content Health
@@ -126,7 +128,7 @@ export default function DashboardPage() {
       </div>
 
       {/* 🕒 Recent Activity */}
-      <div className="rounded-2xl bg-black/50 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/10 p-5">
+      <div className="rounded-[var(--rt-radius-control)] bg-white/[0.055] bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/10 p-5">
         <h3 className="text-lg font-medium text-gray-300 mb-5 flex items-center gap-2">
           <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
           Recent Activity
@@ -136,7 +138,7 @@ export default function DashboardPage() {
           {/* Item */}
           <div className="flex items-center justify-between group">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-[var(--rt-radius-control)] bg-indigo-500/10 flex items-center justify-center">
                 <span className="text-indigo-400 text-xs">+</span>
               </div>
               <p className="text-sm text-gray-300 group-hover:text-white transition">
@@ -148,7 +150,7 @@ export default function DashboardPage() {
 
           <div className="flex items-center justify-between group">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-[var(--rt-radius-control)] bg-blue-500/10 flex items-center justify-center">
                 <span className="text-blue-400 text-xs">▶</span>
               </div>
               <p className="text-sm text-gray-300 group-hover:text-white transition">
@@ -160,7 +162,7 @@ export default function DashboardPage() {
 
           <div className="flex items-center justify-between group">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-[var(--rt-radius-control)] bg-green-500/10 flex items-center justify-center">
                 <span className="text-green-400 text-xs">U</span>
               </div>
               <p className="text-sm text-gray-300 group-hover:text-white transition">
@@ -172,7 +174,7 @@ export default function DashboardPage() {
 
           <div className="flex items-center justify-between group">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-yellow-500/10 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-[var(--rt-radius-control)] bg-yellow-500/10 flex items-center justify-center">
                 <span className="text-yellow-400 text-xs">!</span>
               </div>
               <p className="text-sm text-gray-300 group-hover:text-white transition">

@@ -3,7 +3,8 @@ import { HugeiconsIcon } from "@hugeicons/react";
 
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import showsData from "../../data/Shows.json";
+import showsData from "../../services/contentService.js";
+import { buildWatchPath } from "../../utils/watchRoutes.js";
 
 function RandomPlayButton() {
   const navigate = useNavigate();
@@ -36,9 +37,7 @@ function RandomPlayButton() {
       alert("No playable episode found.");
       return;
     }
-    navigate(`/watch/${episode.showId}`, {
-      state: { startEpisode: episode },
-    });
+    navigate(buildWatchPath(episode.showId, episode.episodeId));
   };
 
   // 🔥 MAGIC PART
@@ -69,16 +68,16 @@ function RandomPlayButton() {
     <button
       ref={btnRef}
       onClick={handlePlay}
-      className="fixed right-10 sm:right-15 z-50 group 
+      className="fixed right-10 sm:right-15 z-50 group
         bg-gradient-to-r from-cyan-500 to-blue-600
         hover:from-blue-600 hover:to-cyan-500
         text-white shadow-xl
-        px-6 py-4 rounded-full flex items-center gap-2 
+        px-6 py-4 rounded-full flex items-center gap-2
         animate-bounce hover:animate-none transition-all duration-300"
       style={{ bottom: "20px" }}
       title="Play a random cartoon"
     >
-      <span className="absolute inline-flex h-14 w-14 rounded-full bg-cyan-400 opacity-30 group-hover:animate-ping -z-10"></span>
+      <span className="absolute inline-flex h-14 w-14 rounded-full bg-cyan-400 opacity-30 group-hover:animate-ping -z-10" />
       <HugeiconsIcon icon={ShuffleIcon} className="text-xl animate-spin-slow" />
       <span className="font-semibold hidden sm:block">Surprise Me!</span>
     </button>
