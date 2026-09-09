@@ -29,7 +29,3 @@ media-source/shows/**
 # Local media files (never commit/deploy)
 public/media/**
 !public/media/README.md
-!public/media/branding/
-!public/media/defaults/
-!public/media/shows/
-!public/media/unassigned/
