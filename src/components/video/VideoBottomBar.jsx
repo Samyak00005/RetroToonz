@@ -57,7 +57,9 @@ export default function VideoBottomBar({
           max={duration || 0}
           step="0.1"
           value={value}
-          onChange={(event) => setDragSeekTime(Number.parseFloat(event.target.value))}
+          onChange={(event) =>
+            setDragSeekTime(Number.parseFloat(event.target.value))
+          }
           onMouseUp={(event) => finishSeek(event.currentTarget.value)}
           onTouchEnd={(event) => finishSeek(event.currentTarget.value)}
           className="rt-video-range flex-1"
