@@ -22,9 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-# Local source/master video files (never deploy)
-media-source/shows/**
-!media-source/shows/.gitkeep
 
 # Local media files (never commit/deploy)
 public/media/**
