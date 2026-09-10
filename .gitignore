@@ -24,5 +24,4 @@ dist-ssr
 *.sw?
 
 # Local media files (never commit/deploy)
-public/media/**
 !public/media/README.md
