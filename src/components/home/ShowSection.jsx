@@ -101,7 +101,7 @@ function ShowSection({
 
           <div
             ref={scrollRef}
-            className="scrollbar-hide flex snap-x snap-proximity gap-3 overflow-x-auto pb-3 pt-2 scroll-smooth sm:gap-4"
+            className="scrollbar-hide flex snap-x snap-proximity gap-3 overflow-x-auto pb-3 pt-2 pr-4 scroll-smooth sm:gap-4 sm:pr-6"
           >
             {shows.map((show) => (
               <div
