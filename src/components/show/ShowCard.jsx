@@ -5,8 +5,14 @@ import { FavouriteIcon, PlayIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 
 import { getEpisodesForShow } from "../../services/contentService.js";
-import { isInWatchlist, toggleWatchlist } from "../../services/libraryService.js";
-import { getFallbackImageUrl, getMediaUrl } from "../../services/mediaService.js";
+import {
+  isInWatchlist,
+  toggleWatchlist,
+} from "../../services/libraryService.js";
+import {
+  getFallbackImageUrl,
+  getMediaUrl,
+} from "../../services/mediaService.js";
 import { buildWatchPath } from "../../utils/watchRoutes.js";
 
 function ShowCard({ id, title, year, poster, linkToWatch = false }) {
@@ -17,10 +23,13 @@ function ShowCard({ id, title, year, poster, linkToWatch = false }) {
     const sync = () => setIsShortlisted(isInWatchlist(id));
     window.addEventListener("retrotoonz:watchlist-changed", sync);
     sync();
-    return () => window.removeEventListener("retrotoonz:watchlist-changed", sync);
+    return () =>
+      window.removeEventListener("retrotoonz:watchlist-changed", sync);
   }, [id]);
 
-  const firstEpisodeId = linkToWatch ? getEpisodesForShow(id)[0]?.episodeId : null;
+  const firstEpisodeId = linkToWatch
+    ? getEpisodesForShow(id)[0]?.episodeId
+    : null;
   const destination = linkToWatch
     ? buildWatchPath(id, firstEpisodeId)
     : `/show/${id}`;
@@ -73,8 +82,12 @@ function ShowCard({ id, title, year, poster, linkToWatch = false }) {
             </div>
 
             <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-black/95 via-black/55 to-transparent px-3 pb-2.5 pt-10">
-              <h3 className="truncate text-xs font-semibold text-white sm:text-sm">{title}</h3>
-              {year && <p className="text-[10px] text-gray-300 sm:text-xs">{year}</p>}
+              <h3 className="truncate text-xs font-semibold text-white sm:text-sm">
+                {title}
+              </h3>
+              {year && (
+                <p className="text-[10px] text-gray-300 sm:text-xs">{year}</p>
+              )}
             </div>
           </div>
         </div>
@@ -89,11 +102,11 @@ function ShowCard({ id, title, year, poster, linkToWatch = false }) {
             : `Add ${title} to watchlist`
         }
         aria-pressed={isShortlisted}
-        className="absolute right-2 top-2 z-20 flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-black/45 text-white backdrop-blur-md transition-all duration-200 hover:scale-105 hover:bg-black/65 focus-visible:ring-2 focus-visible:ring-cyan-300/80"
+        className="absolute right-2 top-2 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/45 text-white backdrop-blur-md transition-all duration-200 hover:scale-105 hover:bg-black/65 focus-visible:ring-2 focus-visible:ring-cyan-300/80"
       >
         <HugeiconsIcon
           icon={FavouriteIcon}
-          size={17}
+          size={18}
           className={isShortlisted ? "text-red-400" : "text-white/80"}
         />
       </button>
