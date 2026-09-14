@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function VideoPlayerShowInfo({ currentShow, currentEpisode }) {
   const navigate = useNavigate();
   const [descriptionExpanded, setDescriptionExpanded] = useState(false);
+
   useEffect(() => {
     setDescriptionExpanded(false);
   }, [currentShow?.id, currentEpisode?.episodeId]);
@@ -26,16 +27,17 @@ export default function VideoPlayerShowInfo({ currentShow, currentEpisode }) {
     currentEpisode?.description ||
     currentShow.description ||
     "";
+
   const tags = Array.isArray(currentShow.tags)
-    ? currentShow.tags.filter(Boolean).slice(0, 6)
+    ? currentShow.tags.filter(Boolean).slice(0, 5)
     : [];
 
   return (
-    <section className="rt-watch-body-content py-4 sm:py-5">
-      <div className="rt-surface p-4 sm:p-6 lg:p-7">
+    <section className="rt-watch-body-content py-5 sm:py-6 lg:py-7">
+      <div className="border-b border-white/10 pb-6 sm:pb-7">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
-          <div className="min-w-0">
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-white/60">
+          <div className="min-w-0 flex-1">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-white/45 sm:text-sm">
               {currentShow.year && <span>{currentShow.year}</span>}
               {currentShow.language && <span>• {currentShow.language}</span>}
               {currentShow.rating && (
@@ -48,14 +50,14 @@ export default function VideoPlayerShowInfo({ currentShow, currentEpisode }) {
               {currentShow.views && <span>• {currentShow.views} views</span>}
             </div>
 
-            <h1 className="mt-1 text-xl font-bold tracking-[-0.025em] text-white sm:text-2xl">
+            <h1 className="mt-1 text-xl font-semibold tracking-[-0.025em] text-white sm:text-2xl">
               {currentShow.title}
             </h1>
 
             {tags.length > 0 && (
               <div className="scrollbar-hide mt-3 flex gap-2 overflow-x-auto pb-1 sm:flex-wrap sm:overflow-visible">
                 {tags.map((tag) => (
-                  <span key={tag} className="rt-chip shrink-0 bg-white/[0.055]">
+                  <span key={tag} className="rt-chip shrink-0 border-white/10 bg-transparent text-white/55">
                     {tag}
                   </span>
                 ))}
@@ -66,17 +68,17 @@ export default function VideoPlayerShowInfo({ currentShow, currentEpisode }) {
           <button
             type="button"
             onClick={() => navigate(`/show/${currentShow.id}`)}
-            className="rt-button rt-button-secondary shrink-0"
+            className="rt-button rt-button-secondary shrink-0 rounded-full"
           >
             View show
             <HugeiconsIcon icon={ArrowRight01Icon} size={16} />
           </button>
         </div>
 
-        <div className="mt-5 border-t border-white/10 pt-5">
-          <div className="flex flex-wrap items-center gap-2">
+        <div className="mt-5 pt-5 sm:mt-6 sm:pt-6 border-t border-white/8">
+          <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
             {episodeCode && (
-              <span className="text-xs font-bold tracking-[0.08em] text-cyan-300">
+              <span className="text-xs font-semibold tracking-[0.06em] text-cyan-300">
                 {episodeCode}
               </span>
             )}
@@ -86,20 +88,19 @@ export default function VideoPlayerShowInfo({ currentShow, currentEpisode }) {
           </div>
 
           {synopsis && (
-            <div className="mt-2 max-w-5xl">
+            <div className="mt-2 max-w-4xl">
               <p
-                className={`text-sm leading-6 text-white/62 ${
+                className={`text-sm leading-6 text-white/55 sm:text-[0.95rem] ${
                   descriptionExpanded ? "" : "rt-mobile-description-clamp"
                 }`}
               >
                 {synopsis}
               </p>
-
               {synopsis.length > 105 && (
                 <button
                   type="button"
                   onClick={() => setDescriptionExpanded((value) => !value)}
-                  className="mt-1.5 text-xs font-semibold text-cyan-300 transition hover:text-cyan-200 sm:hidden"
+                  className="mt-1.5 text-xs font-semibold text-cyan-300 transition-colors hover:text-cyan-200 sm:hidden"
                 >
                   {descriptionExpanded ? "Show less" : "Show more"}
                 </button>

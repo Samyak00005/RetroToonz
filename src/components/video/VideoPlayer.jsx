@@ -6,7 +6,7 @@ import {
   markPlaybackCompleted,
   savePlaybackProgress,
 } from "../../services/libraryService.js";
-import { getFallbackImageUrl, getMediaUrl } from "../../services/mediaService.js";
+import { getFallbackImageUrl, getMediaUrl, probeMediaUrl } from "../../services/mediaService.js";
 import VideoBottomBar from "./VideoBottomBar.jsx";
 import VideoCenterControls from "./VideoCenterControls.jsx";
 import VideoTopBar from "./VideoTopBar.jsx";
@@ -58,7 +58,8 @@ export default function VideoPlayer({
   const [progressBackground, setProgressBackground] = useState("");
   const [seekFeedback, setSeekFeedback] = useState(null);
   const [dragSeekTime, setDragSeekTime] = useState(null);
-  const [mediaError, setMediaError] = useState("");
+  const [mediaError, setMediaError] = useState(null);
+  const [activeSourceUrl, setActiveSourceUrl] = useState("");
 
   const showId = currentShow?.id || "";
   const episodeId = startEpisode?.episodeId || "";
@@ -120,7 +121,7 @@ export default function VideoPlayer({
     if (!video) return;
 
     if (video.paused) {
-      setMediaError("");
+      setMediaError(null);
       setIsBuffering(true);
       video
         .play()
@@ -257,6 +258,11 @@ export default function VideoPlayer({
     const video = videoRef.current;
     if (!video) return;
 
+    // Apply persistent player preferences to the newly mounted media element.
+    video.playbackRate = playbackRateRef.current;
+    video.volume = volumeRef.current;
+    video.muted = mutedRef.current;
+
     const loadedDuration = Number(video.duration || 0);
     durationRef.current = loadedDuration;
     setDuration(loadedDuration);
@@ -358,9 +364,8 @@ export default function VideoPlayer({
       resumeAfterSourceChangeRef.current = wasPlaying;
       setSelectedQuality(quality.label || label);
       setIsBuffering(true);
-      setMediaError("");
-      video.src = quality.url;
-      video.load();
+      setMediaError(null);
+      setActiveSourceUrl(getMediaUrl(quality.url));
       resetControlsTimer();
     },
     [qualities, resetControlsTimer],
@@ -399,7 +404,7 @@ export default function VideoPlayer({
 
     setQualities(nextQualities);
     setSelectedQuality(nextQualities[0]?.label || "Auto");
-    setMediaError("");
+    setMediaError(null);
     setIsBuffering(Boolean(nextQualities[0]?.url));
     setPlayingState(false);
     setCurrentTime(0);
@@ -413,31 +418,17 @@ export default function VideoPlayer({
     setShowControls(true);
     clearControlsTimeout();
 
-    const video = videoRef.current;
-    const sourceUrl = nextQualities[0]?.url;
+    const sourceUrl = getMediaUrl(nextQualities[0]?.url || "");
+    setActiveSourceUrl(sourceUrl);
 
-    if (!video || !sourceUrl) {
+    if (!sourceUrl) {
       setIsBuffering(false);
-      setMediaError("Media file not included in this project copy.");
-      return undefined;
-    }
-
-    video.src = sourceUrl;
-    video.playbackRate = playbackRateRef.current;
-    video.volume = volumeRef.current;
-    video.muted = mutedRef.current;
-    video.load();
-    video
-      .play()
-      .then(() => {
-        setPlayingState(true);
-        resetControlsTimer();
-      })
-      .catch(() => {
-        setIsBuffering(false);
-        setPlayingState(false);
-        setShowControls(true);
+      setMediaError({
+        kind: "missing-source",
+        message: "No video source is configured for this episode.",
+        source: "",
       });
+    }
 
     return () => {
       persistProgress(true);
@@ -599,7 +590,9 @@ export default function VideoPlayer({
       onTouchEnd={handleTouchEnd}
     >
       <video
+        key={`${episodeId}:${activeSourceUrl}`}
         ref={videoRef}
+        src={activeSourceUrl || undefined}
         className="absolute inset-0 h-full w-full bg-black object-contain"
         controls={false}
         autoPlay
@@ -622,11 +615,56 @@ export default function VideoPlayer({
         onLoadedMetadata={handleLoadedMetadata}
         onProgress={updateProgressBackground}
         onEnded={handleVideoEnd}
-        onError={() => {
+        onError={async (event) => {
+          const video = event.currentTarget;
+          const errorCode = video.error?.code ?? 0;
+
+          // An aborted request can happen during React development remounts or a
+          // deliberate source/quality change. It is not a missing-media error.
+          if (errorCode === 1) {
+            setIsBuffering(false);
+            return;
+          }
+
           setIsBuffering(false);
           setPlayingState(false);
           setShowControls(true);
-          setMediaError("Media file not included in this project copy.");
+
+          const diagnostic = await probeMediaUrl(activeSourceUrl);
+          let message = "This episode could not be played.";
+          let kind = "unknown";
+
+          if (diagnostic.reachable && !diagnostic.ok) {
+            kind = "not-found";
+            message = `The configured video URL returned HTTP ${diagnostic.status}.`;
+          } else if (!diagnostic.reachable) {
+            kind = "network";
+            message = "The browser could not reach the configured video URL.";
+          } else if (errorCode === 3) {
+            kind = "decode";
+            message = "The video file exists, but the browser could not decode its codec.";
+          } else if (errorCode === 4) {
+            kind = "unsupported";
+            message = "The video file exists, but this browser does not support its container or codec.";
+          } else if (errorCode === 2) {
+            kind = "network";
+            message = "The video file was found, but loading failed because of a media network error.";
+          }
+
+          console.error("[RetroToonz] Video playback failed", {
+            source: activeSourceUrl,
+            mediaErrorCode: errorCode,
+            diagnostic,
+          });
+
+          setMediaError({
+            kind,
+            message,
+            source: activeSourceUrl,
+            status: diagnostic.status,
+            contentType: diagnostic.contentType,
+            mediaErrorCode: errorCode,
+          });
         }}
       />
 
@@ -668,7 +706,7 @@ export default function VideoPlayer({
 
       {seekFeedback && (
         <div className="pointer-events-none absolute inset-0 z-50 flex items-center justify-center">
-          <div className="rounded-[var(--rt-radius-control)] border border-white/15 bg-[#081526]/80 px-4 py-2 text-sm font-semibold text-white shadow-lg backdrop-blur-lg">
+          <div className="rounded-[var(--rt-radius-control)] border border-white/15 bg-black/70 px-4 py-2 text-sm font-semibold text-white">
             {seekFeedback}
           </div>
         </div>
@@ -683,44 +721,33 @@ export default function VideoPlayer({
             src={fallbackVisual}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 h-full w-full scale-[1.02] object-cover opacity-45 blur-[1px]"
+            className="absolute inset-0 h-full w-full object-cover opacity-35"
             onError={(event) => {
               event.currentTarget.onerror = null;
               event.currentTarget.src = getFallbackImageUrl();
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/35" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/92 via-black/66 to-black/35" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/25" />
 
           <div className="relative flex h-full items-end p-5 sm:p-7 lg:p-9">
-            <div className="max-w-xl rounded-2xl border border-white/10 bg-black/45 p-5 text-left shadow-2xl backdrop-blur-xl sm:p-6">
-              <span className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-cyan-100">
-                Development media
-              </span>
-              <h2 className="mt-3 text-xl font-semibold text-white sm:text-2xl">
+            <div className="max-w-xl text-left">
+              <span className="text-xs font-semibold text-cyan-200">Development media</span>
+              <h2 className="mt-2 text-xl font-semibold text-white sm:text-2xl">
                 {startEpisode?.title || "Episode media not included"}
               </h2>
-              <p className="mt-2 text-sm leading-6 text-white/65">
-                The video files were intentionally removed from this lightweight project package.
-                Restore the configured file inside <span className="text-white/85">public/media</span> and the player will use it automatically.
+              <p className="mt-2 max-w-lg text-sm leading-6 text-white/62">
+                {mediaError?.message || "This episode could not be played."}
+                {mediaError?.source && (
+                  <span className="mt-2 block break-all text-xs text-white/40">
+                    Source: {mediaError.source}
+                  </span>
+                )}
               </p>
-
               <div className="mt-5 flex flex-wrap gap-2.5">
-                <button
-                  type="button"
-                  className="rt-button rt-button-secondary"
-                  onClick={() => navigate(`/show/${currentShow.id}`)}
-                >
-                  Back to show
-                </button>
+                <button type="button" className="rt-button rt-button-secondary rounded-full" onClick={() => navigate(`/show/${currentShow.id}`)}>Back to show</button>
                 {canGoNext && (
-                  <button
-                    type="button"
-                    className="rt-button rt-button-ghost"
-                    onClick={() => goToNextEpisode?.()}
-                  >
-                    Next episode
-                  </button>
+                  <button type="button" className="rt-button rt-button-ghost rounded-full" onClick={() => goToNextEpisode?.()}>Next episode</button>
                 )}
               </div>
             </div>

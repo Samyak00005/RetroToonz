@@ -189,7 +189,7 @@ function CategorySection({
           <button
             type="button"
             onClick={() => onSelectGenre(null)}
-            className="inline-flex min-h-10 shrink-0 items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 text-sm font-semibold text-white/65 transition-all duration-200 hover:border-cyan-300/25 hover:bg-cyan-300/[0.06] hover:text-cyan-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70"
+            className="inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 text-sm font-semibold text-white/65 transition-all duration-200 hover:border-cyan-300/25 hover:bg-cyan-300/[0.06] hover:text-cyan-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70"
           >
             <HugeiconsIcon icon={ArrowLeft01Icon} size={16} />
             <span>Back to categories</span>
@@ -350,8 +350,8 @@ function CategorySection({
               top-[42%]
               z-30
               hidden
-              h-10
-              w-10
+              h-11
+              w-11
               -translate-y-1/2
               items-center
               justify-center
@@ -392,8 +392,8 @@ function CategorySection({
               top-[42%]
               z-30
               hidden
-              h-10
-              w-10
+              h-11
+              w-11
               -translate-y-1/2
               items-center
               justify-center

@@ -32,7 +32,7 @@ const AboutPage = () => {
             <HugeiconsIcon
               icon={Home01Icon}
               size={20}
-              className="group-hover:scale-125 transition-transform"
+              className="transition-colors"
             />
             <span className="font-semibold text-base md:text-lg">Home</span>
           </Link>
@@ -55,11 +55,11 @@ const AboutPage = () => {
 
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#15419f] rounded-full blur-[200px] opacity-25 z-0"></div>
 
-        <div className="relative z-10 mb-12 transform hover:scale-[1.02] transition-transform duration-1000 ease-out w-full md:w-auto">
+        <div className="relative z-10 mb-12 w-full md:w-auto">
           <img
             src={logoSrc}
             alt="RetroToonz Emblem"
-            className="w-full md:w-[500px] md:rounded-2xl mx-auto drop-shadow-[0_25px_50px_rgba(29,78,216,0.35)] cursor-pointer"
+            className="mx-auto w-full md:w-[500px] md:rounded-2xl"
           />
         </div>
 
@@ -104,11 +104,11 @@ const AboutPage = () => {
         <div className="relative border border-[#334155]/30 bg-[#0f172a]/30 backdrop-blur-sm p-3 rounded-tr-3xl rounded-bl-3xl shadow-[0_0_60px_-15px_rgba(30,58,138,0.2)]">
           <div className="grid grid-cols-2 gap-3 relative z-10">
             {/* VINTAGE */}
-            <div className="bg-[#0b1121] hover:bg-[#111827] border border-[#1e293b] hover:border-[#60a5fa]/40 rounded-2xl flex flex-col items-center justify-center text-center gap-4 h-48 transition-all duration-500 group cursor-pointer shadow-lg">
+            <div className="bg-[#0b1121] hover:bg-[#111827] border border-[#1e293b] hover:border-[#60a5fa]/40 rounded-2xl flex flex-col items-center justify-center text-center gap-4 h-48 transition-colors duration-200 group">
               <HugeiconsIcon
                 icon={Film02Icon}
                 size={40}
-                className="text-[#64748b] group-hover:text-[#93c5fd] group-hover:scale-110 transition-all duration-500"
+                className="text-[#64748b] group-hover:text-[#93c5fd] transition-colors duration-200"
               />
               <span className="font-royal text-lg text-[#cbd5e1] group-hover:text-white tracking-widest">
                 VINTAGE
@@ -116,11 +116,11 @@ const AboutPage = () => {
             </div>
 
             {/* TOONZ */}
-            <div className="bg-[#0b1121] hover:bg-[#111827] border border-[#1e293b] hover:border-[#60a5fa]/40 rounded-2xl flex flex-col items-center justify-center text-center gap-4 h-48 transition-all duration-500 group cursor-pointer shadow-lg">
+            <div className="bg-[#0b1121] hover:bg-[#111827] border border-[#1e293b] hover:border-[#60a5fa]/40 rounded-2xl flex flex-col items-center justify-center text-center gap-4 h-48 transition-colors duration-200 group">
               <HugeiconsIcon
                 icon={Tv01Icon}
                 size={34}
-                className="text-[#64748b] group-hover:text-[#93c5fd] group-hover:scale-110 transition-all duration-500"
+                className="text-[#64748b] group-hover:text-[#93c5fd] transition-colors duration-200"
               />
               <span className="font-royal text-lg text-[#cbd5e1] group-hover:text-white tracking-widest">
                 TOONZ
@@ -128,11 +128,11 @@ const AboutPage = () => {
             </div>
 
             {/* REMIX */}
-            <div className="bg-[#0b1121] hover:bg-[#111827] border border-[#1e293b] hover:border-[#60a5fa]/40 rounded-2xl flex flex-col items-center justify-center text-center gap-4 h-48 transition-all duration-500 group cursor-pointer shadow-lg">
+            <div className="bg-[#0b1121] hover:bg-[#111827] border border-[#1e293b] hover:border-[#60a5fa]/40 rounded-2xl flex flex-col items-center justify-center text-center gap-4 h-48 transition-colors duration-200 group">
               <HugeiconsIcon
                 icon={StarsIcon}
                 size={34}
-                className="text-[#64748b] group-hover:text-[#93c5fd] group-hover:scale-110 transition-all duration-500"
+                className="text-[#64748b] group-hover:text-[#93c5fd] transition-colors duration-200"
               />
               <span className="font-royal text-lg text-[#cbd5e1] group-hover:text-white tracking-widest">
                 REMIX
@@ -140,11 +140,11 @@ const AboutPage = () => {
             </div>
 
             {/* NOSTALGIA */}
-            <div className="bg-[#0b1121] hover:bg-[#111827] border border-[#1e293b] hover:border-[#60a5fa]/40 rounded-2xl flex flex-col items-center justify-center text-center gap-4 h-48 transition-all duration-500 group cursor-pointer shadow-lg">
+            <div className="bg-[#0b1121] hover:bg-[#111827] border border-[#1e293b] hover:border-[#60a5fa]/40 rounded-2xl flex flex-col items-center justify-center text-center gap-4 h-48 transition-colors duration-200 group">
               <HugeiconsIcon
                 icon={FavouriteIcon}
                 size={40}
-                className="text-[#64748b] group-hover:text-[#93c5fd] group-hover:scale-110 transition-all duration-500"
+                className="text-[#64748b] group-hover:text-[#93c5fd] transition-colors duration-200"
               />
               <span className="font-royal text-lg text-[#cbd5e1] group-hover:text-white tracking-widest">
                 NOSTALGIA
@@ -160,7 +160,7 @@ const AboutPage = () => {
         <HugeiconsIcon
           icon={StarsIcon}
           size={24}
-          className="text-[#93c5fd] animate-pulse"
+          className="text-[#93c5fd]"
         />
         <div className="h-[1px] w-40 bg-gradient-to-r from-transparent via-[#78abeb] to-transparent"></div>
       </div>
@@ -189,7 +189,7 @@ const AboutPage = () => {
           ].map((item, idx) => (
             <div
               key={idx}
-              className="bg-[#0b1121] p-10 border border-[#1e293b] hover:border-[#60a5fa]/40 transition-all duration-500 rounded-lg group hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_rgba(30,58,138,0.2)]"
+              className="bg-[#0b1121] p-10 border border-[#1e293b] hover:border-[#60a5fa]/40 transition-colors duration-200 rounded-lg group"
             >
               <h4 className="text-xl font-royal font-bold text-[#e2e8f0] mb-4 group-hover:text-[#93c5fd] transition-colors">
                 {item.title}
@@ -216,7 +216,7 @@ const AboutPage = () => {
             href="https://buymeachai.ezee.li/Samyak005"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-xl shadow-md hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-200"
+            className="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-xl shadow-md hover:bg-slate-100 transition-colors duration-200"
           >
             <img
               src="https://buymeachai.ezee.li/assets/images/chai.png"
@@ -250,18 +250,21 @@ const AboutPage = () => {
           <div className="flex gap-6">
             <a
               href="#"
+              aria-label="Instagram"
               className="p-3 bg-[#0f172a] border border-[#1e293b] rounded-full hover:border-[#60a5fa] hover:text-[#93c5fd] transition-all duration-300 text-[#64748b]"
             >
               <HugeiconsIcon icon={InstagramIcon} size={20} />
             </a>
             <a
               href="#"
+              aria-label="Twitter"
               className="p-3 bg-[#0f172a] border border-[#1e293b] rounded-full hover:border-[#60a5fa] hover:text-[#93c5fd] transition-all duration-300 text-[#64748b]"
             >
               <HugeiconsIcon icon={TwitterIcon} size={20} />
             </a>
             <a
               href="#"
+              aria-label="Email"
               className="p-3 bg-[#0f172a] border border-[#1e293b] rounded-full hover:border-[#60a5fa] hover:text-[#93c5fd] transition-all duration-300 text-[#64748b]"
             >
               <HugeiconsIcon icon={Mail01Icon} size={20} />

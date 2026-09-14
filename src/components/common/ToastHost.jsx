@@ -39,11 +39,13 @@ export default function ToastHost() {
           transition={{ duration: 0.16, ease: "easeOut" }}
         >
           <div
-            role="status"
-            className={`pointer-events-auto flex min-w-0 max-w-md items-center gap-3 border px-4 py-3 backdrop-blur-xl ${
+            role={isError ? "alert" : "status"}
+            aria-live={isError ? "assertive" : "polite"}
+            aria-atomic="true"
+            className={`pointer-events-auto flex min-w-0 max-w-md items-center gap-3 border px-4 py-3 ${
               isError
-                ? "border-red-300/20 bg-[rgba(55,18,30,0.92)]"
-                : "border-cyan-200/20 bg-[rgba(8,20,30,0.92)]"
+                ? "border-red-300/20 bg-[#2c111c]"
+                : "border-cyan-200/20 bg-[#09151f]"
             }`}
             style={{ borderRadius: "var(--rt-radius-control)" }}
           >
@@ -60,7 +62,7 @@ export default function ToastHost() {
             <button
               type="button"
               onClick={() => setToast(null)}
-              className="ml-auto text-lg leading-none text-white/35 transition-colors duration-150 hover:text-white"
+              className="ml-auto flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-lg leading-none text-white/45 transition-colors duration-150 hover:bg-white/[0.06] hover:text-white focus-visible:text-white"
               aria-label="Dismiss notification"
             >
               ×

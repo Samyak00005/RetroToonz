@@ -1,7 +1,7 @@
-import { AllBookmarkIcon } from "@hugeicons/core-free-icons";
+import { AllBookmarkIcon, Login01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { useEffect, useMemo, useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import EmptyState from "../../components/common/EmptyState.jsx";
 import Footer from "../../components/layout/Footer.jsx";
@@ -45,87 +45,107 @@ export default function WatchlistPage() {
   }, [savedShows, genre, sortBy]);
 
   useEffect(() => {
-    if (genre !== "All" && !genres.some((item) => item.label === genre)) {
-      setGenre("All");
-    }
+    if (genre !== "All" && !genres.some((item) => item.label === genre)) setGenre("All");
   }, [genre, genres]);
 
   const currentUser = getCurrentUser();
 
   if (!currentUser) {
     return (
-      <Navigate
-        to="/login?reason=watchlist"
-        replace
-        state={{ from: "/watchlist" }}
-      />
+      <div className="rt-page flex min-h-screen flex-col">
+        <Header />
+        <main className="flex-1">
+          <div className="rt-standard-content py-10 sm:py-14 lg:py-16">
+            <div className="mx-auto max-w-xl">
+              <EmptyState
+                icon={<HugeiconsIcon icon={Login01Icon} size={38} />}
+                title="Sign in to see your watchlist"
+                description="Your saved shows are connected to your RetroToonz account on this device. Sign in to view or manage them."
+                action={(
+                  <div className="flex flex-wrap justify-center gap-2">
+                    <button
+                      type="button"
+                      className="rt-button rt-button-primary rounded-full px-5"
+                      onClick={() => navigate("/login", { state: { from: "/watchlist" } })}
+                    >
+                      Sign in
+                    </button>
+                    <button
+                      type="button"
+                      className="rt-button rt-button-secondary rounded-full px-5"
+                      onClick={() => navigate("/signup", { state: { from: "/watchlist" } })}
+                    >
+                      Create account
+                    </button>
+                  </div>
+                )}
+              />
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </div>
     );
   }
 
   return (
-    <div className="rt-page flex flex-col">
+    <div className="rt-page flex min-h-screen flex-col">
       <Header />
 
       <main className="flex-1">
-        <div className="rt-standard-content py-6 sm:py-9">
-          <div>
-            <h1 className="text-2xl font-bold tracking-[-0.035em] text-white sm:text-3xl">Your Watchlist</h1>
-            <p className="mt-1.5 text-sm text-white/48">
-              {savedShows.length
-                ? `${savedShows.length} saved show${savedShows.length === 1 ? "" : "s"}`
-                : "Save shows with the heart button and they will appear here."}
-            </p>
+        <div className="rt-standard-content py-7 pb-16 sm:py-9 sm:pb-20">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h1 className="text-2xl font-semibold tracking-[-0.035em] text-white sm:text-3xl">Watchlist</h1>
+              <p className="mt-1.5 text-sm text-white/45">
+                {savedShows.length
+                  ? `${savedShows.length} saved show${savedShows.length === 1 ? "" : "s"}`
+                  : "Shows you save will stay here for later."}
+              </p>
+            </div>
+
+            {savedShows.length > 1 && (
+              <label className="flex items-center gap-2 text-sm text-white/45">
+                <span>Sort</span>
+                <select className="rt-select min-h-11 w-auto py-2" value={sortBy} onChange={(event) => setSortBy(event.target.value)}>
+                  <option value="title-asc">A → Z</option>
+                  <option value="year-desc">Newest</option>
+                  <option value="year-asc">Oldest</option>
+                  <option value="rating-desc">Top rated</option>
+                </select>
+              </label>
+            )}
           </div>
 
-          {savedShows.length > 0 && (
-            <div className="mt-7 flex flex-col gap-3 rounded-[var(--rt-radius-card)] border border-white/8 bg-white/[0.025] p-3 sm:flex-row sm:items-end sm:justify-between sm:p-4">
-              <label className="rt-field min-w-0 sm:w-52">
-                <span className="rt-field-label">Category</span>
-                <select className="rt-select" value={genre} onChange={(event) => setGenre(event.target.value)}>
-                  <option value="All">All categories</option>
-                  {genres.map((item) => (
-                    <option key={item.label} value={item.label}>{item.label}</option>
-                  ))}
-                </select>
-              </label>
-
-              <label className="rt-field min-w-0 sm:w-52">
-                <span className="rt-field-label">Sort by</span>
-                <select className="rt-select" value={sortBy} onChange={(event) => setSortBy(event.target.value)}>
-                  <option value="title-asc">Title A → Z</option>
-                  <option value="year-desc">Newest first</option>
-                  <option value="year-asc">Oldest first</option>
-                  <option value="rating-desc">Highest rated</option>
-                </select>
-              </label>
+          {savedShows.length > 0 && genres.length > 1 && (
+            <div className="mt-6 flex gap-2 overflow-x-auto pb-1 scrollbar-none" aria-label="Filter watchlist by category">
+              <button type="button" className={`rt-chip ${genre === "All" ? "rt-chip-active" : ""}`} onClick={() => setGenre("All")}>All</button>
+              {genres.map((item) => (
+                <button
+                  key={item.label}
+                  type="button"
+                  className={`rt-chip ${genre === item.label ? "rt-chip-active" : ""}`}
+                  onClick={() => setGenre(item.label)}
+                >
+                  {item.label}
+                </button>
+              ))}
             </div>
           )}
 
-          <div className="mt-8">
+          <div className="mt-7 sm:mt-8">
             {savedShows.length === 0 ? (
               <EmptyState
-                icon={<HugeiconsIcon icon={AllBookmarkIcon} size={58} />}
-                title="Your watchlist is empty"
-                description="Tap the heart on any show card or Show Details page to keep it here for later."
-                action={
-                  <button
-                    type="button"
-                    className="rt-button rt-button-primary"
-                    onClick={() => navigate("/all-shows")}
-                  >
-                    Browse shows
-                  </button>
-                }
+                icon={<HugeiconsIcon icon={AllBookmarkIcon} size={42} />}
+                title="Nothing saved yet"
+                description="Use the heart on any show to keep it in your watchlist."
+                action={<button type="button" className="rt-button rt-button-primary" onClick={() => navigate("/all-shows")}>Browse shows</button>}
               />
             ) : shows.length === 0 ? (
               <EmptyState
-                title="Nothing in this category"
-                description="Choose another category to see the rest of your saved shows."
-                action={
-                  <button type="button" className="rt-button rt-button-secondary" onClick={() => setGenre("All")}>
-                    Show all saved shows
-                  </button>
-                }
+                title="No saved shows in this category"
+                description="Choose another category to see the rest of your watchlist."
+                action={<button type="button" className="rt-button rt-button-secondary" onClick={() => setGenre("All")}>Show everything</button>}
               />
             ) : (
               <ShowGrid shows={shows} />

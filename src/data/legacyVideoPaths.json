@@ -1,0 +1,552 @@
+{
+  "ben-10-s01-e1": [
+    "/media/episodes/ben-10/season-01/ben-10-s01-e01.mp4",
+    "/media/episodes/ben-10/season-01/ben-10-s01-e01.mkv"
+  ],
+  "ben-10-s01-e2": [
+    "/media/episodes/ben-10/season-01/ben-10-s01-e02.mp4",
+    "/media/episodes/ben-10/season-01/ben-10-s01-e02.mkv"
+  ],
+  "ben-10-s01-e3": [
+    "/media/episodes/ben-10/season-01/ben-10-s01-e03.mp4",
+    "/media/episodes/ben-10/season-01/ben-10-s01-e03.mkv"
+  ],
+  "ben-10-s02-e1": [
+    "/media/episodes/ben-10/season-02/ben-10-s02-e01.mp4",
+    "/media/episodes/ben-10/season-02/ben-10-s02-e01.mkv"
+  ],
+  "ben-10-s02-e2": [
+    "/media/episodes/ben-10/season-02/ben-10-s02-e02.mp4",
+    "/media/episodes/ben-10/season-02/ben-10-s02-e02.mkv"
+  ],
+  "chhota-bheem-s01-e1": [
+    "/media/episodes/chhota-bheem/season-01/chhota-bheem-s01-e01.mp4",
+    "/media/episodes/chhota-bheem/season-01/chhota-bheem-s01-e01.mkv"
+  ],
+  "chhota-bheem-s01-e2": [
+    "/media/episodes/chhota-bheem/season-01/chhota-bheem-s01-e02.mp4",
+    "/media/episodes/chhota-bheem/season-01/chhota-bheem-s01-e02.mkv"
+  ],
+  "chhota-bheem-s01-e3": [
+    "/media/episodes/chhota-bheem/season-01/chhota-bheem-s01-e03.mp4",
+    "/media/episodes/chhota-bheem/season-01/chhota-bheem-s01-e03.mkv"
+  ],
+  "chhota-bheem-s02-e1": [
+    "/media/episodes/chhota-bheem/season-02/chhota-bheem-s02-e01.mp4",
+    "/media/episodes/chhota-bheem/season-02/chhota-bheem-s02-e01.mkv"
+  ],
+  "chhota-bheem-s02-e2": [
+    "/media/episodes/chhota-bheem/season-02/chhota-bheem-s02-e02.mp4",
+    "/media/episodes/chhota-bheem/season-02/chhota-bheem-s02-e02.mkv"
+  ],
+  "chhota-bheem-s02-e3": [
+    "/media/episodes/chhota-bheem/season-02/chhota-bheem-s02-e03.mp4",
+    "/media/episodes/chhota-bheem/season-02/chhota-bheem-s02-e03.mkv"
+  ],
+  "doraemon-s01-e1": [
+    "/media/episodes/doraemon/season-01/doraemon e01.mkv",
+    "/media/episodes/doraemon/season-01/doraemon e01.mp4"
+  ],
+  "doraemon-s01-e2": [
+    "/media/episodes/doraemon/season-01/doraemon e02.mkv",
+    "/media/episodes/doraemon/season-01/doraemon e02.mp4"
+  ],
+  "doraemon-s01-e3": [
+    "/media/episodes/doraemon/season-01/doraemon e03.mkv",
+    "/media/episodes/doraemon/season-01/doraemon e03.mp4"
+  ],
+  "doraemon-s02-e26": [
+    "/media/episodes/doraemon/season-02/doraemon e26.mkv",
+    "/media/episodes/doraemon/season-02/doraemon e26.mp4"
+  ],
+  "doraemon-s02-e29": [
+    "/media/episodes/doraemon/season-02/doraemon e29.mkv",
+    "/media/episodes/doraemon/season-02/doraemon e29.mp4"
+  ],
+  "doraemon-s02-e33": [
+    "/media/episodes/doraemon/season-02/doraemon e33.mkv",
+    "/media/episodes/doraemon/season-02/doraemon e33.mp4"
+  ],
+  "doraemon-s02-e46": [
+    "/media/episodes/doraemon/season-02/doraemon e46.mkv",
+    "/media/episodes/doraemon/season-02/doraemon e46.mp4"
+  ],
+  "doraemon-s03-e5": [
+    "/media/episodes/doraemon/season-03/doraemon e05.mkv",
+    "/media/episodes/doraemon/season-03/doraemon e05.mp4"
+  ],
+  "doraemon-s03-e27": [
+    "/media/episodes/doraemon/season-03/doraemon e05.mkv",
+    "/media/episodes/doraemon/season-03/doraemon e05.mp4",
+    "/media/episodes/doraemon/season-03/doraemon e027.mkv",
+    "/media/episodes/doraemon/season-03/doraemon e027.mp4"
+  ],
+  "hagemaru-s01-e01": [
+    "/media/episodes/hagemaru/season-01/hagemaru e01.mkv",
+    "/media/episodes/hagemaru/season-01/hagemaru e01.mp4"
+  ],
+  "hagemaru-s01-e02": [
+    "/media/episodes/hagemaru/season-01/hagemaru e02.mkv",
+    "/media/episodes/hagemaru/season-01/hagemaru e02.mp4"
+  ],
+  "kick-s01-e1": [
+    "/media/episodes/kick-buttowski/season-01/kick-buttowski-s01-e01.mp4",
+    "/media/episodes/kick-buttowski/season-01/kick-buttowski-s01-e01.mkv"
+  ],
+  "kick-s01-e2": [
+    "/media/episodes/kick-buttowski/season-01/kick-buttowski-s01-e02.mp4",
+    "/media/episodes/kick-buttowski/season-01/kick-buttowski-s01-e02.mkv"
+  ],
+  "kick-s01-e3": [
+    "/media/episodes/kick-buttowski/season-01/kick-buttowski-s01-e03.mp4",
+    "/media/episodes/kick-buttowski/season-01/kick-buttowski-s01-e03.mkv"
+  ],
+  "kick-s02-e1": [
+    "/media/episodes/kick-buttowski/season-02/kick-buttowski-s02-e01.mp4",
+    "/media/episodes/kick-buttowski/season-02/kick-buttowski-s02-e01.mkv"
+  ],
+  "kick-s02-e2": [
+    "/media/episodes/kick-buttowski/season-02/kick-buttowski-s02-e02.mp4",
+    "/media/episodes/kick-buttowski/season-02/kick-buttowski-s02-e02.mkv"
+  ],
+  "kidvkat-s01-e1": [
+    "/media/episodes/kid-vs-kat/season-01/kid-vs-kat-s01-e01.mp4",
+    "/media/episodes/kid-vs-kat/season-01/kid-vs-kat-s01-e01.mkv"
+  ],
+  "kidvkat-s01-e2": [
+    "/media/episodes/kid-vs-kat/season-01/kid-vs-kat-s01-e02.mp4",
+    "/media/episodes/kid-vs-kat/season-01/kid-vs-kat-s01-e02.mkv"
+  ],
+  "kidvkat-s02-e1": [
+    "/media/episodes/kid-vs-kat/season-02/kid-vs-kat - Rat a Phooey - s02-e01.mp4",
+    "/media/episodes/kid-vs-kat/season-02/kid-vs-kat - Rat a Phooey - s02-e01.mkv"
+  ],
+  "kidvkat-s02-e2": [
+    "/media/episodes/kid-vs-kat/season-02/kid-vs-kat - Night Of The Zombie Cat - s01-e02.mp4",
+    "/media/episodes/kid-vs-kat/season-02/kid-vs-kat - Night Of The Zombie Cat - s01-e02.mkv"
+  ],
+  "kiteretsu-s01-e1": [
+    "/media/episodes/kiteretsu/season-01/kiteretsu-s01e01.mp4",
+    "/media/episodes/kiteretsu/season-01/kiteretsu-s01e01.mkv"
+  ],
+  "kiteretsu-s01-e2": [
+    "/media/episodes/kiteretsu/season-01/kiteretsu-s01e02.mp4",
+    "/media/episodes/kiteretsu/season-01/kiteretsu-s01e02.mkv"
+  ],
+  "kiteretsu-s02-e1": [
+    "/media/episodes/kiteretsu/season-02/kiteretsu-s02e01.mp4",
+    "/media/episodes/kiteretsu/season-02/kiteretsu-s02e01.mkv"
+  ],
+  "kiteretsu-s02-e2": [
+    "/media/episodes/kiteretsu/season-02/kiteretsu-s02e02.mp4",
+    "/media/episodes/kiteretsu/season-02/kiteretsu-s02e02.mkv"
+  ],
+  "mickey-s01-e1": [
+    "/media/episodes/mickey-mouse-clubhouse/season-01/mickey-mouse-clubhouse-s01-e01.mp4",
+    "/media/episodes/mickey-mouse-clubhouse/season-01/mickey-mouse-clubhouse-s01-e01.mkv"
+  ],
+  "mickey-s01-e2": [
+    "/media/episodes/mickey-mouse-clubhouse/season-01/mickey-mouse-clubhouse-s01-e02.mp4",
+    "/media/episodes/mickey-mouse-clubhouse/season-01/mickey-mouse-clubhouse-s01-e02.mkv"
+  ],
+  "mickey-s01-e3": [
+    "/media/episodes/mickey-mouse-clubhouse/season-01/mickey-mouse-clubhouse-s01-e03.mp4",
+    "/media/episodes/mickey-mouse-clubhouse/season-01/mickey-mouse-clubhouse-s01-e03.mkv"
+  ],
+  "mickey-s02-e1": [
+    "/media/episodes/mickey-mouse-clubhouse/season-02/mickey-mouse-clubhouse - s02-e01.mp4",
+    "/media/episodes/mickey-mouse-clubhouse/season-02/mickey-mouse-clubhouse - s02-e01.mkv"
+  ],
+  "mickey-s02-e2": [
+    "/media/episodes/mickey-mouse-clubhouse/season-02/mickey-mouse-clubhouse-s02-e02.mp4",
+    "/media/episodes/mickey-mouse-clubhouse/season-02/mickey-mouse-clubhouse-s02-e02.mkv"
+  ],
+  "mrbean-s01-e1": [
+    "/media/episodes/mr-bean/season-01/mr-bean-s01-e01.mp4",
+    "/media/episodes/mr-bean/season-01/mr-bean-s01-e01.mkv"
+  ],
+  "mrbean-s01-e2": [
+    "/media/episodes/mr-bean/season-01/mr-bean-s01-e02.mp4",
+    "/media/episodes/mr-bean/season-01/mr-bean-s01-e02.mkv"
+  ],
+  "mrbean-s01-e3": [
+    "/media/episodes/mr-bean/season-01/mr-bean-s01-e03.mp4",
+    "/media/episodes/mr-bean/season-01/mr-bean-s01-e03.mkv"
+  ],
+  "mrbean-s02-e1": [
+    "/media/episodes/mr-bean/season-02/mr-bean-s02-e01.mp4",
+    "/media/episodes/mr-bean/season-02/mr-bean-s02-e01.mkv"
+  ],
+  "mrbean-s02-e2": [
+    "/media/episodes/mr-bean/season-02/mr-bean-s02-e02.mp4",
+    "/media/episodes/mr-bean/season-02/mr-bean-s02-e02.mkv"
+  ],
+  "ninjahattori-s01-e1": [
+    "/media/episodes/ninja-hattori/season-01/ninja-hattori-s01-e01.mp4",
+    "/media/episodes/ninja-hattori/season-01/ninja-hattori-s01-e01.mkv"
+  ],
+  "ninjahattori-s01-e2": [
+    "/media/episodes/ninja-hattori/season-01/ninja-hattori-s01-e02.mp4",
+    "/media/episodes/ninja-hattori/season-01/ninja-hattori-s01-e02.mkv"
+  ],
+  "ninjahattori-s01-e3": [
+    "/media/episodes/ninja-hattori/season-01/ninja-hattori-s01-e03.mp4",
+    "/media/episodes/ninja-hattori/season-01/ninja-hattori-s01-e03.mkv"
+  ],
+  "ninjahattori-s02-e1": [
+    "/media/episodes/ninja-hattori/season-02/ninja-hattori-s02-e01.mp4",
+    "/media/episodes/ninja-hattori/season-02/ninja-hattori-s02-e01.mkv"
+  ],
+  "ninjahattori-s02-e2": [
+    "/media/episodes/ninja-hattori/season-02/ninja-hattori-s02-e02.mp4",
+    "/media/episodes/ninja-hattori/season-02/ninja-hattori-s02-e02.mkv"
+  ],
+  "oggy-s01-e1": [
+    "/media/episodes/oggy/season-01/oggy-and-the-cockroaches-s01-e01.mp4",
+    "/media/episodes/oggy/season-01/oggy-and-the-cockroaches-s01-e01.mkv"
+  ],
+  "oggy-s01-e2": [
+    "/media/episodes/oggy/season-01/oggy-and-the-cockroaches-s01-e02.mp4",
+    "/media/episodes/oggy/season-01/oggy-and-the-cockroaches-s01-e02.mkv"
+  ],
+  "oggy-s02-e1": [
+    "/media/episodes/oggy/season-02/oggy-and-the-cockroaches-S02E01.mp4",
+    "/media/episodes/oggy/season-02/oggy-and-the-cockroaches-S02E01.mkv"
+  ],
+  "oggy-s02-e2": [
+    "/media/episodes/oggy/season-02/oggy-and-the-cockroaches-S02E02.mp4",
+    "/media/episodes/oggy/season-02/oggy-and-the-cockroaches-S02E02.mkv"
+  ],
+  "oswald-s01-e01": [
+    "/media/episodes/oswald/season-01/oswald-s01-e01.mp4",
+    "/media/episodes/oswald/season-01/oswald-s01-e01.mkv"
+  ],
+  "oswald-s01-e02": [
+    "/media/episodes/oswald/season-01/oswald-s01-e02.mp4",
+    "/media/episodes/oswald/season-01/oswald-s01-e02.mkv"
+  ],
+  "perman-s01-e1": [
+    "/media/episodes/perman/season-01/perman-s01-e01.mp4",
+    "/media/episodes/perman/season-01/perman-s01-e01.mkv"
+  ],
+  "perman-s01-e2": [
+    "/media/episodes/perman/season-01/perman-s01-e02.mp4",
+    "/media/episodes/perman/season-01/perman-s01-e02.mkv"
+  ],
+  "perman-s01-e3": [
+    "/media/episodes/perman/season-01/perman-s01-e03.mp4",
+    "/media/episodes/perman/season-01/perman-s01-e03.mkv"
+  ],
+  "perman-s02-e1": [
+    "/media/episodes/perman/season-02/perman-s02-e01.mp4",
+    "/media/episodes/perman/season-02/perman-s02-e01.mkv"
+  ],
+  "perman-s02-e2": [
+    "/media/episodes/perman/season-02/perman-s02-e02.mp4",
+    "/media/episodes/perman/season-02/perman-s02-e02.mkv"
+  ],
+  "perman-s02-e3": [
+    "/media/episodes/perman/season-02/perman-s02-e03.mp4",
+    "/media/episodes/perman/season-02/perman-s02-e03.mkv"
+  ],
+  "phineas-s01-e1": [
+    "/media/episodes/phineas-and-ferb/season-01/phineas-and-ferb-s01-e01.mp4",
+    "/media/episodes/phineas-and-ferb/season-01/phineas-and-ferb-s01-e01.mkv"
+  ],
+  "phineas-s01-e2": [
+    "/media/episodes/phineas-and-ferb/season-01/phineas-and-ferb-s01-e02.mp4",
+    "/media/episodes/phineas-and-ferb/season-01/phineas-and-ferb-s01-e02.mkv"
+  ],
+  "phineas-s01-e3": [
+    "/media/episodes/phineas-and-ferb/season-01/phineas-and-ferb-s01-e03.mp4",
+    "/media/episodes/phineas-and-ferb/season-01/phineas-and-ferb-s01-e03.mkv"
+  ],
+  "phineas-s01-e4": [
+    "/media/episodes/phineas-and-ferb/season-01/phineas-and-ferb-s01-e04.mp4",
+    "/media/episodes/phineas-and-ferb/season-01/phineas-and-ferb-s01-e04.mkv"
+  ],
+  "phineas-s02-e1": [
+    "/media/episodes/phineas-and-ferb/season-02/phineas-and-ferb-s02-e01.mp4",
+    "/media/episodes/phineas-and-ferb/season-02/phineas-and-ferb-s02-e01.mkv"
+  ],
+  "phineas-s02-e2": [
+    "/media/episodes/phineas-and-ferb/season-02/phineas-and-ferb-s02-e02.mp4",
+    "/media/episodes/phineas-and-ferb/season-02/phineas-and-ferb-s02-e02.mkv"
+  ],
+  "pokemon-s01-e1": [
+    "/media/episodes/pokemon/season-01/pokemon-s01-e01.mp4",
+    "/media/episodes/pokemon/season-01/pokemon-s01-e01.mkv"
+  ],
+  "pokemon-s01-e2": [
+    "/media/episodes/pokemon/season-01/Pokemon - A Fan with a Plan - s01-e02.mp4",
+    "/media/episodes/pokemon/season-01/Pokemon - A Fan with a Plan - s01-e02.mkv"
+  ],
+  "pokemon-s01-e3": [
+    "/media/episodes/pokemon/season-01/Pokemon - Exploud and Clear - s01-e03.mp4",
+    "/media/episodes/pokemon/season-01/Pokemon - Exploud and Clear - s01-e03.mkv"
+  ],
+  "pokemon-s02-e1": [
+    "/media/episodes/pokemon/season-02/Pokemon - Two Hits and a miss - s02-e01.mp4",
+    "/media/episodes/pokemon/season-02/Pokemon - Two Hits and a miss - s02-e01.mkv"
+  ],
+  "pokemon-s02-e2": [
+    "/media/episodes/pokemon/season-02/Pokemon s02-e02.mp4",
+    "/media/episodes/pokemon/season-02/Pokemon s02-e02.mkv"
+  ],
+  "shaun-s01-e1": [
+    "/media/episodes/shaun-the-sheep/season-01/shaun-the-sheep-s01-e01.mp4",
+    "/media/episodes/shaun-the-sheep/season-01/shaun-the-sheep-s01-e01.mkv"
+  ],
+  "shaun-s01-e2": [
+    "/media/episodes/shaun-the-sheep/season-01/shaun-the-sheep-s01-e02.mp4",
+    "/media/episodes/shaun-the-sheep/season-01/shaun-the-sheep-s01-e02.mkv"
+  ],
+  "shaun-s01-e3": [
+    "/media/episodes/shaun-the-sheep/season-01/shaun-the-sheep-s01-e03.mp4",
+    "/media/episodes/shaun-the-sheep/season-01/shaun-the-sheep-s01-e03.mkv"
+  ],
+  "shaun-s02-e1": [
+    "/media/episodes/shaun-the-sheep/season-02/shaun-the-sheep-s02-e01.mp4",
+    "/media/episodes/shaun-the-sheep/season-02/shaun-the-sheep-s02-e01.mkv"
+  ],
+  "shaun-s02-e2": [
+    "/media/episodes/shaun-the-sheep/season-02/shaun-the-sheep-s02-e02.mp4",
+    "/media/episodes/shaun-the-sheep/season-02/shaun-the-sheep-s02-e02.mkv"
+  ],
+  "shaun-s02-e3": [
+    "/media/episodes/shaun-the-sheep/season-02/shaun-the-sheep-s02-e03.mp4",
+    "/media/episodes/shaun-the-sheep/season-02/shaun-the-sheep-s02-e03.mkv"
+  ],
+  "shinchan-s02-e01": [
+    "/media/episodes/shinchan/season-02/shinchan e01.mp4",
+    "/media/episodes/shinchan/season-02/shinchan e01.mkv"
+  ],
+  "shinchan-s02-e02": [
+    "/media/episodes/shinchan/season-02/shinchan e02.mp4",
+    "/media/episodes/shinchan/season-02/shinchan e02.mkv"
+  ],
+  "shinchan-s02-e03": [
+    "/media/episodes/shinchan/season-02/shinchan e03.mp4",
+    "/media/episodes/shinchan/season-02/shinchan e03.mkv"
+  ],
+  "shinchan-s04-e07": [
+    "/media/episodes/shinchan/season-04/shinchan e07.mkv",
+    "/media/episodes/shinchan/season-04/shinchan e07.mp4"
+  ],
+  "shinchan-s04-e19": [
+    "/media/episodes/shinchan/season-04/shinchan e19.mkv",
+    "/media/episodes/shinchan/season-04/shinchan e19.mp4"
+  ],
+  "shinchan-s04-e42": [
+    "/media/episodes/shinchan/season-04/shinchan e42.mkv",
+    "/media/episodes/shinchan/season-04/shinchan e42.mp4"
+  ],
+  "spongebob-s01-e1": [
+    "/media/episodes/spongebob-squarepants/season-01/spongebob-squarepants-s01-e01.mp4",
+    "/media/episodes/spongebob-squarepants/season-01/spongebob-squarepants-s01-e01.mkv"
+  ],
+  "spongebob-s01-e2": [
+    "/media/episodes/spongebob-squarepants/season-01/spongebob-squarepants-s01-e02.mp4",
+    "/media/episodes/spongebob-squarepants/season-01/spongebob-squarepants-s01-e02.mkv"
+  ],
+  "spongebob-s01-e3": [
+    "/media/episodes/spongebob-squarepants/season-01/spongebob-squarepants-s01-e03.mp4",
+    "/media/episodes/spongebob-squarepants/season-01/spongebob-squarepants-s01-e03.mkv"
+  ],
+  "spongebob-s02-e1": [
+    "/media/episodes/spongebob-squarepants/season-02/spongebob-squarepants-s02-e01.mp4",
+    "/media/episodes/spongebob-squarepants/season-02/spongebob-squarepants-s02-e01.mkv"
+  ],
+  "spongebob-s02-e2": [
+    "/media/episodes/spongebob-squarepants/season-02/spongebob-squarepants-s02-e02.mp4",
+    "/media/episodes/spongebob-squarepants/season-02/spongebob-squarepants-s02-e02.mkv"
+  ],
+  "strawberry-s01-e1": [
+    "/media/episodes/strawberry-shortcake/season-01/strawberry-shortcake-s01-e01.mp4",
+    "/media/episodes/strawberry-shortcake/season-01/strawberry-shortcake-s01-e01.mkv"
+  ],
+  "strawberry-s01-e2": [
+    "/media/episodes/strawberry-shortcake/season-01/strawberry-shortcake-s01-e02.mp4",
+    "/media/episodes/strawberry-shortcake/season-01/strawberry-shortcake-s01-e02.mkv"
+  ],
+  "strawberry-s02-e1": [
+    "/media/episodes/strawberry-shortcake/season-02/strawberry-shortcake-s02-e01.mp4",
+    "/media/episodes/strawberry-shortcake/season-02/strawberry-shortcake-s02-e01.mkv"
+  ],
+  "strawberry-s02-e2": [
+    "/media/episodes/strawberry-shortcake/season-02/strawberry-shortcake-s02-e02.mp4",
+    "/media/episodes/strawberry-shortcake/season-02/strawberry-shortcake-s02-e02.mkv"
+  ],
+  "tom-and-jerry-e10": [
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e10.mp4",
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e10.mkv"
+  ],
+  "tom-and-jerry-e24": [
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e24.mp4",
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e24.mkv"
+  ],
+  "tom-and-jerry-e25": [
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e25.mp4",
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e25.mkv"
+  ],
+  "tom-and-jerry-e26": [
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e26.mp4",
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e26.mkv"
+  ],
+  "tom-and-jerry-e28": [
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e28.mp4",
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e28.mkv"
+  ],
+  "tom-and-jerry-e35": [
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e35.mp4",
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e35.mkv"
+  ],
+  "tom-and-jerry-e40": [
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e40.mp4",
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e40.mkv"
+  ],
+  "tom-and-jerry-e41": [
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e41.mp4",
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e41.mkv"
+  ],
+  "tom-and-jerry-e47": [
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e47.mp4",
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e47.mkv"
+  ],
+  "tom-and-jerry-e54": [
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e54.mp4",
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e54.mkv"
+  ],
+  "tom-and-jerry-e55": [
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e55.mp4",
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e55.mkv"
+  ],
+  "tom-and-jerry-e56": [
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e56.mp4",
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e56.mkv"
+  ],
+  "tom-and-jerry-e57": [
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e57.mp4",
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e57.mkv"
+  ],
+  "tom-and-jerry-e59": [
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e59.mp4",
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e59.mkv"
+  ],
+  "tom-and-jerry-e65": [
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e65.mp4",
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e65.mkv"
+  ],
+  "tom-and-jerry-e66": [
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e66.mp4",
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e66.mkv"
+  ],
+  "tom-and-jerry-e71": [
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e71.mp4",
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e71.mkv"
+  ],
+  "tom-and-jerry-e75": [
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e75.mp4",
+    "/media/episodes/tom-and-jerry/season-01/tom-and-jerry-s01-e75.mkv"
+  ],
+  "tomandjerrytales-s01-e1": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e01.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e01.mkv"
+  ],
+  "tomandjerrytales-s01-e2": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e02.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e02.mkv"
+  ],
+  "tomandjerrytales-s01-e3": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e03.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e03.mkv"
+  ],
+  "tomandjerrytales-s01-e4": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e04.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e04.mkv"
+  ],
+  "tomandjerrytales-s01-e5": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e05.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e05.mkv"
+  ],
+  "tomandjerrytales-s01-e6": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e06.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e06.mkv"
+  ],
+  "tomandjerrytales-s01-e7": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e07.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e07.mkv"
+  ],
+  "tomandjerrytales-s01-e8": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e08.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e08.mkv"
+  ],
+  "tomandjerrytales-s01-e10": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e10.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e10.mkv"
+  ],
+  "tomandjerrytales-s01-e11": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e11.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e11.mkv"
+  ],
+  "tomandjerrytales-s01-e12": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e12.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e12.mkv"
+  ],
+  "tomandjerrytales-s01-e13": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e13.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e13.mkv"
+  ],
+  "tomandjerrytales-s01-e14": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e14.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e14.mkv"
+  ],
+  "tomandjerrytales-s01-e15": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e15.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e15.mkv"
+  ],
+  "tomandjerrytales-s01-e17": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e17.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e17.mkv"
+  ],
+  "tomandjerrytales-s01-e18": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e18.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e18.mkv"
+  ],
+  "tomandjerrytales-s01-e19": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e19.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e19.mkv"
+  ],
+  "tomandjerrytales-s01-e20": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e20.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e20.mkv"
+  ],
+  "tomandjerrytales-s01-e21": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e21.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e21.mkv"
+  ],
+  "tomandjerrytales-s01-e22": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e22.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e22.mkv"
+  ],
+  "tomandjerrytales-s01-e23": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e23.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e23.mkv"
+  ],
+  "tomandjerrytales-s01-e25": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e25.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e25.mkv"
+  ],
+  "tomandjerrytales-s01-e26": [
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e26.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-01/tom-and-jerry-tales-s01-e26.mkv"
+  ],
+  "tomandjerrytales-s02-e1": [
+    "/media/episodes/tom-and-jerry-tales/season-02/tom-and-jerry-tales-s02-e01.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-02/tom-and-jerry-tales-s02-e01.mkv"
+  ],
+  "tomandjerrytales-s02-e2": [
+    "/media/episodes/tom-and-jerry-tales/season-02/tom-and-jerry-tales-s02-e02.mp4",
+    "/media/episodes/tom-and-jerry-tales/season-02/tom-and-jerry-tales-s02-e02.mkv"
+  ]
+}

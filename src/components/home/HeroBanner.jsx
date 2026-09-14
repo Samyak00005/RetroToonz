@@ -262,7 +262,7 @@ function HeroBanner({ shows = [] }) {
               <button
                 type="button"
                 onClick={() => navigate(`/show/${show.id}`)}
-                className="rt-button rt-button-secondary border-white/12 bg-black/20 px-4 text-white backdrop-blur-sm hover:bg-black/35 sm:px-5"
+                className="rt-button rt-button-secondary rounded-full border-white/12 bg-black/20 px-4 text-white backdrop-blur-sm hover:bg-black/35 sm:px-5"
                 aria-label={`More information about ${show.title}`}
               >
                 <HugeiconsIcon icon={InformationCircleIcon} size={18} />

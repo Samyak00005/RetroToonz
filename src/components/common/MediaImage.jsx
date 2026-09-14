@@ -27,7 +27,7 @@ export default function MediaImage({
   }, [resolvedSrc]);
 
   return (
-    <span className={`rt-media-frame ${wrapperClassName}`}>
+    <span className={`rt-media-frame ${wrapperClassName}`} aria-busy={!loaded}>
       {!loaded && <span className="rt-media-skeleton" aria-hidden="true" />}
       <img
         {...props}

@@ -146,6 +146,10 @@ Used for utility actions and navigation.
 
 Icon buttons must have a comfortable touch target.
 
+### Shape consistency
+
+User-facing action and utility controls should use `rounded-full` pill geometry where practical. This includes account/Guest controls, secondary CTAs such as More Info, and compact player controls such as Previous, Next, Speed and Quality. Cards, panels, text fields and media surfaces should not be forced into pill geometry.
+
 ---
 
 ## 7. Cards
@@ -303,3 +307,111 @@ Preserve its original visual identity:
 
 Other UI may evolve around it, but this CTA should remain visually recognizable.
 
+---
+
+## 15. Design Decision Precedence
+
+When design guidance conflicts, use this order:
+
+1. **RetroToonz `DESIGN.md`** — highest priority and project-specific source of truth.
+2. **Explicit protected brand decisions** documented below.
+3. Existing product behavior that the user has approved.
+4. Accessibility and platform usability requirements.
+5. External design-audit guidance (for example Impeccable-style audits or Taste-style anti-slop rules).
+6. Generic framework defaults or personal preference.
+
+External design advice may identify a problem, but it must not silently overwrite a deliberate RetroToonz brand decision.
+
+## 16. Protected Brand Components
+
+The following elements are intentionally distinctive and must not be "normalized" by generic design cleanup:
+
+### Hero Start Watching CTA
+
+Preserve the original treatment:
+
+- `rounded-full`
+- cyan → blue gradient
+- white play icon and label
+- subtle `shadow-md`
+- `hover:scale-105`
+- gradient reversal on hover
+- `active:scale-95`
+- subtle cyan ping accent
+
+### Surprise Me CTA
+
+Use the same protected visual language as Start Watching.
+
+Its position may change responsively to avoid collisions, but the button's visual identity should remain recognizable.
+
+### Artwork-first rule
+
+Show posters, backdrops, episode thumbnails and playback are allowed to be visually stronger than surrounding UI. Do not dim, blur, glass-cover or decorate artwork unless readability or interaction requires it.
+
+## 17. Motion Quality Rules
+
+Motion quality should follow these principles:
+
+- animate state changes, not decoration
+- prefer opacity and small transforms over large movement
+- prefer 160–320ms for most UI feedback
+- use longer transitions only for cinematic media changes such as Hero crossfades
+- avoid perpetual motion unless it communicates active loading/playback
+- hover feedback should be reversible immediately
+- do not stack scale + glow + blur + rotation on one interaction
+- pre-load neighboring Hero artwork where practical to avoid flashes
+- never make motion essential to understanding state
+- always respect `prefers-reduced-motion`
+
+### Default motion vocabulary
+
+- page/content enter: fade + up to 4px movement
+- card hover: subtle artwork scale, usually <= 1.03
+- button press: short scale-down feedback
+- dropdown/modal: fade + small translate/scale
+- Hero media change: restrained crossfade, no continuous zoom
+- loading: small spinner, skeleton or progress indicator; no decorative bouncing
+
+## 18. AI / Design-Audit Guardrails
+
+When an AI coding tool proposes UI changes, it must first answer internally:
+
+- Does this improve content hierarchy?
+- Is this component already solved by an existing shared component?
+- Does this add a new color, radius, shadow or motion pattern unnecessarily?
+- Does it preserve protected RetroToonz brand UI?
+- Does it work on mobile, tablet and desktop?
+- Is the interaction usable with keyboard/touch?
+- Would removing this decoration make the product clearer?
+
+Prefer fixing spacing, hierarchy, readability and interaction before adding decoration.
+
+## 19. Design Review Definition of Done
+
+A public-facing UI change is not complete until it has been checked for:
+
+- mobile (~360–430px)
+- tablet (~768–1024px)
+- laptop (~1280–1366px)
+- desktop (~1536–1920px)
+- keyboard focus
+- touch target size
+- loading / empty / error state where relevant
+- reduced-motion behavior
+- safe-zone / container alignment
+- protected brand-component regressions
+
+Run:
+
+```bash
+npm run design:audit
+```
+
+before considering a design phase ready for visual review.
+
+
+
+### Protected Search Bar
+
+The current expanded RetroToonz search bar is a protected brand/UI element. Do not redesign, restyle, resize, replace, or simplify it unless the user explicitly requests a search-bar change. Preserve its pill-shaped dark field, very thin/subtle cyan focus border, cyan search icon/accent, integrated cyan-to-blue Search button, circular close control supplied by the Header, proportions, suggestions behavior, and keyboard interaction.

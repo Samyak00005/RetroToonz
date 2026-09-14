@@ -27,3 +27,34 @@ export function getMediaUrl(path) {
 export function getFallbackImageUrl() {
   return getMediaUrl("/media/defaults/image.jpg");
 }
+
+
+/**
+ * Lightweight diagnostic used only after HTMLMediaElement reports an error.
+ * It distinguishes a missing/unreachable file from a file that exists but the
+ * browser cannot decode. This does not participate in normal playback.
+ */
+export async function probeMediaUrl(path) {
+  const url = getMediaUrl(path);
+  if (!url) return { url: "", ok: false, status: 0, contentType: "", reachable: false };
+
+  try {
+    const response = await fetch(url, { method: "HEAD", cache: "no-store" });
+    return {
+      url,
+      ok: response.ok,
+      status: response.status,
+      contentType: response.headers.get("content-type") || "",
+      reachable: true,
+    };
+  } catch (error) {
+    return {
+      url,
+      ok: false,
+      status: 0,
+      contentType: "",
+      reachable: false,
+      error: error instanceof Error ? error.message : String(error),
+    };
+  }
+}

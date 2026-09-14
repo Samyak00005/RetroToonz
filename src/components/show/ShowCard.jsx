@@ -66,12 +66,12 @@ function ShowCard({ id, title, year, poster, linkToWatch = false }) {
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 ease-out sm:group-hover:scale-[1.015]"
             />
 
-            <span
-              className={`rt-poster-loading pointer-events-none absolute inset-0 z-[1] transition-opacity duration-200 ${
-                imageLoaded ? "opacity-0" : "opacity-100"
-              }`}
-              aria-hidden="true"
-            />
+            {!imageLoaded && (
+              <span
+                className="rt-poster-loading pointer-events-none absolute inset-0 z-[1]"
+                aria-hidden="true"
+              />
+            )}
 
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/12 to-transparent" />
 
@@ -102,7 +102,7 @@ function ShowCard({ id, title, year, poster, linkToWatch = false }) {
             : `Add ${title} to watchlist`
         }
         aria-pressed={isShortlisted}
-        className="absolute right-2 top-2 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-black/45 text-white backdrop-blur-sm transition-[background-color,border-color,transform] duration-200 hover:bg-black/65 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/80 sm:h-10 sm:w-10 sm:hover:scale-[1.04]"
+        className="absolute right-2 top-2 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-black/45 text-white backdrop-blur-sm transition-[background-color,border-color,transform] duration-200 hover:bg-black/65 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/80 sm:hover:scale-[1.04]"
       >
         <HugeiconsIcon
           icon={FavouriteIcon}

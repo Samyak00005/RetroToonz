@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 
+import { HomeContentSkeleton } from "../../components/common/PageContentSkeletons.jsx";
+
 import CategorySection from "../../components/home/CategorySection.jsx";
 import ContinueWatchingRow from "../../components/home/ContinueWatchingRow.jsx";
 import HeroBanner from "../../components/home/HeroBanner.jsx";
@@ -88,6 +90,12 @@ const cartoonComedy = allCartoonComedy.slice(0, 8);
 function HomePage() {
   const [selectedGenre, setSelectedGenre] = useState(null);
   const [playbackRevision, setPlaybackRevision] = useState(0);
+  const [contentReady, setContentReady] = useState(false);
+
+  useEffect(() => {
+    const timeout = window.setTimeout(() => setContentReady(true), 180);
+    return () => window.clearTimeout(timeout);
+  }, []);
 
   useEffect(() => {
     const syncPlayback = () => setPlaybackRevision((value) => value + 1);
@@ -112,6 +120,17 @@ function HomePage() {
   }, [playbackRevision]);
 
   const genres = getGenres(allShows);
+
+  if (!contentReady) {
+    return (
+      <div className="rt-page flex min-h-screen flex-col">
+        <Header />
+        <main className="relative flex-grow">
+          <HomeContentSkeleton />
+        </main>
+      </div>
+    );
+  }
 
   return (
     <div className="rt-page flex flex-col">

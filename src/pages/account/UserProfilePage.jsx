@@ -147,7 +147,7 @@ export default function UserProfilePage() {
         <Header />
         <main className="rt-standard-content flex flex-1 items-center justify-center py-12">
           <section className="rt-surface w-full max-w-xl p-7 text-center sm:p-10">
-            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400/25 to-blue-500/25">
+            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-cyan-300/15 bg-cyan-300/[0.07] text-cyan-100">
               <HugeiconsIcon icon={UserIcon} size={34} />
             </div>
             <h1 className="mt-5 text-2xl font-semibold">Sign in to view your profile</h1>
@@ -181,7 +181,7 @@ export default function UserProfilePage() {
           <section className="rt-surface overflow-hidden">
             <div className="flex flex-col gap-6 p-5 sm:p-7 lg:flex-row lg:items-center lg:justify-between">
               <div className="flex min-w-0 items-center gap-4 sm:gap-6">
-                <div className="relative flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 text-2xl font-bold tracking-[-0.06em] text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12)] sm:h-24 sm:w-24 sm:text-3xl">
+                <div className="relative flex h-20 w-20 shrink-0 items-center justify-center rounded-full border border-cyan-300/20 bg-cyan-300/[0.09] text-2xl font-bold tracking-[-0.06em] text-cyan-50 sm:h-24 sm:w-24 sm:text-3xl">
                   {getInitials(displayName)}
                   <span className={`absolute -bottom-1 right-0 rounded-full border px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide ${isAdmin ? "border-yellow-300/30 bg-[#2a2410] text-yellow-200" : "border-cyan-300/25 bg-[#10242a] text-cyan-100"}`}>
                     {isAdmin ? "Admin" : "Viewer"}
@@ -219,8 +219,8 @@ export default function UserProfilePage() {
           <div className={`mt-6 grid gap-5 ${isAdmin ? "lg:grid-cols-[1.15fr_0.85fr]" : "lg:grid-cols-[1.15fr_0.85fr]"}`}>
             <section className="rt-surface p-5 sm:p-6">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.13em] text-white/32">Account</p>
-                <h2 className="mt-1 text-lg font-semibold">Account settings</h2>
+                <h2 className="text-lg font-semibold">Account settings</h2>
+                <p className="mt-1 text-sm text-white/40">Profile, sign-in details and saved shows.</p>
               </div>
 
               <div className="mt-5 divide-y divide-white/[0.07]">
@@ -251,8 +251,7 @@ export default function UserProfilePage() {
             {isAdmin ? (
               <section className="rt-surface p-5 sm:p-6">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.13em] text-yellow-200/50">Admin</p>
-                  <h2 className="mt-1 text-lg font-semibold">Admin tools</h2>
+                  <h2 className="text-lg font-semibold">Admin tools</h2>
                   <p className="mt-1 text-sm text-white/40">Platform controls stay separate from your personal account.</p>
                 </div>
 
@@ -280,8 +279,7 @@ export default function UserProfilePage() {
             ) : (
               <section className="rt-surface p-5 sm:p-6">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.13em] text-white/32">Library</p>
-                  <h2 className="mt-1 text-lg font-semibold">Your viewing</h2>
+                  <h2 className="text-lg font-semibold">Your viewing</h2>
                   <p className="mt-1 text-sm leading-6 text-white/40">
                     Resume episodes, revisit recent shows and keep favourites together.
                   </p>
@@ -466,9 +464,9 @@ function ActivityCard({ show, mode, onOpen, onRemove }) {
             wrapperClassName="absolute inset-0"
             className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.025]"
           />
-          <span className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+          <span className="absolute inset-0 bg-black/10" />
           <span className="absolute inset-0 flex items-center justify-center opacity-0 transition group-hover:opacity-100">
-            <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-black/55 backdrop-blur-md">
+            <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-black/70">
               <HugeiconsIcon icon={PlayIcon} size={19} />
             </span>
           </span>
@@ -578,7 +576,7 @@ function EditProfileDialog({ user, onClose, onSaved }) {
   };
 
   return (
-    <div className="fixed inset-0 z-[10000] flex items-end justify-center bg-black/70 p-0 backdrop-blur-sm sm:items-center sm:p-5" onMouseDown={onClose}>
+    <div className="fixed inset-0 z-[10000] flex items-end justify-center bg-black/75 p-0 sm:items-center sm:p-5" onMouseDown={onClose}>
       <section role="dialog" aria-modal="true" aria-labelledby="edit-profile-title" onMouseDown={(event) => event.stopPropagation()} className="rt-surface-strong w-full rounded-b-none p-5 sm:max-w-lg sm:rounded-[var(--rt-radius-card)] sm:p-6">
         <div className="flex items-start justify-between gap-4">
           <div>

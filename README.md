@@ -10,8 +10,9 @@ Built with a **high-performance frontend stack**, immersive UI, and smooth inter
 
 - **D1 — Foundation & Design Tokens:** complete.
 - **D2 — Header, Navigation & Hero:** complete.
-- **D3 — Homepage & Content Cards:** complete in this package.
-- See `docs/D1_FOUNDATION.md`, `docs/D2_HEADER_HERO.md`, and `docs/D3_HOMEPAGE_CONTENT_CARDS.md`.
+- **D3 — Homepage & Content Cards:** complete.
+- **D4 — Discovery UX:** complete in this package.
+- See `docs/D1_FOUNDATION.md`, `docs/D2_HEADER_HERO.md`, `docs/D3_HOMEPAGE_CONTENT_CARDS.md`, and `docs/D4_DISCOVERY_UX.md`.
 
 ## 💡 Why This Project?
 
@@ -175,3 +176,79 @@ Homepage rails, poster cards, Continue Watching and Browse by Category now follo
 
 ## D3.1 Category Revert
 Browse by Category uses the pre-D3 non-poster category card design. See `docs/D3_1_CATEGORY_REVERT.md`.
+
+## Design quality workflow
+
+RetroToonz includes project-local design guardrails for AI-assisted development.
+
+Before UI work, read:
+
+- `DESIGN.md`
+- `AGENTS.md`
+- `docs/DESIGN_REVIEW_WORKFLOW.md`
+- `docs/MOTION_GUIDELINES.md`
+
+Run after UI changes:
+
+```bash
+npm run design:audit
+```
+
+Strict mode treats review warnings as failures:
+
+```bash
+npm run design:audit:strict
+```
+
+These development checks are not included in the viewer-facing runtime bundle.
+
+
+## D4 Discovery UX
+
+Search and All Shows now share a lightweight, URL-aware discovery system with quick genre filters, responsive mobile filters, relevance-preserving search refinement, and cleaner result hierarchy. See `docs/D4_DISCOVERY_UX.md`.
+
+
+## Design refresh — D5
+
+D5 refines Show Details and the Video Player while preserving the original Show Details identity and all protected brand UI. See `docs/D5_SHOW_DETAILS_VIDEO_PLAYER.md`.
+
+
+## D5.1 — Search brand lock
+
+- Restored the user-approved SearchBar implementation as protected RetroToonz brand UI.
+- Kept its dark pill field, cyan search accent, integrated cyan-to-blue Search button, recent searches, suggestions and keyboard behavior.
+- Reduced the cyan focus border to a subtle `0.5px` treatment.
+- Logged remaining Video Player bugs as intentionally deferred for a later stabilization pass.
+
+See `docs/D5_1_SEARCH_BRAND_LOCK.md` and `docs/D5_DEFERRED_VIDEO_PLAYER_BUGS.md`.
+
+## Design Refresh — D6
+Account, authentication, watchlist and footer were refined in `docs/D6_ACCOUNT_AUTH_FOOTER.md`. Protected brand elements remain unchanged.
+
+### D6.1 auth refinement
+The auth screens restore the slow-moving doodle treatment, place Forgot Password below the password input, and use the refined cyan-to-blue RetroToonz primary CTA style.
+
+
+## D7 — Motion, Loading & Accessibility
+
+See `docs/D7_MOTION_LOADING_ACCESSIBILITY.md` for the accessibility and interaction-feedback pass.
+
+## D7.1 loading refinement
+
+- Route-level spinner replaced with page-shaped skeletons.
+- Removed the thin top navigation progress sweep because it could visibly complete after page content was already rendered.
+- Skeletons use a soft opacity breathe rather than a left-to-right shimmer.
+- Poster loading placeholders are removed immediately once artwork is ready.
+
+## D7.2 — Loading, Watchlist and pill consistency
+
+- Home and All Shows now use page-shaped skeleton states on each page entry.
+- Logged-out Watchlist visitors see an in-page sign-in state instead of an automatic redirect.
+- Sign-in opened from Watchlist returns to Watchlist after authentication.
+- User-facing action/utility buttons use consistent pill geometry; circular icon controls remain circular.
+- Player Previous/Next/Speed/Quality controls now use pill styling.
+- Protected SearchBar and brand CTAs are unchanged.
+
+## D7.4 player-core fix
+
+Video playback now uses a declarative React-owned `<video src>` lifecycle rather than imperative `video.src/load/play` mutation. The temporary legacy-path fallback is not included. If playback fails, the player distinguishes URL/network problems from codec/decode problems and reports the exact configured source.

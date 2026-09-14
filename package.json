@@ -9,7 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview --host",
     "media:prepare": "node tools/prepare-media.mjs",
-    "media:scan": "node tools/prepare-media.mjs --dry-run --verbose"
+    "media:scan": "node tools/prepare-media.mjs --dry-run --verbose",
+    "design:audit": "node tools/design-audit.mjs",
+    "design:audit:strict": "node tools/design-audit.mjs --strict"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
