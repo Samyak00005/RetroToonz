@@ -1,9 +1,9 @@
-// src/pages/HomePage.jsx
+// src/pages/oublic/HomePage.jsx
 
 import { useEffect, useMemo, useState } from "react";
 
-import ContinueWatchingRow from "../../components/home/ContinueWatchingRow.jsx";
 import CategorySection from "../../components/home/CategorySection.jsx";
+import ContinueWatchingRow from "../../components/home/ContinueWatchingRow.jsx";
 import HeroBanner from "../../components/home/HeroBanner.jsx";
 import RandomPlayButton from "../../components/home/RandomPlayButton.jsx";
 import ShowSection from "../../components/home/ShowSection.jsx";
@@ -54,9 +54,7 @@ const normalizeShow = (show) => {
     ratingNum: Number(show.rating) || 0,
     yearNum: Number(show.year) || 0,
 
-    addedAt: show.year
-      ? new Date(`${show.year}-01-01`)
-      : new Date(0),
+    addedAt: show.year ? new Date(`${show.year}-01-01`) : new Date(0),
   };
 };
 
@@ -64,12 +62,9 @@ const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
 
 const allShows = showsData.allShows.map(normalizeShow);
 
-
 const featuredPool = allShows.filter((show) => show.featured);
 const heroSource = featuredPool.length ? featuredPool : allShows;
 const heroShows = shuffle(heroSource).slice(0, 5);
-
-
 
 const allTrendingShows = [...allShows].sort((a, b) => b.viewsNum - a.viewsNum);
 
@@ -108,21 +103,15 @@ function HomePage() {
     const entries = getContinueWatchingEntries(8);
     return entries
       .map((entry) => {
-        const show = allShows.find((candidate) => candidate.id === entry.showId);
+        const show = allShows.find(
+          (candidate) => candidate.id === entry.showId,
+        );
         return show ? { ...show, playback: entry } : null;
       })
       .filter(Boolean);
   }, [playbackRevision]);
 
   const genres = getGenres(allShows);
-
-  const filteredShows = selectedGenre
-    ? allShows.filter((show) =>
-        show.tags?.some(
-          (tag) => tag.toLowerCase() === selectedGenre.toLowerCase(),
-        ),
-      )
-    : null;
 
   return (
     <div className="rt-page flex flex-col">
@@ -152,14 +141,6 @@ function HomePage() {
             selectedGenre={selectedGenre}
             onSelectGenre={setSelectedGenre}
           />
-
-          {selectedGenre && (
-            <ShowSection
-              sectionTitle={`${selectedGenre} Picks`}
-              shows={filteredShows}
-              showMore={false}
-            />
-          )}
 
           <ShowSection
             sectionTitle="Retro Classics"
