@@ -771,6 +771,29 @@ input[type="radio"] {
   width: min(42vw, 11.25rem);
 }
 
+.rt-continue-rail-card {
+  flex: 0 0 min(82vw, 34rem);
+  min-width: 0;
+}
+
+@media (min-width: 640px) {
+  .rt-continue-rail-card {
+    flex-basis: min(62vw, 36rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .rt-continue-rail-card {
+    flex-basis: calc(2 * ((min(100vw, 1800px) - 5rem - 5rem) / 6) + 1rem);
+  }
+}
+
+@media (min-width: 1280px) {
+  .rt-continue-rail-card {
+    flex-basis: calc(2 * ((min(100vw, 1800px) - 5rem - 7rem) / 8) + 1rem);
+  }
+}
+
 .rt-episode-rail-card {
   flex: 0 0 min(78vw, 21rem);
   min-width: 0;
