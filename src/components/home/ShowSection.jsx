@@ -64,7 +64,7 @@ function ShowSection({
           {showMore && sectionKey && (
             <Link
               to={showMoreTo || `/search?section=${sectionKey}`}
-              className="group flex items-center gap-1.5 text-sm font-medium text-white/55 transition-all hover:text-cyan-200 sm:text-base"
+              className="group inline-flex min-h-10 items-center gap-1.5 rounded-full px-2 text-sm font-medium text-white/55 transition-colors hover:bg-white/[0.05] hover:text-cyan-200 sm:text-base"
             >
               <span className="underline-offset-4 group-hover:underline">
                 Show more

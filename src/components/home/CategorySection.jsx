@@ -5,10 +5,17 @@ import { useMemo, useRef } from "react";
 import MediaImage from "../common/MediaImage.jsx";
 
 function formatGenre(tag = "") {
-  return tag.replace(/-/g, " ").replace(/\b\w/g, (character) => character.toUpperCase());
+  return tag
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (character) => character.toUpperCase());
 }
 
-function CategorySection({ genres = [], shows = [], onSelectGenre, selectedGenre }) {
+function CategorySection({
+  genres = [],
+  shows = [],
+  onSelectGenre,
+  selectedGenre,
+}) {
   const scrollRef = useRef(null);
 
   const categories = useMemo(() => {
@@ -20,13 +27,15 @@ function CategorySection({ genres = [], shows = [], onSelectGenre, selectedGenre
           show.tags?.some((tag) => tag.toLowerCase() === genre.toLowerCase()),
         )
         .sort((a, b) => {
-          const featuredDifference = Number(Boolean(b.featured)) - Number(Boolean(a.featured));
+          const featuredDifference =
+            Number(Boolean(b.featured)) - Number(Boolean(a.featured));
           if (featuredDifference) return featuredDifference;
           return (b.viewsNum ?? 0) - (a.viewsNum ?? 0);
         });
 
       const representative =
-        matchingShows.find((show) => !usedShowIds.has(show.id)) ?? matchingShows[0];
+        matchingShows.find((show) => !usedShowIds.has(show.id)) ??
+        matchingShows[0];
 
       if (representative) usedShowIds.add(representative.id);
 
@@ -57,7 +66,10 @@ function CategorySection({ genres = [], shows = [], onSelectGenre, selectedGenre
   if (!categories.length) return null;
 
   return (
-    <section id="genre-section" className="rt-home-section-content relative py-5 sm:py-6">
+    <section
+      id="genre-section"
+      className="rt-home-section-content relative py-5 sm:py-6"
+    >
       <div className="mb-3 flex items-end justify-between gap-4">
         <div>
           <h3 className="rt-section-title">Browse by Category</h3>
@@ -133,12 +145,13 @@ function CategorySection({ genres = [], shows = [], onSelectGenre, selectedGenre
                         {category.title}
                       </p>
                       <p className="mt-0.5 text-[11px] font-medium text-white/50 sm:text-xs">
-                        {category.count} {category.count === 1 ? "show" : "shows"}
+                        {category.count}{" "}
+                        {category.count === 1 ? "show" : "shows"}
                       </p>
                     </div>
 
                     <span
-                      className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-sm transition ${
+                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border text-sm transition ${
                         isActive
                           ? "border-cyan-200/50 bg-cyan-300/20 text-cyan-100"
                           : "border-white/15 bg-black/25 text-white/65 group-hover/category:bg-white/10 group-hover/category:text-white"
