@@ -213,7 +213,7 @@ function HeroBanner({ shows = [] }) {
 
           {descriptionText && (
             <div className="mb-3 text-white/80">
-              <p className="m-0 line-clamp-2 max-w-full text-xs leading-relaxed sm:text-sm lg:line-clamp-3 lg:max-w-[50vw] lg:text-base">
+              <p className="m-0 line-clamp-2 max-w-full text-xs leading-relaxed sm:text-sm lg:line-clamp-3 lg:max-w-2xl lg:text-base">
                 {descriptionText}
               </p>
             </div>

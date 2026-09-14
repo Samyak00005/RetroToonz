@@ -82,7 +82,7 @@ function ShowCard({ id, title, year, poster, linkToWatch = false }) {
             </div>
 
             <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-black/95 via-black/55 to-transparent px-3 pb-2.5 pt-10">
-              <h3 className="truncate text-xs font-semibold text-white sm:text-sm">
+              <h3 className="line-clamp-2 text-xs font-semibold leading-tight text-white sm:text-sm">
                 {title}
               </h3>
               {year && (

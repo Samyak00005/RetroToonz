@@ -66,8 +66,12 @@ function ShowSection({
               to={showMoreTo || `/search?section=${sectionKey}`}
               className="group flex items-center gap-1.5 text-sm font-medium text-white/55 transition-all hover:text-cyan-200 sm:text-base"
             >
-              <span className="underline-offset-4 group-hover:underline">Show more</span>
-              <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+              <span className="underline-offset-4 group-hover:underline">
+                Show more
+              </span>
+              <span className="transition-transform duration-200 group-hover:translate-x-1">
+                →
+              </span>
             </Link>
           )}
         </div>
@@ -100,7 +104,10 @@ function ShowSection({
             className="scrollbar-hide flex snap-x snap-proximity gap-3 overflow-x-auto pb-3 pt-2 scroll-smooth sm:gap-4"
           >
             {shows.map((show) => (
-              <div key={show.id} className="rt-show-rail-card min-w-0 flex-shrink-0 snap-start">
+              <div
+                key={show.id}
+                className="rt-show-rail-card min-w-0 flex-shrink-0 snap-start"
+              >
                 <ShowCard {...show} linkToWatch={linkToWatch} />
               </div>
             ))}

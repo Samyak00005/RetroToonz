@@ -29,11 +29,23 @@
 
   --rt-gradient-brand: linear-gradient(135deg, #55d6e8 0%, #5d8cff 100%);
   --rt-gradient-page:
-    radial-gradient(circle at 12% 0%, rgba(85, 214, 232, 0.08), transparent 28rem),
-    radial-gradient(circle at 88% 10%, rgba(93, 140, 255, 0.09), transparent 30rem),
+    radial-gradient(
+      circle at 12% 0%,
+      rgba(85, 214, 232, 0.08),
+      transparent 28rem
+    ),
+    radial-gradient(
+      circle at 88% 10%,
+      rgba(93, 140, 255, 0.09),
+      transparent 30rem
+    ),
     linear-gradient(180deg, #080914 0%, #090a16 54%, #0c0b1a 100%);
   --rt-gradient-admin:
-    radial-gradient(circle at 85% 0%, rgba(93, 140, 255, 0.09), transparent 30rem),
+    radial-gradient(
+      circle at 85% 0%,
+      rgba(93, 140, 255, 0.09),
+      transparent 30rem
+    ),
     linear-gradient(135deg, #080a12 0%, #0b0e18 48%, #07080e 100%);
 
   /* Layout */
@@ -58,7 +70,8 @@
   --rt-shadow-focus: 0 0 0 3px rgba(85, 214, 232, 0.18);
 
   /* Typography */
-  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+  --font-sans:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
   --text-display: clamp(1.6rem, 2.4vw, 2.35rem);
   --text-title: clamp(1.35rem, 2vw, 1.8rem);
@@ -273,7 +286,12 @@ a {
 .rt-divider {
   height: 1px;
   width: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
 }
 
 /* Titles */
@@ -495,7 +513,12 @@ a {
   position: absolute;
   inset: 0 0 auto;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(85, 214, 232, 0.45), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(85, 214, 232, 0.45),
+    transparent
+  );
 }
 
 .rt-empty-state {
@@ -526,22 +549,36 @@ a {
 }
 
 .shadow-neon-cyan {
-  box-shadow: 0 0 10px rgba(85, 214, 232, 0.55), 0 0 20px rgba(85, 214, 232, 0.22);
+  box-shadow:
+    0 0 10px rgba(85, 214, 232, 0.55),
+    0 0 20px rgba(85, 214, 232, 0.22);
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes spinSlow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes slowZoom {
-  from { transform: scale(1); }
-  to { transform: scale(1.035); }
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.035);
+  }
 }
 
 .animate-fadeIn {
@@ -577,7 +614,10 @@ a {
   color: #fff;
   padding: 0.7rem 1rem;
   outline: none;
-  transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
 }
 
 .rt-auth-input::placeholder {
@@ -602,7 +642,10 @@ a {
   padding: 0.7rem 1rem;
   font-weight: 600;
   box-shadow: 0 8px 24px rgba(239, 71, 111, 0.2);
-  transition: transform 160ms ease, filter 160ms ease, box-shadow 160ms ease;
+  transition:
+    transform 160ms ease,
+    filter 160ms ease,
+    box-shadow 160ms ease;
 }
 
 .rt-auth-primary:hover {
@@ -626,7 +669,9 @@ a {
   background: transparent;
   color: #fff;
   padding: 0.65rem 0.9rem;
-  transition: background-color 160ms ease, border-color 160ms ease;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease;
 }
 
 .rt-auth-social:hover:not(:disabled) {
@@ -672,10 +717,10 @@ a {
   width: 13px;
   height: 13px;
   margin-top: -4px;
-  border: 1px solid rgba(255,255,255,.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 999px;
   background: #fff;
-  box-shadow: 0 0 0 5px rgba(69,216,235,.12);
+  box-shadow: 0 0 0 5px rgba(69, 216, 235, 0.12);
 }
 
 .rt-volume-range::-webkit-slider-thumb {
@@ -696,7 +741,7 @@ a {
 .rt-volume-range::-moz-range-thumb {
   width: 13px;
   height: 13px;
-  border: 1px solid rgba(255,255,255,.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 999px;
   background: #fff;
 }
@@ -773,7 +818,6 @@ input[type="radio"] {
   }
 }
 
-
 /* Phase 1I: one shared content gutter + a deliberately wider player canvas. */
 .rt-standard-content,
 .rt-watch-body-content {
@@ -817,7 +861,10 @@ input[type="radio"] {
   font-weight: 700;
   line-height: 1;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
-  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
 }
 
 .rt-chai-button:hover {
@@ -912,7 +959,11 @@ input[type="radio"] {
   position: relative;
   display: block;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.045),
+    rgba(255, 255, 255, 0.018)
+  );
 }
 
 .rt-media-frame > img {
@@ -923,15 +974,24 @@ input[type="radio"] {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(100deg, transparent 25%, rgba(255, 255, 255, 0.07) 45%, transparent 65%),
+    linear-gradient(
+      100deg,
+      transparent 25%,
+      rgba(255, 255, 255, 0.07) 45%,
+      transparent 65%
+    ),
     rgba(255, 255, 255, 0.035);
   background-size: 220% 100%;
   animation: rt-media-shimmer 1.4s ease-in-out infinite;
 }
 
 @keyframes rt-media-shimmer {
-  from { background-position: 160% 0; }
-  to { background-position: -60% 0; }
+  from {
+    background-position: 160% 0;
+  }
+  to {
+    background-position: -60% 0;
+  }
 }
 
 @media (hover: none) and (pointer: coarse) {
@@ -973,7 +1033,6 @@ input[type="radio"] {
     font-size: clamp(1.85rem, 2.25vw, 2.35rem) !important;
   }
 }
-
 
 /* Phase 1K.2: media cleanup, reliable filters and compact library headings. */
 .rt-mobile-filter-button {
@@ -1039,7 +1098,12 @@ input[type="radio"] {
   display: block;
   height: 100%;
   border-radius: 0 999px 999px 0;
-  background: linear-gradient(90deg, rgba(85, 214, 232, 0.55), #55d6e8 58%, #82e9f5);
+  background: linear-gradient(
+    90deg,
+    rgba(85, 214, 232, 0.55),
+    #55d6e8 58%,
+    #82e9f5
+  );
   box-shadow: 0 0 10px rgba(85, 214, 232, 0.24);
   transition: width 180ms cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -1054,20 +1118,31 @@ input[type="radio"] {
 }
 
 @keyframes rt-loading-spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .rt-poster-loading {
   background:
-    linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, 0.065) 46%, transparent 62%),
+    linear-gradient(
+      105deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.065) 46%,
+      transparent 62%
+    ),
     rgba(7, 8, 18, 0.16);
   background-size: 220% 100%;
   animation: rt-poster-shimmer 1.25s ease-in-out infinite;
 }
 
 @keyframes rt-poster-shimmer {
-  from { background-position: 150% 0; }
-  to { background-position: -55% 0; }
+  from {
+    background-position: 150% 0;
+  }
+  to {
+    background-position: -55% 0;
+  }
 }
 
 .rt-form-message {
@@ -1085,8 +1160,14 @@ input[type="radio"] {
 }
 
 @keyframes rt-message-in {
-  from { opacity: 0; transform: translateY(-3px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Keep everyday motion small and predictable. */
