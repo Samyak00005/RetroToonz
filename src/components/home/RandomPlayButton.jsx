@@ -3,6 +3,7 @@ import { HugeiconsIcon } from "@hugeicons/react";
 
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+
 import showsData from "../../services/contentService.js";
 import { buildWatchPath } from "../../utils/watchRoutes.js";
 
@@ -12,6 +13,7 @@ function RandomPlayButton() {
 
   function pickRandomEpisode(allShows) {
     const pool = [];
+
     allShows.forEach((show) => {
       (show.seasons || []).forEach((season) => {
         (season.episodes || []).forEach((ep) => {
@@ -26,21 +28,24 @@ function RandomPlayButton() {
         });
       });
     });
+
     if (pool.length === 0) return null;
+
     return pool[Math.floor(Math.random() * pool.length)];
   }
 
   const handlePlay = () => {
     const allShows = showsData.allShows || showsData;
     const episode = pickRandomEpisode(allShows);
+
     if (!episode) {
       alert("No playable episode found.");
       return;
     }
+
     navigate(buildWatchPath(episode.showId, episode.episodeId));
   };
 
-  // 🔥 MAGIC PART
   useEffect(() => {
     const handleScroll = () => {
       const footer = document.querySelector("footer");
@@ -52,7 +57,6 @@ function RandomPlayButton() {
       const windowHeight = window.innerHeight;
 
       if (footerRect.top < windowHeight) {
-        // Push button up when footer enters view
         const overlap = windowHeight - footerRect.top;
         btn.style.bottom = `${20 + overlap}px`;
       } else {
@@ -60,26 +64,57 @@ function RandomPlayButton() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
     <button
       ref={btnRef}
+      type="button"
       onClick={handlePlay}
-      className="fixed right-10 sm:right-15 z-50 group
+      className="
+        group fixed right-4 sm:right-6 z-50
+        inline-flex min-h-11 items-center justify-center
+        gap-2
+        rounded-full
+        border border-cyan-300/25
         bg-gradient-to-r from-cyan-500 to-blue-600
+        px-4 py-2.5 sm:px-5 sm:py-3
+        text-white
+        shadow-[0_12px_32px_rgba(37,99,235,0.28)]
+        backdrop-blur-sm
+        transition-all duration-200 ease-out
+        hover:-translate-y-0.5
         hover:from-blue-600 hover:to-cyan-500
-        text-white shadow-xl
-        px-6 py-4 rounded-full flex items-center gap-2
-        animate-bounce hover:animate-none transition-all duration-300"
+        hover:shadow-[0_16px_38px_rgba(37,99,235,0.38)]
+        active:translate-y-0
+        active:scale-[0.98]
+        focus-visible:outline-none
+        focus-visible:ring-2
+        focus-visible:ring-cyan-200/80
+        focus-visible:ring-offset-2
+        focus-visible:ring-offset-[#070812]
+      "
       style={{ bottom: "20px" }}
       title="Play a random cartoon"
+      aria-label="Surprise me with a random cartoon"
     >
-      <span className="absolute inline-flex h-14 w-14 rounded-full bg-cyan-400 opacity-30 group-hover:animate-ping -z-10" />
-      <HugeiconsIcon icon={ShuffleIcon} className="text-xl animate-spin-slow" />
-      <span className="font-semibold hidden sm:block">Surprise Me!</span>
+      <HugeiconsIcon
+        icon={ShuffleIcon}
+        size={19}
+        className="
+          transition-transform duration-200 ease-out
+          group-hover:rotate-12
+        "
+      />
+
+      <span className="text-sm font-semibold tracking-[-0.01em]">
+        Surprise Me!
+      </span>
     </button>
   );
 }

@@ -137,7 +137,8 @@ function HeroBanner({ shows = [] }) {
       savedPlayback &&
       !savedPlayback.completed &&
       episodes.some(
-        (episode) => String(episode.episodeId) === String(savedPlayback.episodeId),
+        (episode) =>
+          String(episode.episodeId) === String(savedPlayback.episodeId),
       );
     const episodeId = savedEpisodeStillExists
       ? savedPlayback.episodeId
@@ -165,7 +166,8 @@ function HeroBanner({ shows = [] }) {
       onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false);
+        if (!event.currentTarget.contains(event.relatedTarget))
+          setPaused(false);
       }}
     >
       <div className="relative aspect-[3/4] w-full sm:aspect-[4/3] lg:aspect-[21/9]">
@@ -229,28 +231,20 @@ function HeroBanner({ shows = [] }) {
             </div>
           )}
 
-          <div className="flex items-center gap-2 lg:gap-4">
+          <div className="flex items-center gap-2.5 lg:gap-3">
             <button
               type="button"
               onClick={handleStartWatching}
               className="
-                group relative inline-flex items-center gap-2
-                rounded-full
-                bg-gradient-to-r from-cyan-500 to-blue-600
-                px-4 py-2.5
-                text-sm font-medium text-white
-                shadow-md
-                transition-all duration-300
-                hover:scale-105
-                hover:from-blue-600 hover:to-cyan-500
-                active:scale-95
-                lg:px-5 lg:py-3
-              "
+      rt-button rt-button-primary
+      min-h-11 rounded-full
+      px-5 py-2.5
+      text-sm
+      lg:px-6 lg:py-3
+      lg:text-base
+    "
             >
-              <span className="absolute -z-10 inline-flex h-9 w-9 rounded-full bg-cyan-400 opacity-20 group-hover:animate-ping" />
-
               <HugeiconsIcon icon={PlayIcon} size={20} />
-
               <span>Start Watching</span>
             </button>
 
@@ -260,20 +254,19 @@ function HeroBanner({ shows = [] }) {
               title="More Info"
               aria-label={`More information about ${show.title}`}
               className="
-                flex h-11 w-11 items-center justify-center
-                rounded-full
-                border border-white/20
-                bg-white/20
-                backdrop-blur-md
-                transition-all duration-300
-                hover:scale-105
-                hover:bg-white/30
-              "
+      rt-icon-button
+      h-11 w-11
+      border-white/15
+      bg-black/20
+      text-white/80
+      backdrop-blur-sm
+      hover:bg-white/10
+      hover:text-white
+    "
             >
               <HugeiconsIcon icon={InformationCircleIcon} size={20} />
             </button>
           </div>
-
           <button
             type="button"
             onClick={handlePrev}
