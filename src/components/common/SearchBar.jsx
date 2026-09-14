@@ -104,7 +104,7 @@ export default function SearchBar({ compact = false, autoFocus = false }) {
       role="search"
       className="relative mx-auto w-full max-w-lg"
     >
-      <div className="relative flex w-full items-center rounded-3xl border border-white/10 bg-black/10 p-1 backdrop-blur-xl backdrop-saturate-150 transition focus-within:border-cyan-300/35 focus-within:bg-black/20">
+      <div className="rt-header-search-shell relative flex w-full items-center p-1 transition">
         <HugeiconsIcon
           icon={Search01Icon}
           size={17}
@@ -130,14 +130,14 @@ export default function SearchBar({ compact = false, autoFocus = false }) {
           aria-controls="retrotoonz-search-suggestions"
           aria-expanded={openPanel}
           autoComplete="off"
-          className={`w-full rounded-3xl bg-transparent pl-11 text-sm text-white outline-none placeholder:text-white/50 ${
-            compact ? "py-2 pr-20" : "py-2.5 pr-24"
+          className={`w-full bg-transparent pl-11 text-sm text-white outline-none placeholder:text-white/45 ${
+            compact ? "py-2 pr-[5.5rem]" : "py-2.5 pr-24"
           }`}
         />
 
         <button
           type="submit"
-          className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-1.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:from-blue-600 hover:to-cyan-500"
+          className="rt-header-search-submit absolute right-1 top-1/2 -translate-y-1/2"
         >
           Search
         </button>

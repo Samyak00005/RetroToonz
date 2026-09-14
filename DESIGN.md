@@ -288,3 +288,18 @@ Target after redesign:
 Overall: 80+
 UI: 80+
 UX: 80+
+
+## Protected Brand UI
+
+The Hero **Start Watching** CTA is a protected RetroToonz brand element.
+
+Preserve its original visual identity:
+
+- cyan → strong-blue gradient
+- white play icon and label
+- fully pill-shaped silhouette
+- restrained blue elevation
+- do not replace it with the generic primary button style
+
+Other UI may evolve around it, but this CTA should remain visually recognizable.
+

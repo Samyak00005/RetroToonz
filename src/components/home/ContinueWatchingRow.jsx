@@ -8,6 +8,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { buildWatchPath } from "../../utils/watchRoutes.js";
+import SectionHeading from "../common/SectionHeading.jsx";
 import MediaImage from "../common/MediaImage.jsx";
 
 function clamp(value, min, max) {
@@ -55,7 +56,7 @@ function ContinueWatchingRow({ shows = [] }) {
     const row = scrollRef.current;
     if (!row) return;
 
-    const distance = Math.min(row.clientWidth * 0.82, 820);
+    const distance = Math.min(row.clientWidth * 0.86, 900);
     row.scrollBy({
       left: direction === "left" ? -distance : distance,
       behavior: "smooth",
@@ -65,22 +66,21 @@ function ContinueWatchingRow({ shows = [] }) {
   if (!shows.length) return null;
 
   return (
-    <section className="relative w-full py-5 sm:py-6">
+    <section className="relative w-full py-5 sm:py-6 lg:py-7">
       <div className="rt-home-section-content">
-        <h3 className="rt-section-title">Continue Watching</h3>
-        <p className="mb-3 mt-1 text-xs text-white/55 sm:mb-4 sm:text-sm">
-          Resume from your saved playback position.
-        </p>
-      </div>
+        <SectionHeading
+          title="Continue Watching"
+          description="Pick up where you left off."
+          className="mb-3 sm:mb-4"
+        />
 
-      <div className="rt-home-section-content">
         <div className="group/row relative">
           {scrollState.left && (
             <button
               type="button"
               onClick={() => scroll("left")}
               aria-label="Scroll Continue Watching left"
-              className="absolute left-2 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-[#10213b]/85 text-white/80 opacity-0 backdrop-blur-md transition-all duration-200 hover:scale-105 hover:bg-[#173054] hover:text-white group-hover/row:opacity-100 md:flex lg:left-4"
+              className="rt-rail-arrow absolute left-1 top-[42%] z-30 hidden -translate-y-1/2 md:flex"
             >
               <HugeiconsIcon icon={ArrowLeft01Icon} size={18} />
             </button>
@@ -91,7 +91,7 @@ function ContinueWatchingRow({ shows = [] }) {
               type="button"
               onClick={() => scroll("right")}
               aria-label="Scroll Continue Watching right"
-              className="absolute right-2 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-[#10213b]/85 text-white/80 opacity-0 backdrop-blur-md transition-all duration-200 hover:scale-105 hover:bg-[#173054] hover:text-white group-hover/row:opacity-100 md:flex lg:right-4"
+              className="rt-rail-arrow absolute right-1 top-[42%] z-30 hidden -translate-y-1/2 md:flex"
             >
               <HugeiconsIcon icon={ArrowRight01Icon} size={18} />
             </button>
@@ -99,7 +99,7 @@ function ContinueWatchingRow({ shows = [] }) {
 
           <div
             ref={scrollRef}
-            className="scrollbar-hide flex snap-x snap-proximity gap-3 overflow-x-auto pb-2 pr-4 scroll-smooth sm:gap-4 sm:pr-6"
+            className="scrollbar-hide flex snap-x snap-proximity gap-3 overflow-x-auto pb-3 pt-1 scroll-smooth sm:gap-4"
           >
             {shows.map((show) => (
               <ContinueCard key={show.id} show={show} />
@@ -122,6 +122,7 @@ function ContinueCard({ show }) {
     duration > currentTime ? formatTimeLeft(duration - currentTime) : "Resume";
   const seasonNumber = playback.seasonNumber ?? 1;
   const episodeNumber = playback.episodeNumber ?? 1;
+  const episodeTitle = playback.episodeTitle || "Continue episode";
 
   const destination = buildWatchPath(show.id, playback.episodeId);
 
@@ -129,49 +130,44 @@ function ContinueCard({ show }) {
     <button
       type="button"
       onClick={() => navigate(destination)}
-      className="rt-continue-rail-card group relative my-1 snap-start overflow-hidden rounded-[var(--rt-radius-card)] border border-white/12 bg-white/[0.06] p-2.5 text-left shadow-[0_12px_34px_rgba(2,8,23,0.16)] transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan-300/35 hover:bg-white/[0.085]"
+      className="rt-continue-rail-card group snap-start text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70"
       aria-label={`Resume ${show.title}, season ${seasonNumber}, episode ${episodeNumber}`}
     >
-      <div className="relative aspect-video w-full overflow-hidden rounded-[var(--rt-radius-control)]">
+      <div className="relative aspect-video w-full overflow-hidden rounded-[var(--rt-radius-card)] bg-[var(--rt-surface-soft)] ring-1 ring-white/[0.09] transition-[ring-color,box-shadow] duration-200 group-hover:ring-white/[0.18] group-hover:shadow-[0_12px_30px_rgba(0,0,0,0.24)]">
         <MediaImage
           src={show.backdrop}
           alt=""
           decorative
           wrapperClassName="absolute inset-0"
-          className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]"
+          className="h-full w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.012]"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-[#07111f]/90 via-black/15 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/8 to-transparent" />
 
-        <div className="absolute inset-0 flex items-center justify-center bg-black/5">
-          <span className="rounded-full border border-white/20 bg-[#0d1c33]/75 p-3 text-white backdrop-blur-lg transition group-hover:scale-105">
-            <HugeiconsIcon icon={PlayIcon} size={17} />
+        <div className="absolute inset-0 flex items-center justify-center opacity-90 transition-opacity duration-200 group-hover:opacity-100">
+          <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-black/55 text-white backdrop-blur-sm">
+            <HugeiconsIcon icon={PlayIcon} size={18} />
           </span>
         </div>
 
-        <div className="absolute bottom-2 left-3 right-3 flex items-end justify-between gap-3">
-          <h4 className="min-w-0 truncate text-sm font-semibold text-white">
-            {show.title}
-          </h4>
-          <span className="shrink-0 text-[10px] text-white/70">
-            S{seasonNumber} • E{episodeNumber}
-          </span>
-        </div>
-      </div>
-
-      <div className="mt-2 flex items-center gap-2">
-        <div
-          className="h-1.5 flex-1 overflow-hidden rounded-full bg-white/12"
-          aria-label={`${Math.round(progress)} percent watched`}
-        >
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/15">
           <div
-            className="h-full rounded-full bg-gradient-to-r from-cyan-300 to-blue-400"
+            className="h-full bg-[var(--rt-brand)] transition-[width] duration-300"
             style={{ width: `${progress}%` }}
           />
         </div>
-        <span className="whitespace-nowrap text-[10px] text-white/55">
-          {timeLeft}
-        </span>
+      </div>
+
+      <div className="mt-2.5 min-w-0">
+        <div className="flex items-start justify-between gap-3">
+          <div className="min-w-0">
+            <h4 className="truncate text-sm font-semibold text-white">{show.title}</h4>
+            <p className="mt-0.5 truncate text-xs text-white/50">
+              S{seasonNumber} E{episodeNumber} · {episodeTitle}
+            </p>
+          </div>
+          <span className="shrink-0 text-[11px] text-white/45">{timeLeft}</span>
+        </div>
       </div>
     </button>
   );

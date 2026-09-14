@@ -5,7 +5,7 @@ import {
   PlayIcon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { getEpisodesForShow } from "../../services/contentService.js";
@@ -14,17 +14,20 @@ import { buildWatchPath } from "../../utils/watchRoutes.js";
 
 const DEFAULT_BACKDROP = "/media/defaults/image.jpg";
 const MOBILE_BREAKPOINT = "(max-width: 640px)";
-const AUTO_PLAY_INTERVAL = 5000;
-const SLIDE_DURATION = 400;
+const AUTO_PLAY_INTERVAL = 7000;
 const MAX_INDICATORS = 5;
+const HERO_TRANSITION_MS = 480;
+
+function getHeroImageForShow(show, isMobile) {
+  if (!show) return DEFAULT_BACKDROP;
+  return (isMobile ? show.poster : show.heroPoster) || DEFAULT_BACKDROP;
+}
 
 function HeroBanner({ shows = [] }) {
   const navigate = useNavigate();
-
   const [index, setIndex] = useState(0);
-  const [slideIn, setSlideIn] = useState(true);
   const [paused, setPaused] = useState(false);
-
+  const [previousShow, setPreviousShow] = useState(null);
   const [isMobile, setIsMobile] = useState(() =>
     typeof window !== "undefined"
       ? window.matchMedia(MOBILE_BREAKPOINT).matches
@@ -33,27 +36,40 @@ function HeroBanner({ shows = [] }) {
 
   const touchStartX = useRef(0);
   const touchStartY = useRef(0);
-  const slideTimeoutRef = useRef(null);
-
+  const transitionTimer = useRef(null);
   const indicatorCount = Math.min(MAX_INDICATORS, shows.length);
+
+  const transitionToIndex = useCallback(
+    (nextIndex) => {
+      if (!shows.length || nextIndex === index) return;
+
+      setPreviousShow(shows[index] || null);
+      setIndex(nextIndex);
+
+      if (transitionTimer.current) {
+        window.clearTimeout(transitionTimer.current);
+      }
+
+      transitionTimer.current = window.setTimeout(() => {
+        setPreviousShow(null);
+        transitionTimer.current = null;
+      }, HERO_TRANSITION_MS + 80);
+    },
+    [index, shows],
+  );
 
   const handlePrev = () => {
     if (!shows.length) return;
-
-    setSlideIn(true);
-    setIndex((current) => (current - 1 + shows.length) % shows.length);
+    transitionToIndex((index - 1 + shows.length) % shows.length);
   };
 
   const handleNext = () => {
     if (!shows.length) return;
-
-    setSlideIn(true);
-    setIndex((current) => (current + 1) % shows.length);
+    transitionToIndex((index + 1) % shows.length);
   };
 
   const handleTouchStart = (event) => {
     if (!isMobile) return;
-
     touchStartX.current = event.touches[0].clientX;
     touchStartY.current = event.touches[0].clientY;
   };
@@ -63,68 +79,62 @@ function HeroBanner({ shows = [] }) {
 
     const endX = event.changedTouches[0].clientX;
     const endY = event.changedTouches[0].clientY;
-
     const deltaX = endX - touchStartX.current;
     const deltaY = endY - touchStartY.current;
 
-    if (Math.abs(deltaY) > Math.abs(deltaX)) return;
-    if (Math.abs(deltaX) < 50) return;
-
-    if (deltaX < 0) {
-      handleNext();
-    } else {
-      handlePrev();
-    }
+    if (Math.abs(deltaY) > Math.abs(deltaX) || Math.abs(deltaX) < 50) return;
+    if (deltaX < 0) handleNext();
+    else handlePrev();
   };
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(MOBILE_BREAKPOINT);
-
-    const handleChange = (event) => {
-      setIsMobile(event.matches);
-    };
+    const handleChange = (event) => setIsMobile(event.matches);
 
     mediaQuery.addEventListener?.("change", handleChange);
-
-    if (!mediaQuery.addEventListener) {
-      mediaQuery.addListener(handleChange);
-    }
+    if (!mediaQuery.addEventListener) mediaQuery.addListener(handleChange);
 
     return () => {
       mediaQuery.removeEventListener?.("change", handleChange);
-
-      if (!mediaQuery.removeEventListener) {
-        mediaQuery.removeListener(handleChange);
-      }
+      if (!mediaQuery.removeEventListener) mediaQuery.removeListener(handleChange);
     };
   }, []);
 
   useEffect(() => {
     if (!shows.length || paused) return undefined;
 
-    const interval = setInterval(() => {
-      setSlideIn(false);
-
-      slideTimeoutRef.current = setTimeout(() => {
-        setIndex((current) => (current + 1) % shows.length);
-        setSlideIn(true);
-      }, SLIDE_DURATION);
+    const interval = window.setInterval(() => {
+      transitionToIndex((index + 1) % shows.length);
     }, AUTO_PLAY_INTERVAL);
 
-    return () => {
-      clearInterval(interval);
-
-      if (slideTimeoutRef.current) {
-        clearTimeout(slideTimeoutRef.current);
-      }
-    };
-  }, [paused, shows.length]);
+    return () => window.clearInterval(interval);
+  }, [index, paused, shows.length, transitionToIndex]);
 
   useEffect(() => {
-    if (index >= shows.length) {
-      setIndex(0);
-    }
+    if (index >= shows.length) setIndex(0);
   }, [index, shows.length]);
+
+  useEffect(() => {
+    if (shows.length < 2 || typeof window === "undefined") return undefined;
+
+    const neighborIndexes = [
+      (index + 1) % shows.length,
+      (index - 1 + shows.length) % shows.length,
+    ];
+
+    neighborIndexes.forEach((neighborIndex) => {
+      const image = new Image();
+      image.src = getHeroImageForShow(shows[neighborIndex], isMobile);
+    });
+
+    return undefined;
+  }, [index, isMobile, shows]);
+
+  useEffect(() => () => {
+    if (transitionTimer.current) {
+      window.clearTimeout(transitionTimer.current);
+    }
+  }, []);
 
   if (!shows.length) return null;
 
@@ -137,8 +147,7 @@ function HeroBanner({ shows = [] }) {
       savedPlayback &&
       !savedPlayback.completed &&
       episodes.some(
-        (episode) =>
-          String(episode.episodeId) === String(savedPlayback.episodeId),
+        (episode) => String(episode.episodeId) === String(savedPlayback.episodeId),
       );
     const episodeId = savedEpisodeStillExists
       ? savedPlayback.episodeId
@@ -147,43 +156,57 @@ function HeroBanner({ shows = [] }) {
     navigate(buildWatchPath(show.id, episodeId));
   };
 
-  const handleMoreInfo = () => {
-    navigate(`/show/${show.id}`);
-  };
-
-  const heroImage = isMobile
-    ? show.poster || DEFAULT_BACKDROP
-    : show.heroPoster || DEFAULT_BACKDROP;
+  const heroImage = getHeroImageForShow(show, isMobile);
+  const previousHeroImage = getHeroImageForShow(previousShow, isMobile);
 
   const descriptionText = show.description || "";
+  const metadata = [
+    show.year,
+    show.language,
+    show.rating ? `${show.rating}/10` : null,
+  ].filter(Boolean);
 
   return (
-    <div
-      className="relative w-full touch-pan-y select-none overflow-hidden text-white"
+    <section
+      className="group relative w-full touch-pan-y select-none overflow-hidden text-white"
+      aria-label={`Featured show: ${show.title}`}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget))
-          setPaused(false);
+        if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false);
       }}
     >
       <div className="relative aspect-[3/4] w-full sm:aspect-[4/3] lg:aspect-[21/9]">
+        {previousShow && (
+          <div
+            aria-hidden="true"
+            className="rt-hero-image rt-hero-image-previous absolute inset-0 h-full w-full"
+          >
+            <img
+              src={previousHeroImage}
+              alt=""
+              draggable="false"
+              className="h-full w-full object-cover"
+              onError={(event) => {
+                event.currentTarget.onerror = null;
+                event.currentTarget.src = DEFAULT_BACKDROP;
+              }}
+            />
+          </div>
+        )}
+
         <div
-          key={show.id}
-          className={`absolute inset-0 h-full w-full transition-all duration-700 ease-in-out will-change-transform ${
-            slideIn
-              ? "translate-x-0 opacity-100"
-              : "-translate-x-full opacity-0"
-          }`}
+          key={`${show.id}-${isMobile ? "mobile" : "wide"}`}
+          className="rt-hero-image rt-hero-image-current absolute inset-0 h-full w-full"
         >
           <img
             src={heroImage}
             alt={show.title}
             draggable="false"
-            className="h-full w-full object-cover animate-[slowZoom_12s_linear_infinite]"
+            className="h-full w-full object-cover"
             onError={(event) => {
               event.currentTarget.onerror = null;
               event.currentTarget.src = DEFAULT_BACKDROP;
@@ -191,126 +214,88 @@ function HeroBanner({ shows = [] }) {
           />
         </div>
 
-        <div className="absolute inset-0 z-20 bg-gradient-to-r from-black/60 via-black/20 to-transparent" />
-        <div className="absolute inset-x-0 top-0 z-20 h-32 bg-gradient-to-b from-black/35 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 z-20 bg-[linear-gradient(90deg,rgba(4,5,12,0.78)_0%,rgba(4,5,12,0.40)_38%,rgba(4,5,12,0.08)_68%,transparent_100%)]" />
+        <div className="pointer-events-none absolute inset-0 z-20 bg-[linear-gradient(0deg,#070812_0%,rgba(7,8,18,0.72)_12%,rgba(7,8,18,0.08)_48%,rgba(7,8,18,0.10)_100%)]" />
 
-        <div className="pointer-events-none absolute inset-0 z-30">
-          <div className="h-full w-full bg-gradient-to-t from-[#080914] via-[#080914]/40 to-transparent" />
+        <div className="rt-hero-content">
+          <div key={show.id} className="rt-hero-copy rt-hero-copy-transition">
+            {metadata.length > 0 && (
+              <div className="mb-2 flex flex-wrap items-center gap-2 text-xs font-medium text-white/68 sm:text-sm">
+                {metadata.map((item, itemIndex) => (
+                  <span key={`${item}-${itemIndex}`} className="flex items-center gap-2">
+                    {itemIndex > 0 && <span className="text-white/28">•</span>}
+                    <span>{item}</span>
+                  </span>
+                ))}
+              </div>
+            )}
+
+            <h1 className="rt-hero-title">{show.title}</h1>
+
+            {descriptionText && (
+              <p className="rt-hero-description">{descriptionText}</p>
+            )}
+
+            <div className="mt-4 flex flex-wrap items-center gap-2.5 sm:mt-5 sm:gap-3">
+              <button
+                type="button"
+                onClick={handleStartWatching}
+                className="
+                  group relative inline-flex items-center gap-2
+                  rounded-full
+                  bg-gradient-to-r from-cyan-500 to-blue-600
+                  px-4 py-2.5
+                  text-sm font-medium text-white
+                  shadow-md
+                  transition-all duration-300
+                  hover:scale-105
+                  hover:from-blue-600 hover:to-cyan-500
+                  active:scale-95
+                  lg:px-5 lg:py-3
+                "
+              >
+                <span className="absolute -z-10 inline-flex h-9 w-9 rounded-full bg-cyan-400 opacity-20 group-hover:animate-ping" />
+                <HugeiconsIcon icon={PlayIcon} size={20} />
+                <span>Start Watching</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => navigate(`/show/${show.id}`)}
+                className="rt-button rt-button-secondary border-white/12 bg-black/20 px-4 text-white backdrop-blur-sm hover:bg-black/35 sm:px-5"
+                aria-label={`More information about ${show.title}`}
+              >
+                <HugeiconsIcon icon={InformationCircleIcon} size={18} />
+                <span>More Info</span>
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div className="absolute inset-0 z-30 mx-auto flex w-full max-w-[1800px] flex-col items-start justify-end px-4 pb-10 sm:px-6 sm:pb-8 md:pb-10 lg:px-10 lg:pb-12">
-          <div className="mb-3 w-full">
-            <div className="flex flex-col gap-1">
-              <span className="text-label text-white/80 lg:text-base">
-                Watch
-              </span>
-
-              <h1 className="max-w-[900px] text-2xl font-bold tracking-[-0.035em] text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)] sm:text-4xl lg:text-5xl xl:text-6xl">
-                {show.title}
-              </h1>
-            </div>
-          </div>
-
-          {descriptionText && (
-            <div className="mb-3 text-white/80">
-              <p className="m-0 line-clamp-2 max-w-full text-xs leading-relaxed sm:text-sm lg:line-clamp-3 lg:max-w-2xl lg:text-base">
-                {descriptionText}
-              </p>
-            </div>
-          )}
-
-          {show.tags?.length > 0 && (
-            <div className="mb-3 flex items-center gap-2 text-[10px] text-white/65 sm:text-xs">
-              {show.tags.slice(0, 3).map((tag, tagIndex) => (
-                <span key={tag} className="flex items-center gap-2">
-                  {tagIndex > 0 && <span className="text-white/30">•</span>}
-
-                  <span>{tag}</span>
-                </span>
-              ))}
-            </div>
-          )}
-
-          <div className="flex items-center gap-2.5 lg:gap-3">
+        {shows.length > 1 && (
+          <>
             <button
               type="button"
-              onClick={handleStartWatching}
-              className="
-      rt-button rt-button-primary
-      min-h-11 rounded-full
-      px-5 py-2.5
-      text-sm
-      lg:px-6 lg:py-3
-      lg:text-base
-    "
+              onClick={handlePrev}
+              aria-label="Previous featured show"
+              className="rt-hero-arrow rt-hero-arrow-left"
             >
-              <HugeiconsIcon icon={PlayIcon} size={20} />
-              <span>Start Watching</span>
+              <HugeiconsIcon icon={ArrowLeft01Icon} size={22} />
             </button>
 
             <button
               type="button"
-              onClick={handleMoreInfo}
-              title="More Info"
-              aria-label={`More information about ${show.title}`}
-              className="
-      rt-icon-button
-      h-11 w-11
-      border-white/15
-      bg-black/20
-      text-white/80
-      backdrop-blur-sm
-      hover:bg-white/10
-      hover:text-white
-    "
+              onClick={handleNext}
+              aria-label="Next featured show"
+              className="rt-hero-arrow rt-hero-arrow-right"
             >
-              <HugeiconsIcon icon={InformationCircleIcon} size={20} />
+              <HugeiconsIcon icon={ArrowRight01Icon} size={22} />
             </button>
-          </div>
-          <button
-            type="button"
-            onClick={handlePrev}
-            aria-label="Previous slide"
-            className="
-              absolute left-5 top-[40%] z-40
-              hidden h-14 w-14
-              -translate-y-1/2
-              items-center justify-center
-              rounded-full
-              bg-black/20
-              backdrop-blur-sm
-              transition-all duration-300
-              hover:scale-110
-              hover:bg-black/50
-              lg:flex
-            "
-          >
-            <HugeiconsIcon icon={ArrowLeft01Icon} size={28} />
-          </button>
+          </>
+        )}
 
-          <button
-            type="button"
-            onClick={handleNext}
-            aria-label="Next slide"
-            className="
-              absolute right-5 top-[40%] z-40
-              hidden h-14 w-14
-              -translate-y-1/2
-              items-center justify-center
-              rounded-full
-              bg-black/20
-              backdrop-blur-sm
-              transition-all duration-300
-              hover:scale-110
-              hover:bg-black/50
-              hover:scale-110
-              lg:flex
-            "
-          >
-            <HugeiconsIcon icon={ArrowRight01Icon} size={28} />
-          </button>
-
-          <div className="absolute bottom-2 left-1/2 z-40 flex -translate-x-1/2 items-center gap-2 lg:bottom-3">
+        {indicatorCount > 1 && (
+          <div className="rt-hero-indicators" aria-label="Featured show slides">
             {Array.from({ length: indicatorCount }).map((_, indicatorIndex) => {
               const activeIndex = index % indicatorCount;
               const isActive = indicatorIndex === activeIndex;
@@ -319,35 +304,19 @@ function HeroBanner({ shows = [] }) {
                 <button
                   key={indicatorIndex}
                   type="button"
-                  onClick={() => {
-                    setIndex(indicatorIndex);
-                    setSlideIn(true);
-                  }}
-                  aria-label={`Go to slide ${indicatorIndex + 1}`}
-                  className={`rounded-full transition-all duration-300 ${
-                    isActive ? "h-2 w-5 bg-white" : "h-1.5 w-1.5 bg-white/40"
+                  onClick={() => transitionToIndex(indicatorIndex)}
+                  aria-label={`Show featured item ${indicatorIndex + 1}`}
+                  aria-current={isActive ? "true" : undefined}
+                  className={`rt-hero-indicator ${
+                    isActive ? "rt-hero-indicator-active" : ""
                   }`}
                 />
               );
             })}
           </div>
-        </div>
+        )}
       </div>
-
-      <style>
-        {`
-          @keyframes slowZoom {
-            from {
-              transform: scale(1.05);
-            }
-
-            to {
-              transform: scale(1.1);
-            }
-          }
-        `}
-      </style>
-    </div>
+    </section>
   );
 }
 

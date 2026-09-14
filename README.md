@@ -5,6 +5,14 @@ Built with a **high-performance frontend stack**, immersive UI, and smooth inter
 
 ---
 
+
+## Current design refresh
+
+- **D1 — Foundation & Design Tokens:** complete.
+- **D2 — Header, Navigation & Hero:** complete.
+- **D3 — Homepage & Content Cards:** complete in this package.
+- See `docs/D1_FOUNDATION.md`, `docs/D2_HEADER_HERO.md`, and `docs/D3_HOMEPAGE_CONTENT_CARDS.md`.
+
 ## 💡 Why This Project?
 
 RetroToonz is built to demonstrate modern frontend architecture using React, Vite, and Tailwind v4, focusing on performance, UI polish, and scalable component design.
@@ -149,3 +157,21 @@ Frontend Developer
 👉 https://buymeachai.ezee.li/Samyak005
 
 ---
+
+## D2.1 Hero Refinement
+
+Desktop Hero arrow placement and featured-artwork transitions were refined after visual review. The Start Watching CTA design was intentionally preserved unchanged. See `docs/D2_1_HERO_REFINEMENT.md`.
+
+
+## D2.4 Hero pagination hotfix
+
+Hero pagination indicators are anchored to the bottom-center at every breakpoint, so they never collide with the fixed bottom-right Surprise Me CTA.
+
+
+## D3 Homepage & Content Cards
+
+Homepage rails, poster cards, Continue Watching and Browse by Category now follow the content-first D1 design system. The protected Start Watching and Surprise Me brand CTAs remain unchanged. See `docs/D3_HOMEPAGE_CONTENT_CARDS.md`.
+
+
+## D3.1 Category Revert
+Browse by Category uses the pre-D3 non-poster category card design. See `docs/D3_1_CATEGORY_REVERT.md`.

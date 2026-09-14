@@ -72,50 +72,35 @@ function RandomPlayButton() {
   }, []);
 
   return (
-    <button
+    <div
       ref={btnRef}
-      type="button"
-      onClick={handlePlay}
-      className="
-        group fixed right-4 sm:right-6 z-50
-        inline-flex min-h-11 items-center justify-center
-        gap-2
-        rounded-full
-        border border-cyan-300/25
-        bg-gradient-to-r from-cyan-500 to-blue-600
-        px-4 py-2.5 sm:px-5 sm:py-3
-        text-white
-        shadow-[0_12px_32px_rgba(37,99,235,0.28)]
-        backdrop-blur-sm
-        transition-all duration-200 ease-out
-        hover:-translate-y-0.5
-        hover:from-blue-600 hover:to-cyan-500
-        hover:shadow-[0_16px_38px_rgba(37,99,235,0.38)]
-        active:translate-y-0
-        active:scale-[0.98]
-        focus-visible:outline-none
-        focus-visible:ring-2
-        focus-visible:ring-cyan-200/80
-        focus-visible:ring-offset-2
-        focus-visible:ring-offset-[#070812]
-      "
+      className="fixed right-4 z-50 sm:right-6"
       style={{ bottom: "20px" }}
-      title="Play a random cartoon"
-      aria-label="Surprise me with a random cartoon"
     >
-      <HugeiconsIcon
-        icon={ShuffleIcon}
-        size={19}
+      <button
+        type="button"
+        onClick={handlePlay}
         className="
-          transition-transform duration-200 ease-out
-          group-hover:rotate-12
+          group relative inline-flex items-center gap-2
+          rounded-full
+          bg-gradient-to-r from-cyan-500 to-blue-600
+          px-4 py-2.5
+          text-sm font-medium text-white
+          shadow-md
+          transition-all duration-300
+          hover:scale-105
+          hover:from-blue-600 hover:to-cyan-500
+          active:scale-95
+          lg:px-5 lg:py-3
         "
-      />
-
-      <span className="text-sm font-semibold tracking-[-0.01em]">
-        Surprise Me!
-      </span>
-    </button>
+        title="Play a random cartoon"
+        aria-label="Surprise me with a random cartoon"
+      >
+        <span className="absolute -z-10 inline-flex h-9 w-9 rounded-full bg-cyan-400 opacity-20 group-hover:animate-ping" />
+        <HugeiconsIcon icon={ShuffleIcon} size={20} />
+        <span>Surprise Me!</span>
+      </button>
+    </div>
   );
 }
 
